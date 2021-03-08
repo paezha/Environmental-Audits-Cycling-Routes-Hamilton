@@ -1,5 +1,5 @@
 ---
-title: Short Paper
+title: A comparison of objective attributes and cyclists' perceptions along cycling routes in a Canadian developing cycling city
 author:
   - name: Author
     email: author1@address.edu
@@ -7,67 +7,90 @@ author:
     footnote: Corresponding Author
   - name: Author 2
     email: author2@address.edu
+    affiliation: Some Department
+  - name: Author 3
+    email: author2@address.edu
+    affiliation: Some School
+  - name: Author 4
+    email: author2@address.edu
+    affiliation: Another Department
+  - name: Author 5
+    email: author2@address.edu
     affiliation: Some School
 address:
   - code: Some School
-    address: School of Studies
-  - code: Some School
-    address: School of Studies
-abstract: |
-  Background: Transport planners and public health officials in Canada are increasingly aiming to encourage cycling for transport. On- and off-street infrastructure is often implemented to facilitate cycling and planners rely on a range of tools for informing the network of facilities. This qualitative description study compares objectively measured attributes along select cycling routes and perceptions of the built environment among people who regularly cycle in Hamilton, Ontario.
-  Methods: Environmental audits were conducted along six inferred cycling routes in Hamilton to document the attributes that might support or hinder cycling. 14 cyclists, 9 male and 5 female, were then participated in semi-structured interviews where they reviewed photos of the routes and described their perceptions and preferences. Qualitative data was analyzed using deductive thematic analysis based on the categories of the audit instrument.
-  Results: Cyclists prefer routes that have dedicated cycling infrastructure and residential streets with low volumes of traffic, and they dislike routes with busy arterial roads that lack infrastructure. Their experience and knowledge of cycling in a city transitioning to be more bicycle-friendly revealed that existing infrastructure and routes need to improved, which may also help to reduce barriers for non-cyclists.
-  Conclusions: The perceptions of people who regularly cycle should be explored and leveraged to inform policies and interventions to make cycling routes and infrastructure safer and more attractive for cycling. Transport planners in developing cycling cities should pay attention to a broad range of built environment factors that influence where people choose to cycle.
+    address: School of X
+  - code: Some Department
+    address: Department of Y
+  - code: Another Department
+    address: Department of Z
 
 journal: "Journal of Transport & Health"
-date: "`r Sys.Date()`"
-bibliography: mybibfile.bib
+date: "October 20, 2020"
+bibliography: References.bib
 linenumbers: true
+geometry: margin=2cm
 numbersections: true
 csl: elsevier-harvard.csl
 output: rticles::elsevier_article
 #always_allow_html: true
 ---
 
-1. Introduction {#sec:introduction}
+```{r load-packages, include = FALSE}
+library(dplyr)
+library(ggthemes)
+library(kableExtra)
+library(knitr)
+#library(rticles)
+library(sf)
+library(spdep)
+library(tidyverse)
+library(units)
+library(sp)
+library(ngram)
+```
+
+  *Background*: Cycling is known to have many health benefits. For this reason, transport planners and public health officials in Canada are increasingly aiming to encourage cycling for transport. On- and off-street infrastructure is often implemented to facilitate cycling and planners rely on a range of tools for informing the design of the network of facilities. This mixed methods study compares objectively measured attributes and cyclists' perceptions of the built environment along select cycling routes in Hamilton, Ontario.
+  *Methods*: Environmental audits were conducted along six cycling routes in Hamilton to document the attributes that might support or hinder cycling. The routes were selected based on the output of a model of cycling flows. Cyclists, 9 male and 5 female, then participated in semi-structured interviews where they reviewed photos of the routes and described their perceptions and preferences. Interview data were analyzed using both inductive and deductive thematic analysis based on the categories of the audit instrument.
+  *Results*: Cyclists prefer routes that have dedicated cycling infrastructure, or residential streets with low volumes of traffic even if they lack infrastructure. They dislike routes with busy arterial roads or that lack cycling infrastructure. Their experience and knowledge of cycling in a city transitioning to be more bicycle-friendly revealed preferences that can help to improve existing infrastructure and cycling routes, which may also help to reduce barriers for non-cyclists.
+  *Conclusions*: The perceptions of people who regularly cycle should be explored and leveraged to inform policies and interventions to make cycling routes and infrastructure safer and more attractive for cycling. Transport planners in developing cycling cities should pay attention to a broad range of built environment factors that influence where people choose to cycle.
+
+
+Introduction {#sec:introduction}
 ==========================
 
-Many Canadian cities have adopted pro-cycling policies and programs in recent years to support the uptake of cycling for transport [@assuncao-denisIncreasingCyclingTransportation2019a]. Some of these are mid-sized cities that currently have low levels of cycling for transport, such as Halifax or Calgary, while others are larger urban areas that have more established cycling cultures like Montréal and Vancouver. To date, efforts to increase cycling in Canada have involved a range of interventions from investments in infrastructure to educational programs or promotional events  [@assuncao-denisIncreasingCyclingTransportation2019a]. Large population health gains [@Celis2017; @dehartogjeroenjohanHealthBenefitsCycling2010] and improved environmental conditions in urban areas [@Zahabi2016] could be achieved if cycling becomes more mainstream. For instance, Raustrop and Koglin [-@raustorpPotentialActiveCommuting2019] estimated that if nearly half of the residents in Scania county, Sweden cycled to work then almost 20 percent would meet the physical activity guidelines from the World Health Organization. The challenge, however, for developing cycling cities is how to successfully transition to a bicycle-friendly city where healthy and active modes of travel constitute a larger part of the mode share.
+Many Canadian cities have adopted pro-cycling policies and programs in recent years to support the uptake of cycling for transport [@assuncao-denisIncreasingCyclingTransportation2019a]. These efforts to date have involved a range of interventions from investments in infrastructure to educational programs or promotional events  [@assuncao-denisIncreasingCyclingTransportation2019a]. Large population health gains [@celis-moralesAssociationActiveCommuting2017b] and improved environmental conditions in urban areas [@zahabiExploringLinkNeighborhood2016b] could be achieved if cycling becomes more mainstream in Canada. For instance, Raustrop and Koglin [-@raustorpPotentialActiveCommuting2019] estimated that if nearly half of the residents in Scania county, Sweden cycled to work then almost 20 percent would meet the physical activity guidelines from the World Health Organization. The challenge, however, for developing cycling cities is how to successfully transition to a bicycle-friendly city where healthy and active modes of travel constitute a larger part of the mode share.
 
-Cycling experts from both The Netherlands and New Zealand agree on the "importance of providing a basic level of safe, high quality infrastructure as an essential starting point for inducing utility cycling mode share" [@adamPlanningCyclingDispersed2020, p. 8]. This suggests that cycling infrastructure is a universal prerequisite in countries with an established culture of cycling for transport and in countries with low levels of cycling. Likely for this reason, cities where cycling is less mainstream have started building infrastructure to encourage more cycling. The case of Seville, Spain is a great example of the success that can be achieved by implementing a network of connected facilities at a rapid pace [@marquesHowInfrastructureCan2015a]. Revealed and stated preference studies have been informative about the types of environments that people who cycle prefer and have further reinforced that cycling infrastructure is fundamentally important. Using global positioning system (GPS) data, several studies have found that cyclists travel routes that have on-street and off-path cycling facilities and streets with low volumes of traffic [@broachWhereCyclistsRide2012; @dillBicyclingTransportationHealth2009, @luUnderstandingBikeShare2018; @misraModelingCyclistRoute2018]. Stated preference studies also indicate that cyclists dislike mixing with traffic and prefer dedicated infrastructure [*inter alia*, see @clarkUserPreferencesBicycle2019a; @caulfieldDeterminingBicycleInfrastructure2012; @stinsonCommuterBicyclistRoute2003; @veilletteDoesOneBicycle2019; @wintersMotivatorsDeterrentsBicycling2011]. Cyclists are also willing to detour from the shortest path to access preferred cycling facilities or areas that are more pleasant to cycle [@krizekGenderDifferencesBicycling2004; @wintersHowFarOut2010; @marquartPlannedPerceivedCity2020]. However, Pucher et al. [-[@pucherInfrastructureProgramsPolicies2010a] note that cities take action to increase the utility of cycling compared to driving and that support individual behaviour change have been most successful in increasing their cycling levels. 
+Cycling experts from both The Netherlands and New Zealand agree on the "importance of providing a basic level of safe, high quality infrastructure as an essential starting point for inducing utility cycling mode share" [@adamPlanningCyclingDispersed2020, p. 8]. This suggests that cycling infrastructure is a universal prerequisite in countries with an established culture of cycling for transport and in countries with low levels of cycling. Likely for this reason, cities where cycling is less mainstream have started building infrastructure to encourage more cycling. The case of Seville, Spain is a great example of the success that can be achieved by implementing a network of connected facilities at a rapid pace [@marquesHowInfrastructureCan2015a]. Revealed and stated preference studies have been further informative about the types of environments that cyclists prefer and have reinforced that cycling infrastructure is fundamentally important. Using global positioning system (GPS) data, several studies have found that cyclists travel routes that have on-street and off-path cycling facilities and streets with low volumes of traffic [@broachWhereCyclistsRide2012; @dillBicyclingTransportationHealth2009; @misraModelingCyclistRoute2018]. Stated preference studies also indicate that cyclists dislike mixing with traffic and prefer dedicated infrastructure [*inter alia*, see @clarkUserPreferencesBicycle2019a; @caulfieldDeterminingBicycleInfrastructure2012; @stinsonCommuterBicyclistRoute2003; @veilletteDoesOneBicycle2019; @wintersMotivatorsDeterrentsBicycling2011]. 
 
-In the case of North America, Buehler and Dill [-@buehlerBikewayNetworksReview2016b] note that people who cycle often travel on shared roadways likely due in part to cities' fragmented cycling networks and more limited facilities. When they do have to share the road with other users, further research in both Canada and the United States has found that people who cycle prefer routes that have fewer cars such as residential areas with traffic calming [@wintersRoutePreferencesAdults2010] or bicycle boulevards [@broachWhereCyclistsRide2012]. This has implications for the widespread adoption of cycling; the provision of infrastructure matters but so do other attributes that make streets friendlier to cycling. People who do not currently cycle report that they need protected infrastructure and safe routes [@wintersRoutePreferencesAdults2010]. Félix et al. [-@felixMaturingUrbanCycling2019] also found that both cyclists and non-cyclists perceived a lack of safe routes as a barrier to cycling in Lisbon, Portugal where cycling levels are currently low. This suggests that not only do developing cycling cities have to sufficiently meet the needs and preferences of those who currently cycle, but they also have to be mindful of factors that hinder more people from cycling. In particular, developing cycling cities should be implementing infrastructure that is perceived to be safe and useable for a range of ages and abilities in order to make cycling more appealing to a larger segment of the population.
+In developing cycling cities, people who currently cycle are in the unique position of observing and experiencing how the city changes over time to become more bicycle-friendly. Their experiences can highlight the extent to which a city's current efforts support or hinder cycling. A few studies in developing cycling cities have found a similarity in route preferences and barriers to cycling between cyclists and non-cyclists [see @felixMaturingUrbanCycling2019; @clarkUserPreferencesBicycle2019a; @wintersRoutePreferencesAdults2010] which also suggests that the perspectives of regular cyclists may also be informative about what could be improved to encourage more people to cycle. Qualitative methods that examine the experience and perceptions of cycling in such settings can help to overcome important gaps in research about the influence of the built environment. For example, interviews or mapping exercises [see @mantonUsingMentalMapping2016 and @marquartPlannedPerceivedCity2020] and ride-alongs [@vanduppenRetracingTrajectoriesEmbodied2013] may shed more light on reasons for where people cycle and how cycling is experienced. Marquart et al.’s [@marquartPlannedPerceivedCity2020] interviews with cyclists and experts in politics and planning demonstrate that qualitative approaches are useful for exploring perceptions that are otherwise less known or perceived differently by planners. Environmental audits can also be a useful tool to document how the built environment supports active travel [@moudonWalkingBicyclingEvaluation2003], and have been used in studies to explore walkability. Qualitative evidence can thus complement objective assessments of the physical environment captured through methods like environmental audits or GIS [see @leePerceptionsWalkabilityDeterminants2018].
 
-In cities where cycling is less mainstream, those who feel comfortable or safe enough to cycle are in the unique position of observing and experiencing how the city changes over time to become more bicycle-friendly. With more limited facilities or a cycling network under development, cyclists in developing cycling cities can typically expect to travel routes from their origin to destination that include a mix of streets with and without infrastructure, or that may require them to negotiate space with other road users at one or more points along the way. Their experiences can then highlight the extent to which a city's current efforts support or hinder cycling. A few studies have found a similarity in route and infrastructure preferences between cyclists and non-cyclists [see @wintersRoutePreferencesAdults2010 and @clarkUserPreferencesBicycle2019a] which also suggests that the perspectives of people who currently cycle may also be informative about what might need to be improved to encourage more people to cycle. Qualitative methods that can examine the experience and perceptions of cycling in such settings, such as interviews or mapping exercises [see @mantonUsingMentalMapping2016 and @marquartPlannedPerceivedCity2020] or ride-alongs [@vanduppenRetracingTrajectoriesEmbodied2013], are one way to overcome these gaps in research [@liuConceptualizingCyclingExperience2018]. Furthermore, in cities where there is potential to increase cycling but it is currently not mainstream, measuring the extent to which a neighbourhood or street can support cycling can help to explain existing levels of travel but also identify opportunities to modify the urban design. Qualitative evidence can thus complement objective assessments of the physical environment captured through methods like environmental audits or GIS. More concretely, Liu et al. [-@liuConceptualizingCyclingExperience2018] highlight: “providing opportunities to complement research about the macro relationship between built environment variables with a nuanced understanding of the micro street-level characteristics that affect the experience of the cyclist throughout a journey” is important. 
+This qualitative description study compares objectively measured attributes and cyclists' perceptions of the built environment along cycling routes in Hamilton, Ontario. This mixed-methods project explored the influence of the built environment on cycling in a mid-sized city with low but growing cycling levels. In previous research, we found that the *quietest* distance route between cycling trip zones of origin and destination inferred by *CycleStreets*^[https://www.cyclestreets.net/] best explained cyclist travel in Hamilton [paper submitted to *Transportation*]. Given that the routes were inferred, we did not know the quality of their built environment or how well they match where cyclists actually travel. To further explore these objectives, we audited 6 inferred routes to document attributes that might influence cycling. We then conducted 14 semi-structured interviews with regular cyclists to examine their perceptions of the routes. 
 
-In this qualitative description study, we report on the findings from a series of environmental audits and 14 semi-structured interviews with regular cyclists in Hamilton, Canada. This project explored the influence of the built environment on cycling in Hamilton, a mid-sized city with low but growing cycling levels. This paper builds upon previous research [see @Desjardins2020a] where we found that the *quietest* distance route between cycling trip zones of origin and destination inferred by *CycleStreets*^[https://www.cyclestreets.net/] best explained cyclist travel in Hamilton. Given that the routes were inferred, we did not know the quality of their built environment or how well they match routes that are actually travelled by cyclists. To further explore the objective environment along the inferred routes, we audited 12 routes, of which we report on 6 here, to document micro-level factors that might influence cycling and explain why such routes best explain cyclist travel. We also conducted semi-structured interviews with people who regularly to examine their perceptions of the routes. 
-
-2. Methods, Research Setting, and Materials {#sec:methods}
+Methods, Research Setting, and Materials {#sec:methods}
 =========================================
 
-## 2.1. Research Setting
+## Research Setting
 
-Hamilton is a mid-sized city located in Canada with a population of roughly 540,000 according to the 2016 Canadian Census [@Statistics2016]. Similiar to other Canadian cities, cycling levels have grown in recent years; the mode share of cycling for transport doubled from 0.6% in 2011 to 1.2% according to the 2016 *Transportation Tomorrow Survey* [@Dmg2018]. This voluntary travel survey is conducted every 5 years to collect information about urban travel for commuting purposes in Southern Ontario [@TTS2018]. Between the 2011 and 2016 surveys, the City of Hamilton implemented a public bicycle share system and added 85 kilometres of bicycle lanes. As of 2019, approximately 46% of the cycling network has been built [@Hamilton2020], with the goal of implementing all proposed infrastructure by 2029 [@Hamilton2018]. Therefore, it is suggested that Hamilton is in a state of transition at this mid-way point; infrastructure and interventions have been implemented to increase cycling levels, but the network is fragmented and the cycling culture is still growing. Further analysis of the 2016 *Transportation Tomorrow Survey* revealed that 35% of all current trips in Hamilton are 5 km or less, which means that these trips could be cycled [@Mitra2016]. Thus, there is the potential to incentivize modal shifts that specifically increase opportunities for physical activity and that bring environmental benefits to the city. 
+Hamilton is a mid-sized city located in Canada with a population of roughly 740,000 according to the 2016 Canadian Census [@Statistics2016]. Similiar to other Canadian cities, cycling levels have grown in recent years; the mode share of cycling for transport doubled from 0.6% in 2011 to 1.2% according to the 2016 *Transportation Tomorrow Survey* (*TTS*) [@Dmg2018tts]. This voluntary travel survey is conducted every 5 years to collect information about urban travel for commuting purposes in Southern Ontario [@Dmg2018tts]. Between the 2011 and 2016 surveys, the City of Hamilton implemented a public bicycle share system and added 85 kilometres of bicycle lanes. As of 2019, approximately 46% of the cycling network has been built and approximately 15 to 20 km of new facilities are added each year. The City's current Cycling Master Plan states that the goal is to implement all proposed infrastructure by 2029 [@Cmp2009], but the City's typical annual investment in cycling infrastructure falls short of what is needed to meet this goal. Therefore, it is suggested that Hamilton is a developing cycling city because it is currently in a state of transition. At this mid-way point in the cycling network development, interventions have been implemented to increase cycling levels, but the network is currently fragmented and the cycling culture is still growing. Further analysis of the 2016 *TTS* revealed that 35% of all current trips in Hamilton are 5 km or less [@Mitra2016], which means that these trips could be cycled. Thus, there is the potential to incentivize modal shifts that specifically increase opportunities for physical activity. The City of Hamilton also aims to have 15% of the mode share be comprised of walking and cycling trips by 2031 [@Tmp2018]. The city is relatively flat but is separated by the Niagara Escarpment, referred to locally as "the mountain", which can be as high as 100m in many places. The rural and suburban parts of the city are on top of the Escarpment and the lower city and downtown core are below [see Figure 1 for reference]. 
 
-The city is relatively flat but is separated by the Niagara Escarpment which can be as high as 100m in many places. The rural and suburban parts of the city are on top of the Escarpment and the lower city and downtown core are below [see Figure 1 and 2 for reference]. This leads to less cycling between the lower city and areas on the Escarpment; most of the city’s cycling trips occur in the west part of the city and downtown core. Part of the area above the Niagara Escarpment is referred to locally as ‘the mountain’ and will be used interchangeably with the 'Escarpment' throughout the paper. 
+![Traffic analysis zones in Hamilton that produced cycle trips.](/Users/elise/Documents/GitHub/Environmental-Audits-Cycling-Routes-Hamilton/Images/TAZ-Hamilton.png)
 
-## 2.2. Study Design
+## Previous Research
 
-In a forthcoming paper [@Desjardins2020], we used bicycle trips from the 2016 *Transportation Tomorrow Survey* (*TTS*) to develop a spatial interaction model that investigated the built environment correlates of cycling flows in Hamilton. The model included several objective measures of the built environmental at the traffic zone level that are known to influence cycling, for instance residential density and availability of jobs. The *TTS*, while informative about the traffic zones of origin and destination of cycling trips in Hamilton, did not reveal the route choice of respondents. A novel feature of this model was the use of a cycle routing algorithm, *CycleStreets* [@Lovelace2018], to infer different types of cycle routes between zones of origins and destinations that a knowledgeable cyclist could take. The distance and time of three different types of routes, characterized as *fastest*, *quietest*, or *balanced* by the *CycleStreets* algorithm, were used as measures of impedance in the spatial interaction model. Briefly, the [R package](https://cran.r-project.org/web/packages/cyclestreets/index.html) states, “These represent routes taken to minimize time, avoid traffic, and compromise between the two, respectively” [@Lovelace2018, p. 1]. Additional details about how the algorithm infers routes is available [online](https://www.cyclestreets.net/help/journey/howitworks/). The development, methodology for inferring the routes, and the findings of the model are described in a forthcoming paper [@Desjardins2020a].
+In a forthcoming paper [submitted to *Transportation*], we used bicycle trip data from the 2016 *TTS* to develop a spatial interaction model that investigated the built environment correlates of cycling flows in Hamilton. While the *TTS* is informative about the traffic zones of origin and destination of cycling trips, it does not reveal the route choice of respondents. A novel feature of this model was the use of a cycle routing algorithm, *CycleStreets* [@Lovelace2018], to infer different types of cycle routes between zones of origins and destinations. The centroid of each traffic analysis zone, the geographical unit of analysis used by the *TTS*, serves as the start and end point for these inferred routes. The distance and time of three different types of routes, characterized as *fastest*, *quietest*, or *balanced* by the *CycleStreets* algorithm, were used as measures of impedance in the model. Briefly, the [R package](https://cran.r-project.org/web/packages/cyclestreets/index.html) states, “These represent routes taken to minimize time, avoid traffic, and compromise between the two, respectively” [@Lovelace2018, p. 1]. Additional details about the algorithm are available [online](https://www.cyclestreets.net/help/journey/howitworks/). The model revealed that inferred *quietest* routes that allow cyclists to minimize distance and interactions with other road users best explain the pattern of travel by bicycle in Hamilton [paper submitted to *Transportation*]. This suggests that cyclists in Hamilton are seeking out routes that enable them to avoid traffic while potentially maximizing the use of residential streets over arterial roads. We then used the model to identify trip flows where there was more or less cycling than expected. The model did not capture any route-level characteristics beyond the data available for Hamilton through *OpenStreetMap* that was used by the algorithm. Therefore, it is hypothesized that more cycling occurred between zones of origin and destination that were under-estimated because the inferred routes facilitate cycling, for example through the provision of infrastructure. Conversely, cycling trips may have been over-estimated if routes between zones of origin and destination are less supportive of cycling.
 
-The model revealed that inferred *quietest* routes that allow cyclists to minimize distance and interactions with other road users best explain the pattern of travel by bicycle in Hamilton [see @Desjardins2020a]. This suggests that people who cycle in Hamilton are seeking out routes that enable them to avoid traffic while potentially maximizing the use of residential streets over arterial roads. This finding aligns with a recent study using GPS data from Hamilton’s public bicycle share system. Researchers found that bike share users travel routes that are significantly longer than the shortest path distance and are more likely to use local streets with low traffic and bicycle facilities [@luUnderstandingBikeShare2018]. Similar to the work of Moniruzzaman and Páez [-@moniruzzamanModelbasedApproachSelect2012b], who developed a model-based approach for investigating walking shares, we used the spatial interaction model to identify cycling trip flows where there was more or less cycling than expected. A further exploratory and descriptive analysis of the model residuals revealed the extent to which cycling trip flows was over- or under-estimated [see @Desjardins2020a]. The use of *CycleStreets* was efficient for objectively inferring a large number of routes and then estimating which type of route best explained the pattern of cyclist travel in Hamilton, however the model did not capture any route-level characteristics of the built environment beyond the data available through *Open Street Map* that was used by the algorithm. We hypothesize that more cycling trips between zones of origin and destination were under-estimated because the inferred routes had attributes that support cycling, such as the provision of infrastructure, that were unexplained by the algorithm and the model. Conversely, cycling trips may have been over-estimated if routes between zones of origin and destination are less supportive of cycling. While there is no way of knowing which routes were actually travelled for the trip flows, we were able to provide statistical support for *quietest* routes that minimize distance. The extent to which the inferred routes support or hinder cycling can now be examined by documenting the built environment. We can also explore how people who cycle perceive the inferred routes, with respect to whether they facilitate cycling, and if the routes match where cyclists travel.   
+## Methods
 
-## 2.3. Methods
+### Environmental Audits
 
-### 2.3.1. Environmental Audits
+We conducted environmental audits along 6 inferred routes that were most poorly predicted by the model. The *Systematic Pedestrian and Cycling Environmental Scan* (*SPACES*)^[[SPACES Audit Instrument](https://activelivingresearch.org/sites/activelivingresearch.org/files/SPACES_Audit_Instrument_0.pdf)] [@pikoraDevelopingReliableAudit2002] was selected because it documents the presence or absence of observable characteristics that are potential influences of walking and cycling. The framework describes four domains of the built environment that influence physical activity: functional, safety, aesthetic, and destination [@pikoraDevelopingFrameworkAssessment2003]. The instrument was developed for use along street segments within neighbourhoods around a residential location. While the cycling trip flows in Hamilton occur beyond the 400m neighbourhood range, our unit of analysis, namely segments of a street, is the same as the *SPACES Instrument*. The instrument also includes an extensive range of measurable features that have been identified in the literature which meet our objective in conducting an exploratory and descriptive analysis of attributes along cycling routes. For these reasons, we determined that the *SPACES Instrument* was suitable for our purposes. This instrument was also selected because it was developed for researchers and is relatively simple to use [@moudonWalkingBicyclingEvaluation2003]. The instrument comes from the field of health and the factors included in the audit were guided by stakeholder interviews and a Delphi study [@pikoraDevelopingFrameworkAssessment2003].
 
-To assess the micro-level attributes of the built environment that might influence cycling along the inferred routes, we conducted environmental audits along 12 routes that were most poorly predicted by the model. This means that these routes were strongly over-estimated or under-estimated and therefore would. Moudon and Lee’s [-@moudonWalkingBicyclingEvaluation2003] review of audit instruments was consulted to compare different instruments and to select the most appropriate one for the study’s objectives. Among those reviewed by Moudon and Lee [-@moudonWalkingBicyclingEvaluation2003], the *Systematic Pedestrian and Cycling Environmental Scan* (*SPACES*)^[[SPACES Audit Instrument](https://activelivingresearch.org/sites/activelivingresearch.org/files/SPACES_Audit_Instrument_0.pdf)] [@pikoraDevelopingReliableAudit2002] was selected because it documents the presence or absence of observable characteristics that are potential influences of walking and cycling. The framework describes four domains of the built environment that influence physical activity: functional, safety, aesthetic, and destination [@pikoraDevelopingFrameworkAssessment2003]. The instrument was developed for use along street segments within neighbourhoods around a residential location. While the trip flows occur beyond the 400m neighbourhood range, our unit of analysis, namely segments of a street, is the same as the *SPACES Instrument*. The instrument also includes an extensive range of measurable features that have been identified in the literature which meet our objective in conducting an exploratory and descriptive analysis of attributes along cycling routes. Therefore, for these reasons, we determined that the *SPACES Instrument*was suitable for our purposes. This instrument was also selected because it was developed for researchers and is relatively simple to use [@moudonWalkingBicyclingEvaluation2003]. The instrument comes from the field of health and the factors included in the audit were guided by stakeholder interviews and a Delphi study [@pikoraDevelopingFrameworkAssessment2003]. The inter- and intra-rater reliability of the instrument were found to be generally high [@pikoraDevelopingReliableAudit2002]. Two studies have modified the instrument for research purposes in recent years: in Madrid, Spain [@gullonAssessingWalkingCycling2015a] and in Auckland, New Zealand [@badlandCanVirtualStreetscape2010].
+The *SPACES Instrument* was adapted to the local context in Hamilton. Cycling was the primary focus of this study; accordingly, some factors that were less influential on cycling, according to the literature, were removed for ease of data collection. The features that were removed from the instrument used in this study include: *permanent path obstructions*, *pedestrian crossing aids*, *surveillance*, *building design*, and *driveway crossovers*. Other features were combined: all types of maintenance instead of specific categories, and the types of paths. A broader range of cycling facilities, buildings, and traffic calming measures that are found in Hamilton were also added. The modified *SPACES Instrument* is shown in Appendix A and the Hamilton cycling guide added to the *SPACES Observation Manual* is found in Appendix B. The first author and three research assistants conducted the audits during October and November 2019. The first author was the only auditor who has cycling experience in Hamilton. Each auditor participated in a training exercise led by the first author to become familiar with the *SPACES Instrument* and the *SPACES Observation Manual*^[[SPACES Observation Manual](https://activelivingresearch.org/sites/activelivingresearch.org/files/SPACES_Observation_Manual.pdf)] [@pikoraDevelopingReliableAudit2002], and to standardize the way in which the audits were carried out. The majority of routes (n = 4/6) were audited by a pair of research assistants who filled out the instrument together. Two routes (n = 2/6) were audited by the first author alone. The auditors were instructed to discuss any disagreements and reach consensus before filling out the instrument. Once the audits were completed, the features of each route segment were manually recorded in an Excel sheet by the first author. Any perceived errors in data collection were reviewed using Google Street View and were corrected by the first author. A descriptive analysis of each route was performed in R to determine the presence and frequency of features along each route.
 
-The *SPACES Instrument* was adapted to the local context in Hamilton. Cycling was the primary focus of this study; accordingly, some factors that were less influential on cycling, according to the literature, were removed for ease of data collection. The features that were removed from the instrument used in this study include: *permanent path obstructions*, *pedestrian crossing aids*, *surveillance*, *building design*, and *driveway crossovers*. Other features were combined: all types of maintenance instead of specific ctegories, and the types of paths. A broader range of cycling facilities and traffic calming measures that are found in Hamilton were also added to the instrument. The modified *SPACES Instrument* is shown in Appendix A and the Hamilton cycling guide added to the *SPACES Observation Manual* is in Appendix B. The first author and three research assistants conducted the audits during October and November 2019. The first author was the only auditor who has cycling experience in Hamilton. Each auditor participated in a training exercise led by the first author to become familiar with the *SPACES Instrument* and the *SPACES Observation Manual*^[[SPACES Observation Manual](https://activelivingresearch.org/sites/activelivingresearch.org/files/SPACES_Observation_Manual.pdf)] [@pikoraDevelopingReliableAudit2002], and to standardardize the way in which the audits were carried out. The training exercise was also useful to improve the clarity of the additional sections specific to Hamilton that were added to the instrument. The majority of routes (n = 10/12) were audited by a pair of research assistants who filled out the instrument together. Two routes (n = 2/12) were audited by the first author alone due to a scheduling conflict with the other research assistants. The auditors were instructed to discuss any disagreements and reach consensus before filling out the instrument. Once the audits were completed, the features of each route segment were manually recorded in an Excel sheet by the first author. Any perceived errors in data collection were reviewed using Google Street View and were corrected. A descriptive analysis of each route was performed in R to determine the presence and frequency of features along each route.
+### Qualitative Interviews
 
-### 2.3.2. Qualitative Interviews
-
-In addition to documenting the built environment attributes that might explain why the inferred routes were over- or under-estimated, we also examined how well the routes matched where cyclists travel or would travel in Hamilton and explored how people who cycle perceive these routes. Following the audits, 14 people who regularly cycle in Hamilton were recruited to participate in a 90-minute semi-structured interview (see Table 1 for demographics of participants). We employed a convenience sampling strategy to recruit participants using posters in local bike stores and coffee shops in Hamilton and a social media post on Twitter. Members of the City of Hamilton's Cycling Advisory Committee were also invited to participate. A total of 28 people responded to the recruitment notice, and the first 14 who met the inclusion criteria were recruited to the study. Inclusion criteria were as follows: age (18 years of age or older) and regular travel by bicycle for transport in Hamilton. The latter was defined as cycling for transport at least once per week. Cyclists who ride for recreational purposes only or who did not meet the age criteria were excluded. 
+Following the audits, 14 cyclists in Hamilton were recruited to participate in a 90-minute semi-structured interview [see Table \ref{tab:demographics} for demographics of participants]. We employed a convenience sampling strategy to recruit participants using posters in local bike stores and coffee shops in Hamilton and a social media post on Twitter. A total of 28 people responded to the recruitment notice, and the first 14 who met the inclusion criteria were recruited to the study. Inclusion criteria were as follows: age (18 years of age or older) and regular travel by bicycle for transport in Hamilton. The latter was defined as cycling for transport at least once per week.
 
 ```{r, echo=FALSE}
 data.frame(
@@ -152,26 +175,26 @@ data.frame(
         booktabs = T,
         caption = "\\label{tab:demographics}Demographics of participants (age, gender, self-reported frequency of cycling, and self-reported confidence level).") %>%
   kable_styling(latex_options = c("scale_down", "striped"),
-                font_size = 9)  %>%
-  column_spec(1, italic = T, border_right = T) %>%
-  column_spec(2, width = "5em") %>%
-  column_spec(3, border_left = T)
+                font_size = 7)  %>%
+  column_spec(1, italic = T, border_right = T)
 ```
 
-The first author conducted semi-structured one-to-one interviews with 14 participants, ranging in time from 60 to 90 minutes. The interviews were conducted between November 2019 and January 2020 at either the institution, a local coffee shop, or local library. The findings from the first part of the interview, respecting participants’ general perceptions of the built environment in Hamilton and the factors that affect their route choice or travel by bicycle, are presented in a forthcoming paper [@Desjardins2020b]. This paper describes the findings from the second half of the interviews where participants were asked to review photos of 6 audited routes. Due to time constraints of a typical semi-structured interview, participants only reviewed half of the routes that were audited (see Table 2 for a description of the routes). The routes included in the photo activity were chosen by the authors because they were considered to be potentially the most informative about the influence of the built environment on cycling. More specifically, we were most curious about cyclists’ perceptions of these particular inferred routes. The interviews were audio recorded and later transcribed using Temi, an [online AI-based transcription software](https://www.temi.com/). The first author then reviewed and proofread each transcript.
+The first author conducted the interviews, ranging in time from 60 to 90 minutes, between November 2019 and January 2020 at either the institution, a local coffee shop, or local library. Participants were presented with three packages of photos that each contained two routes (i.e., the first package contained routes *1A* and *1B*; the second  contained routes *2A* and *2B*; and the third contained routes *3A* and *3B*). Table \ref{tab:routes} provides a description of the routes. The photos of the audits were taken from Google Street View. The first two packages each had one route where cycling was over-estimated (i.e., *1A* and *2A*), and one route where cycling was under-estimated (i.e., *1B* and *2B*). The final package had two routes where cycling was under-estimated (i.e., *3A* and *3B*). The routes in each package were paired according to their length and number of segments [see Table \ref{tab:routes}]. Participants did not know which routes were over- and under-estimated. The photos for each route were numbered to make it easier to transcribe and ensure that participants’ comments could be attributed to the appropriate segment. Segments that were long or that had changing attributes in the same segment were depicted through multiple photos. Participants were asked to look through the photos of each route from start to finish and then to share their perceptions by commenting on what they liked and disliked about the route. However, some participants preferred to make comments as they looked through the photos. After commenting on both routes in one package, participants were asked which route they preferred. Additional questions were asked if a participant reported having cycled part of a route or if they described taking a different route than the one inferred. Other follow-up prompting questions were asked to better understand participants' perceptions or experiences of the route. 
 
-Participants were presented with three packages of photos that each contained two routes (i.e., the first package contained routes labelled 1A and 1B; the second package contained routes 2A and 2B; and the third package contained routes 3A and 3B). The photos of the audits were taken from Google Street View. The first two packages each had one route where cycling was over-estimated (i.e., route 1A and 2A) between the zone of origin and destination, and one route where cycling was under-estimated (i.e., route 1B and 2B). The final package had two routes where cycling was under-estimated (i.e., route 3A and 3B) between the zones of origin and destination. The routes in each package were paired according to their length and number of segments (see Table 2). Participants did not know which routes were over- and under-estimated. The photos for each route were numbered to make it easier to transcribe and ensure that participants’ comments could be attributed to the appropriate segment. Segments that were long or that had changing attributes (i.e., land use was different at multiple points in the same segment) were depicted through multiple photos. Participants were asked to look through the photos from start to finish and then to comment on what they liked and disliked about the route. However, some participants preferred to make comments as they looked through the photos. After commenting on both routes in one package, participants were asked which route they preferred (i.e., did they prefer route 1A or route 1B?). Because the routes were inferred, there were additional questions asked if a participant reported having cycled part of a route or if they described taking a different route than the one inferred. Other follow-up and off-script questions were asked to better understand participants' perceptions of the route or their experiences along the route.
+The interviews were audio recorded and later transcribed using Temi, an [online AI-based transcription software](https://www.temi.com/). The first author then reviewed and proofread each transcript. The first author coded all of the interviews and conducted a thematic analysis using both inductive and deductive approaches [@braunUsingThematicAnalysis2006]. Themes were determined by the frequency of codes [@braunUsingThematicAnalysis2006], meaning the number of different participants who expressed a similar like, dislike, or perception for each route. Themes identified using a deductive approach aligned with the attribute categories from the *SPACES Instrument*, while other themes were identified using an inductive approach based on perceptions and experiences that emerged in the interviews. Themes were identified for each individual route and not for the collective of six routes.
 
-Thematic analysis was conducted using the qualitative software NVivo. The first author coded all of the interviews. Themes were determined by the frequency of codes (Braun and Clarke 2006), meaning the number of different participants who expressed a similar like, dislike, or perception for each route. Analysis was conducted in a more quantitative manner to align with the specific questions that participants answered after looking at route (i.e., *What do you like about the route? What do you dislike about the route?*). In this way, themes with respect to participants' perceptions were identified for each individual route and not for the collective of six routes.
+### Ethics
 
-### 2.3.3. Ethics
+This study was approved by the institution's research ethics board in September 2019.
 
-This study was approved by the institutions's research ethics board in September 2019. In accordance with the requirements of the research ethics board, each participant was provided with a letter of information to describe the study and had to sign a consent form prior to beginning the interview. In appreciation of their time, each participant received a $20 gift card to a coffee chain.
-
-3. Findings {#sec:findings}
+Findings {#sec:findings}
 =========================================
 
-A total of 6 inferred routes were reviewed by 14 people who regularly cycle in the second half of the interviews (see Table 2). For each route, we present first the objective features of the route segments to give the reader a sense of the quality of the route (e.g., *on-road features*, *destination features*, *green space*, as well as *attractiveness*, *comfortability*, and *wayfinding* ratings from the auditor(s)), followed by a qualitative description of the perceptions of participants (i.e., what they like or dislike and what they perceive positively or negatively about routes). The characteristics documented from the *SPACES Instrument* are presented only for the side of the street where cyclists would be travelling, which is typically the outer right lane of the roadway, unless travelling on a one-way street with infrastructure in the outer left lane. Each route is accompanied by a map of the street network from origin to destination and by two or more photos to illustrate segments that elicited a significant number of comments from many participants. Many other features measured by the *SPACES Instrument* are not included in this paper due to space constraints, but the full results of the audits are publicly available in an online repository.
+## Observable Route Attributes Measured using the SPACES Instrument
+
+A total of 6 inferred routes were reviewed by 14 cyclists [see Table \ref{tab:routes}]. The results of select objective route attributes are presented in Table \ref{tab:attributes}. The characteristics documented from the *SPACES Instrument* are presented only for the right side of the street where cyclists would typically travel. Each route is accompanied by a map of the street network from origin to destination and by one or more photos to illustrate segments with attributes that elicited comments from many participants. The full results of the audits are available in a Google Drive folder:
+
+> https://drive.google.com/drive/folders/1tYFPrlNgsF_LffzZferBMeMQOcUu3MIH?usp=sharing
 
 ```{r, echo=FALSE}
 data.frame(
@@ -202,209 +225,536 @@ data.frame(
     "5.3 km",
     "4.7 km",
     "3.6 km",
-    "Every day",
     "2.5 km"),
-  Segments = c(
+  "Number of Segments" = c(
     "13",
     "10",
     "27",
     "31",
     "19",
     "20"),
-  Residual = c(
-    "-2.275",
-    "22.874",
-    "-3.63",
-    "21.851",
-    "29.343",
-    "24.728")
+  "Number of Photos" = c(
+    "19",
+    "17",
+    "34",
+    "36",
+    "23",
+    "25")
 ) %>%
   kable("latex",
         booktabs = T,
         caption = "\\label{tab:routes}Description of inferred routes that were audited using the SPACES Instrument.") %>%
   kable_styling(latex_options = c("scale_down", "striped"),
-                font_size = 9)  %>%
-  column_spec(1, italic = T, border_right = T) %>%
-  column_spec(2, width = "5em") %>%
-  column_spec(3, border_left = T)
+                font_size = 7)  %>%
+  column_spec(1, italic = T)
 ```
 
-## 3.1. Package 1
-
-### 3.1.1. Route 1A^[This route was slightly adjusted for the audit. Rather than starting midblock, the audit started one block south at the commercial plaza. Recall that the origin of each inferred route is the centroid of the traffic analysis zone, so this is not the true origin of this cycling flow.]
-
-![*Figure 3. Map of route 1A.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 1A.png)
-
-#### Observable Route Attributes Measured using the SPACES Instrument
-
-This route has 13 segments and connects a commercial plaza in Dundas to the city’s university in west Hamilton. The first three segments (n = 3/13) have a mix of functions including housing as well as services and food locations in two different shopping places. These segments have two or three lanes in each direction and had a traffic signal at two intersections (n = 2/13). These segments lacked cycling facilities but had one or more bus stops per block. One of these segments has a steep uphill slope, but the rest of the route was flat. The route requires a cyclist to make a left turn at an unsignalized intersection on a street with two or three lanes in direction. There are also wayfinding signs from the City’s signed route that advise cyclists to turn left. After this turn, the majority of route segments (n = 9/13) that follow are located on a residential street and have a marked on-street bicycle lane (n = 7/9). This street has one lane in each direction (n = 7/7). From start to end, more than half of the route (n = 7/13) features cycling facilities. The entire route (n = 13/13) was subjectively rated as maintained well (i.e., the street verge looked trim, clean, and the grass was kept up). There were no traffic calming measures along the route. All segments had streetlights (n = 13/13) which covered the path area where one would cycle. All segments have tree canopy where the majority of trees range in height from small to medium. More than half of the segments (n = 7/13) are subjectively rated as *very attractive for cycling*. These segments correspond with those that have an on-street marked bicycle lane. Segments at the beginning of the route (n = 3/13) that were in the commercial area with two or more lanes in each direction were rated as *not attractive for cycling*. The route’s subjectively rated comfortability varied according to the presence or absence of a cycling facility. The segments that had an on-road marked bicycle lane (n = 9/13) or were on less busy segments were rated *easy to cycle*, while those with a signed route (n = 1/13) and no facilities (n = 3/13) were rated as *moderately difficult* and *very difficult*, respectively. There are many destinations along the route that a cyclist could access. The majority of segments (n = 11/13) had good road condition. This route also featured 3 public bicycle share system hubs. Overall, wayfinding was subjectively rated as easy because the route followed a direct path and there were destinations or wayfinding signs to help orient someone who cycles.
-
-#### Cyclists’ Perceptions of the Route
-
-Most participants reported being familiar with this route; they had previously cycled at least part of the route or in this general area. The majority of participants strongly disliked the first 3 segments (n = 13/14) and more than half stated that they would not cycle this part of the route. Those who disliked these segments perceived them to be “*terrible*”, “*terrifying*”, or “*scary*”. Other factors that made them dislike these segments include the lack of cycling facilities or “cyclist space” (n = 7/13), number of traffic lanes (n = 2/13), the width of the lanes (n = 3/13), and the uphill section (n = 4/13) (see Figures 4 and 5). Most participants (n = 9/13) expected car traffic to be moving faster on these segments. However, one participant perceived this part of the route differently: “*It's never super busy that you need two lanes of car traffic. While it's not built for cycling safety, with that in mind, most cars very easily and safely move out of the way and around you. So it's not super scary to bike through.*”
-
-![*Figure 4. Segment 2 of route 1A depicting two or three lanes in each direction and no cycling facilities on the roadway. Lighting and natural views are present. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 3.png)
-
-![*Figure 5. Segment 2 of route 1A depicting the uphill section on a 2 lane arterial road with no on-street cycling infrastructure. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 4.png)
-
-A few participants (n = 3/14) who were familiar with the area reported that they would have chosen to cycle the Hamilton-Brantford Rail Trail, an off-street multi-use trail parallel to the first 3 segments, to avoid travelling on the arterial road. The lack of lateral space to move out of the way in the event of conflict with other road users and the poor condition of the road were also reasons that some participants disliked these segments (see Figure 4). Many cyclists (n = 5/14) noted that there was no sidewalk or shoulder on the right side of the roadway where they would be cycling, with some describing that it would make them feel “*uncomfortable*” or “*anxious*” to cycle without that space. In general, the first 3 segments were perceived to be too busy and not designed for cycling. The left turn from segment 3 to 4 was noted as difficult by a few participants (n = 4/14) or led to “*vulnerability*” because, as two participants described it, “*it’s not the safest*” and “*you’re a sitting duck in the middle of a turning intersection with two lanes of traffic whizzing by*” (see Figure 6).
-
-![*Figure 6. Segment 4 of route 1A depicting the urban design of the street when making a left turn to follow the City's signed bicycle route. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 4.png)
-
-However, the route was generally perceived positively from segment 4 onwards once it entered a residential area. The majority of participants (n = 12/14) specifically reported liking or had positive comments of the segments that had an on-street marked bicycle lane (see Figure 7). Most participants (n = 9/14) also liked these segments because they were perceived to be “residential” or “quiet”, which was described by several participants as meaning less busy with traffic and lower speeds or wide enough that cars and bicycles could safely have their separate space. Based on experience or perceptions, many cyclists (n = 6/14) liked that these segments would were not as busy in terms of car volume. A few participants reported feeling comfortable (n = 4/14) cycling on these segments with infrastructure, compared to the first four that lacked cycling facilities. One said that he felt more relaxed, and participant reported feeling calmer. One cyclist said that she could “feel her pulse dropping” after making the left turn and entering the residential area. Along the segments with the on-street marked bicycle lane, four participants (n = 4/14) reported liking the green space and nature. The only feature noted by two participants that could improve the residential segments was added protection to the on-street marked bicycle lane.
-
-![*Figure 7. Segment 9 of route 1A depicting the on-street marked bicycle lane in a residential neighbourhood.(Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 6.png)
-
-In addition, half of the participants (n = 7/14) stated that they liked the pedestrian-activated signal because it enabled them to cross the arterial road promptly and safely (see Figure 8). The only feature noted by two participants that could improve the residential segments was added protection to the on-street marked bicycle lane. Finally, four participants (n = 4/14) reported liking the nature and trees along the last 12 segments.
-
-![*Figure 8. Segment 13 of Route 1A depicting a pedestrian-activated signal to cross a an arterial road. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 7.png)
-
-
-### 3.1.2. Route 1B
-
-![*Figure 8. Map of route 1B.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 1B.png)
-
-#### Observable Route Attributes Measured using the SPACES Instrument
-
-This route connects two neighbourhoods in the east mountain area and has 10 segments. The entire route is located in a residential area (n = 10/10). The majority of segments (n = 8/10) feature a signed route, indicating that people who cycle are directed with signs from the City of Hamilton to use this route. These segments are on a street that appears to be a direct route in and out of the neighbourhood. All segments (n = 10/10) had one lane in each direction. The first five segments predominantly feature housing (n = 5/10) and one segment had a park (n = 1/5). This is followed by a segment with a school, a park, and more housing (n = 1/10). There is one (n = 1/10) signalized intersection that would require a cyclist to cross an arterial road. The second half of the route (n = 5/10) predominantly features housing. One segment has a park with recreational facilities (n = 1/5). The entire route was subjectively rated as well maintained (n = 10/10). There were no traffic calming measures along the route. Most segments had streetlights (n = 8/10) which covered the path area where one would cycle. Overall, the route is subjectively rated by the auditor as *attractive for cycling* (n = 7/10) meaning that it was mostly aesthetically pleasing. The auditor rated most segments to be *moderately difficult* (n = 7/10) to cycle because there are no separated facilities, and this would require cyclists to mix with traffic along a route with a school and several parks that might have parked cars. This could pose some difficulties depending on the skill of the person cycling. However, the speed limit was observed to be 40 km/h, therefore the route is not expected to have fast traffic. The street pavement on all segments (n = 10/10) is in good condition (i.e., few bumps) and most had a flat slope (n = 9/10) except for one that had a moderate slope (n = 1/10). There were no bus stops along the route. All segments have tree canopy where the majority of trees range in height from small to medium. Wayfinding was rated as not easy at all for most segments (n = 6/10) because the signed route was not consistently displayed, and it might have been easy to get confused because all segments looked fairly similar.
-
-#### Cyclists’ Perceptions of the Route
-
-None of the participants were familiar with this route likely because they did not report cycling often on the mountain (see Chapter 4). This route received overall positive comments from participants (n = 14/14). Cyclists primarily liked the route because it was perceived to have low traffic (n = 5/14), fewer cars (n = 9/14), and was quiet or residential (n = 11/14). Some descriptions of the route include “*nice*”, “*residential*”, “*lots of trees*”, and “*not busy*” (see Figure 10). The lack of infrastructure was noted by several participants (n = 5/14) but only two reported that they disliked this aspect of the route. Only one participant noticed that it was a signed route, but participants reported that they would generally feel comfortable cycling this route. Finally, a few participants (n = 3/14) commented on the good quality of the pavement. Although the route was perceived to be low traffic and residential, some cyclists (n = 4/14) would still have preferred if the route had some type of dedicated cycling facility. Four participants noticed or liked the 40 kilometres/hour speed limit on the route. A few participants (n = 3/14) disliked that the route was not direct; one participant perceived it to be “*disjointed*” and another described it as “*for recreational cycling*”. Two participants (n = 2/14) commented that it did not appear to pass by any key destinations other than the school.
-
-![*Figure 10. Segment 4 of route 1B depicting the streetscape on a signed route in a residential area. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 9.png)
-
-## 3.2. Package 2
-
-### 3.2.1. Route 2A^[This route was slightly adjusted for the audit. CycleStreets inferred that cyclists would cross midblock at an unsignalized intersection towards the end of the route. Cyclists have been found to be sensitive to intersections [@@broachWhereCyclistsRide2012]. Therefore, the audited route was adjusted to a parallel street one block east that would enable a cyclist to cross at a signalized intersection.]
-
-![*Figure 11. Map of route 2A.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 2A.png)
-
-#### Observable Route Attributes Measured using the SPACES Instrument
-
-This route connects the Durand neighbourhood in the downtown core to the city’s university in west Hamilton and had 27 segments. More than half of this route had cycling infrastructure (n = 15/27) but there was a lot of variability in the type of cycling facility present. Many segments lacked cycling facilities (n = 12/27). The route begins with several segments in a mixed use residential area that has services, educational, and food locations (n = 7/27). Most of these segments (n = 6/7) have an on-street marked (n = 5/7) or buffered bicycle lane (n = 1/7). These segments are located on a one-way street that has one lane in a westward direction and cycling facilities on the right side of the roadway (n = 7/7). The buffered bicycle lane ends, and the route requires a cyclist to make a left turn at an unsignalized intersection from a one-way residential street to a segment with one lane of traffic in each direction. These segments (n = 2/27) have an on-street marked bicycle lane and a variety of retail, service, and food locations. The route then takes a right turn to enter another residential area and travels along 5 segments with no cycling facilities (n = 5/27). Next, the route turns right on to an arterial road with two lanes in each direction that lack cycling facilities for two segments. The cyclist then makes a left turn at a signalized intersection on to a segment that had sharrows and a steep slope. The segment that followed is located in a residential area and leads to the Hamilton-Brantford Rail-Trail. There are four segments with an off-street multi-use path. After getting off the trail, most of the segments for the rest of the route (n = 6/7) had one lane in each direction except for the final segment which had two or three lanes (n = 1/7). There is one signalized intersection at the second last segment. The segments that had some type of cycling facility were all in good condition (n = 13/15) and all except for one were flat (n = 14/15). Nearly all segments (n = 24/27) had well-maintained verges that were clean and kept up, and more than half had one lane of traffic in each direction (n = 18/27). Two segments (n = 2/27) were undergoing road repairs at the time of the audit. Two segments had speedhumps (n = 2/27), one near the start of the route and one towards the end. Overall, the majority of the route (n = 24/27) had a good amount of tree coverage where the majority of trees ranged from small to tall. Most of the segments (n = 17/27) were subjectively rated as *attractive* or *very attractive to cycle* and these segments typically corresponded with those that had some type of cycling facility or were a residential street. Similarly, the segments (n = 10/27) that were subjectively rated as *easy to cycle* either had an on-street marked or buffered bicycle lane or an off-street multi-use path. The segments that were rated as *moderately difficult* (n = 13/27) had dedicated infrastructure on a busier street or had no infrastructure on a residential street. Segments that were subjectively rated as *very difficult to cycle* (n = 4/27) were located on streets that had more than 2 lanes of traffic or no facilities. Finally, wayfinding was mostly subjectively rated as fairly easy because there were signs at various points that indicated the different directions that a cyclist could travel and destinations to help orient.
-
-#### Cyclists’ Perceptions of the Route
-
-The participants were familiar with this route and had previously cycled the entire route or parts of it. Cyclists reported liking the cycling infrastructure (n = 14/14), particularly the on-street marked bicycle on segments 2 to 7 and the Hamilton-Brantford Rail Trail on segments 17 to 20 (see Figure 12 and Figure 13). The Rail Trail was perceived to be ideal for cycling: one participant called it a "*superhighway for bicycles*", another described it as a fundamental “*arterial route*” for cyclists in Hamilton. One participant said, “*this is where I want to bike*”, and someone else commented that it reminded him of infrastructure in The Netherlands. Most participants (n = 9/14) also liked that many sections of the route that did not have dedicated on-street infrastructure were on residential streets that were perceived to be “*quiet*” and “*calm*”. Several cyclists liked or noticed (n = 4/14) that the route connected them to or passed by key destinations. One participant remarked that this route was more direct than other routes in the city because the on-street marked bicycle lanes were located on arterial roads.
-
-![*Figure 12. Segment 5 on route 2A depicting an on-street marked bicycle lane on a one-way street with one lane going westward. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 11.png)
-
-![*Figure 13. Segment 18 of route 2A depicting the off-street multi-use path called the Hamilton Brantford Rail Trail. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 12.png)
-
-There were four areas or features along the route that participants disliked or that were more poorly perceived. First, several participants (n = 6/14) disliked or expressed concern about turning left at an intersection without a signal after the bike lane ends. For instance, it was described as “*a little tricky*” and “*problematic*”. The bike lane ending shortly before the intersection requires a cyclist to transition from the right lane to the far left lane of the roadway to turn left. Cyclists who disliked this feature reported often waiting a while to turn left, but it was more challenging for them that people who drive did not always anticipate their need to transition lanes like other road users or that they were not given enough space (see Figure 14).
-
-![*Figure 14. Segment 8 of route 2A depicting the buffered bicycle lane ending and the transition that a cyclist would have to make to get into the left-turn lane. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 13.png)
-
-Second, the short stretch along an arterial road with two lanes in each direction and no dedicated cycling infrastructure (see Figure 15) was strongly disliked by most participants (n = 9/14). Others had mixed perceptions or experiences or reported being fine cycling on a short stretch of this road. Those who strongly disliked the arterial road reported avoiding this street as much as possible or preferred to cycle on the sidewalk instead. For example, the arterial road was perceived to be a “*speedway*” leading to the highway and an area that had “*a lot of car entitlement*”. Third, the left turn at a signalized intersection from the arterial road to a street with sharrows was disliked or concerning for some participants (see Figure 16). Three participants (n = 3/14) shared that they knew or had heard of someone who had been hit from behind when waiting to turn left. A few cyclists try to avoid this area, and one reported that he would have crossed like a pedestrian on the sidewalk instead. Many participants (n = 6/14) noted that they used a similar alternate route to get to the Rail Trail by taking an off-street path through a nearby golf course that helps them avoid this arterial road and intersection entirely.
-
-![*Figure 15. Segment 14 of route 2A depicting an arterial road without on-street cycling infrastructure. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 14.png)
-
-![Figure 16. Segment 14 of route 2A depicting a signalized intersection where a cyclist would turn left on to a street with sharrows to travel to the Hamilton-Brantford Rail Trail. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 14.png)
-
-Finally, most cyclists (n = 9/14) stated that they disliked an intersection at the end of the route that would require them to transition from a residential to arterial road (see Figure 17). There was also a lane of traffic merging to the shared roadway after the intersection. The area was viewed as very busy, confusing, and “not fluid” by participants because there was an off-street multi-use path parallel to the road on the left side of the roadway that could not be accessed swiftly from the right side. One participant who was familiar with this intersection described this alternative to staying on the road: “*The confusing intersection of impending doom. If you don't know what you're doing, you just sort of come up to this and go, "I have no idea what to do." If I was new to the city, I would just... hit the panic button, get off my bike, and then just do what the pedestrians do - which unfortunately would mean doing two crosswalks. If I knew that I was coming [to this intersection] - if I go back [a segment] - right about here after the stop sign, there's a little entrance to the gas station. I'd go up onto the sidewalk so that I can go through this crosswalk and then, making sure there's no traffic coming this way off of Cootes, I'd get onto the bike path there. And then safety. Again, it's an intersection that just doesn't make sense. Not designed by a cyclist. Or someone who just [said], ‘Let's just make this work with what we've got.’ Poorly planned.*” After looking at this intersection, another participant said: “*I find that a lot with cycling - you can get almost to where you need to go and then you have to do one risky thing before you reach your final destination. And I think that's a problem with a lot of the cycle routes in the city, but especially this one.*" However, several participants (n = 5/14) reported that they would have taken an alternate route after leaving the Rail Trail and would have accessed the university campus from another entrance.
-
-![*Figure 17. Segment 29 of route 2A depicting the intersection of a residential road and two arterial roads. (Source: Google Street View)*](/Users/elise/Desktop/Thesis Manuscript/Images/Figure 15.png)
-
-### 3.2.2. Route 2B
-
-![*Figure 16. Map of Route 2B.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 2B.png)
-
-#### Observable Route Attributes Measured using the SPACES Instrument
-
-This route is located in the city’s east end and connects a neighbourhood to a commercial and industrial area. The route has 31 segments. The majority of the route was a signed route (n = 17/31) and the rest had no facilities (n = 13/31) except for one segment (n = 1/31) on the bridge over the Red Hill Valley Parkway that had a separated and protected multi-use trail on the right side of the roadway. There are many destinations along the route that a cyclist could access. The first eight segments were in a predominantly residential area (n = 8/31) on a street with one to three lanes in each direction that had no cycling infrastructure. There was one segment (n = 1/8) in this stretch that had services and natural features. After this part, the cyclist turned right and the segments that followed were a signed route (n = 17/31). These segments had two or three lanes in each direction with a mix of housing and food, retail, and service locations. After the signed route ended, there was one segment on a residential street then the cyclist turned right on to an arterial road with two or three lanes in each direction. This segment had a separated and protected multi-use path. Once the path ended over the Red Hill Valley Parkway, the segment that followed required a cyclist to quickly merge across two or three lanes of traffic to make a left turn at a signalized intersection. The last two segments of the route (n = 2/31) were located in a commercial and industrial area. Several segments had one or more bus stops (n = 9/31). Tree coverage was sparser, with nearly half of segments having no trees at all (n = 14/31). Streetlights were located on the left side of the roadway for most of the route, meaning that there were limited segments (n = 5/31) that had light cover on the right side of the roadway where a cyclist would travel in the direction of the route. There were no traffic calming measures along the route. The majority of segments along the route were well-maintained (n = 23/31), but there were some segments that were undergoing construction (n = 5/31) at the time of the audits or less maintained (n = 2/31). Overall, the route is subjectively rated as *not attractive at all for cycling* (n = 19/31), but there are some segments rated as *attractive* (n = 11/31) or *very attractive* (n = 1/21). There is no discernible pattern corresponding to other features; routes that are both rated as not attractive at all or as attractive are a mix of residential and commercial areas and also a mix of segments with signed route and no facilities. All segments, but one, were subjectively rated as *moderately difficult* (n = 19/31) or *very difficult to cycle* (n = 11/31). This is likely due to the lack of dedicated facilities or the number of lanes being two or more which would require a fair amount of mixing with traffic. The road condition along the segments with a signed route ranged from moderate with some bumps and holes (n = 8/17) to good with few bumps or holes (n = 9/17). Finally, the route was entirely flat and subjectively rated as fairly easy for wayfinding likely because it had a lot of segments along arterial roads that made the route more direct.
-
-#### Cyclists’ Perceptions of the Route
-
-Some cyclists (n = 4/14) reported that they were familiar with this route or that they had previously cycled part of the route. The participants commented that there was a mix of features of the route that they liked and disliked, although generally there were more dislikes. The segments along the route that were perceived to be "*quiet*" or "*residential*" were liked by most participants because car volume and speed were perceived to be lower (see Figure 19). The protected off-street multi-use trail over the Red Hill Valley Parkway was also a feature that most participants liked or that elicited positive comments (n = 9/14), particularly the separation from traffic on a busy arterial road (see Figure 20). In general, the route or segments that were perceived to not be busy were liked or participants reported feeling comfortable cycling there, but the segments where car volume or speed was perceived to be higher were disliked. One participant said, “*The fact that it has a lot of residential streets through the beginning and middle. Those are nice and safe. No problem with that. [But] there's a lot of shared two lane traffic roads and avoiding parked cars, and people getting out of parked cars. So, I'm not going to have a comfortable ride. I'm always going to have to be on my game and looking through car windows to see if someone's in the driver's seat.*”
-
-![*Figure 19. Segment 11 of route 2B depicting a residential area.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 17.png)
-
-![*Figure 20. Segment 30 of route 2B depicting the protected multi-use trail on the right side of the roadway on an arterial road over the Red Hill Valley Parkway.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 18.png)
-
-Some cyclists had mixed perceptions about the width of some of the segments. A few participants commented that at times there appeared to be enough space for people who drive to safely pass cyclists, while others perceived the wide streets to invite people who drive to speeding or to be less comfortable to cyclists. One participant said, “*I think it makes people feel empowered*”, implying that wider streets might encourage people to drive faster. Another participant noted, “*[I dislike] the busy streets. Where there's obviously nothing in place to accommodate cyclists. You would have to act as a vehicle, I guess. There is nothing resembling a bike lane.*” Anticipated car volume and the presence of on-street parking along these segments seemed to influence these views, meaning that the photos of wider segments were generally perceived better than photos of wider segments with on-street parking or more traffic volume (see Figure 21 and Figure 22). This suggests that comfort with lane width is influenced by the perceived busyness, with cyclists preferring to have space away from cars when the road is busier. Some participants (n = 3/14) commented that many segments looked wide enough to incorporate cycling infrastructure, suggesting an upgrade from a signed route to a route with some type of on- or off-street facility would be preferred. Most participants noticed or disliked the poor condition of the road along part of the route (n = 9/14). Finally, most participants (n = 10/14) reported that they disliked the end of the multi-use trail or having to cycle on an arterial road and cross four lanes to make a left turn (see Figure 23).
-
-![*Figure 21. Segment 14 on route 2B depicting a two-lane arterial road with on-street parking.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 19.png)
-
-![*Figure 22. Segment 20 on route 2B depicting a two-lane arterial road with no on-street parking and a wide grassy verge on the right side of the roadway.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 20.png)
-
-![*Figure 23. Segment 31 of route 2B depicting a lane change from the far right side of the roadway to the left-turn lane on a four-lane arterial road.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 21.png)
-
-## 3.3. Package 3
-
-### 3.3.1. Route 3A^[This route was slightly adjusted for the audit. The starting point was midblock on a residential street. The audit started instead at the nearest intersection along the route.]
-
-![*Figure 24. Map of Route 3A.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 3A.png)
-
-#### Observable Route Attributes Measured using the SPACES Instrument
-
-This route is located in Stoney Creek and connects a neighbourhood to an industrial area. The route had 19 segments. There were no segments with cycling infrastructure (n = 19/19). The route starts in a residential area; more than half of the route is residential (n = 13/19) and these segments typically had one lane in each direction (n = 11/13). These segments had one or more trees per block, ranging in height from small to medium. To leave the residential area, the route requires that a cyclist turn left on to an arterial road with two or three lanes in each direction. This intersection is not signalized. The rest of the continues on the arterial road (n = 6/19). The first two segments on this stretch are mixed use; there is housing, services, food, and retail locations. The cyclist then crosses another arterial road, but this intersection has a traffic signal. The route then enters a more industrial area with car and construction services or offices. The last five segments of the route have signs that designate it a truck route and have two or three lanes (n = 3/5) or one lane in each direction (n = 2/5). A few of these segments have one tree approximately every few blocks (n = 3/5) while the other two had one or more per block (n = 2/5). There were no traffic calming measures along the route. Two segments on the arterial road before entering the industrial area had one or more bus stops (n = 2/19). The entire route is rated as *moderately difficult* or *very difficult to cycle* because it lacks cycling facilities. While many segments are residential (n = 13/19), it would require a cyclist to mix with traffic and negotiate both moving and parked cars. The other segments (n = 6/19) are on an arterial road where traffic volume and speed are expected to be higher. Overall, the residential segments are rated as *attractive to cycle* (n = 11/13), but the segments on the arterial road and in the industrial area are rated as *not attractive at all to cycle* (n = 6/19). There are many destinations along the route that a cyclist could access. The area around the end point of the route likely has many employment opportunities.
-
-#### Cyclists’ Perceptions of the Route
-
-None of the participants had cycled in this area or were familiar with this route. The opposite to route 1A, the participants liked the first half of the route and generally disliked features of the second half. The beginning of the route was in a residential area; most cyclists (n = 13/14) reported that they liked the quiet and nicely paved streets (See Figure 25). The lower speed limit of 40 km/h was noticed by several participants (n = 5/14) and some commented that they like travelling on streets with this speed limit (n = 3/14). Once the route left the residential area about mid-way, most participants (n = 10/14) disliked making a left turn to a two-lane arterial road. The segments leading towards the industrial area destination were perceived by some cyclists to be “*uncomfortable*”, “*terrifying*”, and “*busy in terms of traffic*” (see Figure 26). The lack of infrastructure along the arterial roads in the second half of the route suggested to a few cyclists (n = 3/14) that this area was designed for cars [see Figure 27]. One participant described this as, “*you’re just out on a bike in the middle of the highway*”. The route ended in an industrial area which received mixed perceptions; some cyclists commented that traffic volume did not appear to be too heavy in the photos (n = 5/14) while others reported feeling less comfortable cycling in an area where they could expect to see a lot of trucks (n = 7/14). Another participant commented “*it doesn’t look like a cyclist would belong*” in the industrial area.
-
-![*Figure 25. Segment 2 of route 3A depicting a residential street.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 23.png)
-
-![*Figure 26. Segment 13 of route 3A depicting a two-lane arterial road without cycling facilities in a residential area.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 24.png)
-
-![*Figure 27. Segment 15 of route 3A depicting a two-lane arterial road without cycling facilities or a sidewalk leading to a more industrial area.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 25.png)
-
-### 3.3.2. Route 3B^[This route was slightly adjusted for the audit. Rather than starting midblock on an uphill access to the escarpment, which would be an unlikely origin, the audit started two blocks south. Recall that the origin of each inferred route is the centroid of the traffic analysis zone, so this is not the true origin of this cycling flow.]
-
-![*Figure 28. Map of Route 3B.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 3B.png)
-
-#### Observable Route Attributes Measured using the SPACES Instrument
-
-This route connects two neighbourhoods in the downtown core and had 20 segments. This route has cycling facilities for the majority of segments (n = 19/20). The route begins in front of a hospital - the first segment has no facilities and the two segments that follow are signed route (n = 2/20). These segments predominantly have health services (n = 3/20) and one to three lanes in each direction. The route requires a cyclist to cross a signalized intersection and then the on-street cycling facilities begin on a one-way street with one lane of traffic in a westward direction. This route differs slightly from the others in that the cycling facilities are on the right side of the roadway for the next three segments where there is an on-street buffered bicycle lane (n = 1/20) followed by a parking protected bicycle lane (n = 2/20). After this, a cyclist would turn right, and the cycling facilities switch to the left side of the roadway on a one-way street where there is a two-way cycle track (n = 12/20). These segments (n = 12/20) have two or three lanes in a northbound direction, with a parking lane on the right side of the roadway. There are five segments with intersections that have either a traffic signal (n = 2/5), bike signal (n = 1/5), or bike box (n = 2/5). At the end of the route, the two-way cycle track ends because the street becomes two-way. At this point, there is a bike box at the signalized intersection and the two-way cycle track becomes an on-street buffered bicycle lane (n = 1/20) on the right side of the roadway and an on-street marked bicycle lane (n = 1/20) on the left side of the roadway. The route varies in terms of land use; segments at the beginning are predominantly residential (n = 6/20) and the segments with the two-way cycle track are mixed use (n = 12/20) with housing, services, and educational, office, and food locations. The route is mostly flat with the exception of a few segments (n = 2/20) along the two-way cycle track that have a moderate or steep uphill slope. The route had some segments with one or more bus stops (n = 7/20). There were no traffic calming measures along the route. The majority of segments (n = 17/20) had one or more trees per block that ranged in height from small to tall. All segments were well-maintained (n = 20/20) and most of the route was subjectively rated as *attractive* or *very attractive for cycling* (n = 15/20). The majority of segments (n = 11/20) were rated as *easy to cycle* and these segments typically corresponded with those that had on street cycling facilities. The segments that had either no facilities or a signed route (n = 3/20) were rated as *very difficult to cycle*. Due to its location in the downtown core, wayfinding was primarily rated as fairly easy and very easy because of known landmarks on the route like a hospital and the city hall. The entire route was maintained well (n = 20/20).
-
-#### Cyclists’ Perceptions of the Route
-
-This route was familiar to the participants and the majority had cycled at least part of it (n = 13/14). The start of the route near the hospital was perceived to be busy by many participants. Cyclists (n = 14/14) liked that the majority of the route had cycling infrastructure (see Figure 29 and 30). The first few segments at the beginning of the route were perceived to be busy in terms of traffic by several participants, but many noted that people drive slower near the hospital. Several participants noted that they would be fine mixing with traffic in this area.
-
-![*Figure 29. Segment 4 on route 3B with a buffered on-street bicycle lane on a one-way street.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 27.png)
-
-The two-way cycle track was generally perceived well and elicited a lot of comments from participants, likely because they reported using it. However, participants expressed a mix of appreciation and frustration about this “*major cycling infrastructure*”. One participant described the two-way cycle track as “*some of it is taking up space*” on an arterial roadway that was previously designed without accommodation for cyclists (see Figure 30). A few other participants noted that the cycle track was important to increase awareness of cycling. Another commented that the route was “*central*”. It would be comparable, if not the same, as a route for someone driving from the origin to the destination, which suggests that it is relatively direct. While the separation of the on-street infrastructure throughout the route was noticed by most participants, many (n = 9/14) expressed a desire to have enhanced protection along these facilities and disliked the plastic barriers. This was influenced by their experiences cycling in the area. Several participants (n = 6/14) reported that they had witnessed people drive or park in the lanes, as well as drift into them to avoid passing closely to the parked cars. Three participants, one travelling with a young child, reporting being hit by a motorist who was turning left across the cycle track. Many participants reported being vigilant when using this infrastructure because it is a two-way facility on a one-way street. One participant who was hit by a motorist suggested that visual cues should be added to remind people who drive to check their left blind spot before turning. Despite it being a relatively new and important North-South route in the city’s cycling network, cyclists described that it needed full protection and improvements to particular areas that were conflict points with other road users.
-
-![*Figure 30. Segment 8 on route 3B depicting a two-way cycle track on a one-way arterial road.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 28.png)
-
-There were also mixed comments about a few intersections along the route. In each of these cases, the city had installed bike boxes which are a type of infrastructure that is meant to show people who cycle, using green paint on the road, how to position themselves to safely make left or right turns to perpendicular streets that also have cycling facilities. Most cyclists (n = 8/14) reported that the bike boxes were confusing or somewhat confusing, both for them and for people who drive, and that sometimes these were not respected spaces (see Figure 31). They reported that people who drive may park in them if the light was red which prevented cyclists from safely accessing this space to make a turn or transition to another cycling facility. However, other participants (n = 4/14) reported that they really liked the bike boxes and find them useful for those transition points. Finally, several participants (n = 3/14) disliked a few segments on the route where the bike lane passed parking lots in the downtown core. They reported that it was a busy area where people who drive would often cross the bike lane suddenly or without looking for people who are cycling. The route was also perceived to be disconnected or disjointed by some participants (n = 5/14); these comments were in reference to the different or inconsistent types of infrastructure along the route and because the infrastructure ends at certain spots.
-
-![*Figure 31. Segment 20 of route 3B depicting the bike box at the intersection of two cycling facilities. After the intersection, the two-way cycle track on the left side of the roadway because on-street bicycle lanes on both sides of the road.*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 29.png)
-
-## 3.4. Preferred Routes
-
-After reviewing each of the three packages of photos, participants were asked to select which of the two routes in each package they preferred. All participants consistently selected the same routes: *1B* was preferred over *1A*, *2A* over *2B*, and *3B* over *3A*. In the first package, *1A* was an over-estimated route, meaning that there was less cycling than expected by the spatial interaction model, and *1B* was under-estimated. Cyclists preferred route *1B* because they strongly disliked the first three segments of *1A*. Cycling on a route through a residential area with quiet streets was preferred over negotiating shared space on a busy four-lane arterial road even though there are dedicated cycling facilities later in the route. It is worth noting that a few participants commented that they most preferred the second half of *1A* because it had an on-street marked bicycle lane, but that *1B* was a better route overall. Our hypothesis is that *1A* may have been over-estimated by the model because the inferred route by *CycleStreets* included busy segments on a four-lane arterial road and failed to account for the parallel Hamilton-Brantford Rail Trail which was preferred by many participants. The *fastest* and *balanced* routes inferred for this cycling flow also includes the busy segments. The findings from the interviews suggest that the first half of *1A* is poor enough to deter a cyclist from travelling this route. In the second package, *2A* was over-estimated and *2B* was under-estimated. Participants preferred *2A* because it had cycling infrastructure throughout compared to *2B* which had a signed route only for part of it. *2A* was also a familiar route to most participants. In this case, we hypothesize that *2A* was also over-estimated by the model because of the segments on the busy arterial road. It may also have been over-estimated because it had only 6 recorded trips in the TTS for this trip flow despite starting and ending in mixed use areas of the city. Finally, *3B* was preferred for similar reasons that *2A* was preferred; there were on-street cycling facilities for most of the route and it was familiar to most participants. It is hypothesized that this route may have been under-estimated because there were no cycling facilities along part of the inferred quietest distance route until late 2017, which was not captured by the algorithm. The relatively new two-way cycle track along this route is now a popular North-South corridor for cyclists in the downtown core. It is worth noting that one of the participants who was cycling with her child when she was hit by a motorist said that she still preferred *3B* over *3A*: “*I don't know if that's because I bike it. I actually bike this route. Or it's because the city is trying. Whereas here [3A], there's nothing and it just happens to be conveniently quiet streets. Whereas if the Bay Street bike lane didn't exist, with all its problems, it would be much harder to get downtown.*”
+```{r, echo=FALSE}
+data.frame(
+  Attribute = c(
+    "Predominant buildings/features", 
+    "Transport infrastructure", 
+    "Housing", 
+    "Office",
+    "Food (grocery, restaurant)",
+    "Retail",
+    "Other retail (gas station, etc.)",
+    "Industrial",
+    "Educational",
+    "Service",
+    "Natural features",
+    "Cycling facilities",
+    "Sharrows",
+    "Signed route",
+    "Bicycle lane - marked",
+    "Buffered bicycle lane",
+    "Protected bicycle lane",
+    "Two-way cycle track",
+    "Multi-use trail",
+    "Bike path",
+    "Paved shoulder",
+    "No facilities",
+    "Cycling facility has flat or gentle slope",
+    "Cycling facility has moderate slope",
+    "Cycling facility has steep slope",
+    "Road condition is good",
+    "Road condition is moderate",
+    "Road condition is poor",
+    "Road is under repair",
+    "1 traffic lane",
+    "2 or 3 traffic lanes",
+    "4 or 5 traffic lanes",
+    "6 or more lanes",
+    "Traffic calming devices",
+    "Traffic signal",
+    "Bike signal",
+    "Bike box",
+    "Bridge or overpass",
+    "Streetlights are present",
+    "Over 75% of street is well maintained",
+    "Street is clean (no litter, graffiti, etc.)",
+    "1 or more trees per block",
+    "Approx 1 tree for every 2 blocks",
+    "No trees at all",
+    "Very attractive for cycling",
+    "Attractive for cycling",
+    "Not attractive at all for cycling",
+    "Easy to cycle",
+    "Moderately difficult to cycle",
+    "Very difficult to cycle"),
+  "Route 1A" = c(
+    "", 
+    "0", 
+    "69", 
+    "0",
+    "8",
+    "8",
+    "0",
+    "0",
+    "8",
+    "8",
+    "0",
+    "",
+    "0",
+    "8",
+    "54",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "38",
+    "100",
+    "0",
+    "0",
+    "92",
+    "8",
+    "0",
+    "0",
+    "77",
+    "23",
+    "0",
+    "0",
+    "0",
+    "23",
+    "0",
+    "0",
+    "0",
+    "31",
+    "100",
+    "100",
+    "100",
+    "0",
+    "0",
+    "54",
+    "23",
+    "23",
+    "62",
+    "15",
+    "23"),
+  "Route 1B" = c(
+    "", 
+    "0", 
+    "80", 
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "20",
+    "",
+    "0",
+    "80",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "20",
+    "88",
+    "12",
+    "0",
+    "100",
+    "0",
+    "0",
+    "0",
+    "100",
+    "0",
+    "0",
+    "0",
+    "0",
+    "10",
+    "0",
+    "0",
+    "0",
+    "60",
+    "100",
+    "100",
+    "80",
+    "0",
+    "20",
+    "10",
+    "70",
+    "20",
+    "10",
+    "70",
+    "20"),
+  "Route 2A" = c(
+    "", 
+    "3.7", 
+    "63", 
+    "0",
+    "0",
+    "3.7",
+    "0",
+    "3.7",
+    "11.1",
+    "3.7",
+    "11.1",
+    "",
+    "4",
+    "7",
+    "26",
+    "4",
+    "0",
+    "0",
+    "15",
+    "0",
+    "0",
+    "44",
+    "93",
+    "7",
+    "0",
+    "63",
+    "22",
+    "0",
+    "0",
+    "63",
+    "19",
+    "0",
+    "0",
+    "7",
+    "22",
+    "0",
+    "0",
+    "4",
+    "59",
+    "88",
+    "100",
+    "66",
+    "4",
+    "30",
+    "11",
+    "52",
+    "37",
+    "37",
+    "48",
+    "15"),
+  "Route 2B" = c(
+    "", 
+    "3", 
+    "58", 
+    "0",
+    "3",
+    "0",
+    "0",
+    "0",
+    "7",
+    "26",
+    "3",
+    "",
+    "0",
+    "55",
+    "0",
+    "0",
+    "0",
+    "0",
+    "3",
+    "0",
+    "0",
+    "42",
+    "100",
+    "0",
+    "0",
+    "55",
+    "29",
+    "0",
+    "16",
+    "55",
+    "42",
+    "3",
+    "0",
+    "0",
+    "13",
+    "0",
+    "0",
+    "3",
+    "19",
+    "81",
+    "97",
+    "19",
+    "20",
+    "61",
+    "3",
+    "36",
+    "61",
+    "3",
+    "61",
+    "36"),
+  "Route 3A" = c(
+    "", 
+    "0", 
+    "63", 
+    "0",
+    "0",
+    "5",
+    "0",
+    "21",
+    "0",
+    "5",
+    "5",
+    "",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "100",
+    "N/A",
+    "N/A",
+    "N/A",
+    "68",
+    "32",
+    "0",
+    "0",
+    "79",
+    "21",
+    "0",
+    "0",
+    "0",
+    "11",
+    "0",
+    "0",
+    "0",
+    "21",
+    "95",
+    "84",
+    "89",
+    "0",
+    "11",
+    "0",
+    "58",
+    "42",
+    "0",
+    "53",
+    "47"),
+  "Route 3B" = c(
+    "", 
+    "5", 
+    "40", 
+    "10",
+    "0",
+    "5",
+    "0",
+    "0",
+    "5",
+    "30",
+    "5",
+    "",
+    "0",
+    "10",
+    "5",
+    "10",
+    "10",
+    "60",
+    "0",
+    "0",
+    "0",
+    "5",
+    "84",
+    "11",
+    "5",
+    "90",
+    "10",
+    "0",
+    "0",
+    "30",
+    "70",
+    "0",
+    "0",
+    "0",
+    "80",
+    "10",
+    "15",
+    "0",
+    "50",
+    "100",
+    "100",
+    "80",
+    "0",
+    "20",
+    "20",
+    "55",
+    "25",
+    "60",
+    "25",
+    "15")
+) %>%
+  kable("latex",
+        booktabs = T,
+        caption = "\\label{tab:attributes}Results of the objectively measured attributes by percentage of segments along the inferred cycle routes.") %>%
+  kable_styling(latex_options = c("scale_down", "striped"),
+                font_size = 7)  %>%
+  column_spec(1, italic = T, bold = T)
+```
+
+## Cyclists' Perceptions of the Cycling Routes
+
+### Package 3
+
+#### Route 1A^[This route was slightly adjusted for the audit. Rather than starting midblock, the audit started one block south at the commercial plaza. Recall that the origin of each inferred route is the centroid of the traffic analysis zone, so this is not the true origin of this cycling flow.]
+
+![Map of route 1A.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 1A.png)
+
+Most participants reported being familiar with this route; they had previously cycled at least part of the route or in this general area. The majority of participants disliked the segments with a four-lane arterial road that lacked infrastructure, and more than half stated that they would not cycle this part of the route. Factors that made them dislike these segments include the lack of cycling facilities, number of traffic lanes, the width of the lanes, and the uphill section (see Figures 3 and 4). Most participants expected car traffic to be moving faster on these segments.
+
+![Segment 2 of route 1A depicting two or three lanes in each direction and no cycling facilities on the roadway. Lighting and natural views are present. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 3.png)
+
+![Segment 2 of route 1A depicting the uphill section on a 2 lane arterial road with no on-street cycling infrastructure. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 4.png)
+
+A few participants who were familiar with the area reported that they would have cycled the Hamilton-Brantford Rail Trail instead, an off-street multi-use trail parallel to the arterial road. Some cyclists noted that there was no sidewalk or shoulder on the right side of the roadway where they would be cycling, with some describing that it would make them feel “*uncomfortable*” or “*anxious*” without that space. In general, the arterial road without infrastructure was perceived to be too busy and not designed for cycling. The left turn at an unsignalized intersection was also noted as difficult by a few participants (see Figure 5).
+
+![Segment 4 of route 1A depicting the urban design of the street when making a left turn to follow the City's signed bicycle route. (Source: Google Street View)*](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 4.png)
+
+However, the route was generally perceived positively once it entered a residential area. The majority of participants reported liking or had positive comments of the segments that had an on-street marked bicycle lane (see Figure 6). Most participants also liked these segments because they were perceived to be “*residential*” or “*quiet*”, and not as busy in terms of car volume. Some participants reported liking the green space and nature along the on-street marked bicycle lane. In addition, half of the participants stated that they liked the pedestrian-activated traffic signal because it enabled them to cross the arterial road promptly and safely (see Figure 7).
+
+![Segment 9 of route 1A depicting the on-street marked bicycle lane in a residential neighbourhood.(Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 6.png)
+
+![Segment 13 of Route 1A depicting a pedestrian-activated signal to cross a an arterial road. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 7.png)
+
+#### Route 1B
+
+![Map of route 1B.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 1B.png)
+
+None of the participants were familiar with this route. This route received overall positive comments from participants. Cyclists primarily liked the route because it was perceived to have low traffic, fewer cars, and was quiet or residential. Some descriptions of the route include “*nice*”, “*lots of trees*”, and “*not busy*” (see Figure 9). The lack of infrastructure was noted by some participants but only two reported that they disliked this aspect of the route. Only one participant noticed that it was a signed route, but participants reported that they would generally feel comfortable cycling this route. A few participants commented on the good quality of the pavement. Although the route was perceived to be low traffic and residential, some cyclists would still have preferred if the route had a dedicated cycling facility. Four participants noticed or liked the 40 kilometres/hour speed limit on the route. 
+
+![Segment 4 of route 1B depicting the streetscape on a signed route in a residential area. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 9.png)
+
+### Package 2
+
+#### Route 2A^[This route was slightly adjusted for the audit. CycleStreets inferred that cyclists would cross midblock at an unsignalized intersection towards the end of the route. Cyclists have been found to be sensitive to intersections [@broachWhereCyclistsRide2012]. Therefore, the audited route was adjusted to a parallel street one block east that would enable a cyclist to cross at a signalized intersection.]
+
+![Map of route 2A.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 2A.png)
+
+Participants were familiar with this route and had previously cycled the entire route or parts of it. Cyclists reported liking the infrastructure, particularly the on-street marked bicycle and the Hamilton-Brantford Rail Trail, an off-street multi-use path (see Figure 11 and Figure 12). The Rail Trail was perceived to be ideal for cycling: one participant called it a "*superhighway for bicycles*", another described it as a fundamental “*arterial route*” for cyclists in Hamilton. Most participants also liked that many sections of the route that did not have dedicated infrastructure were on residential streets. Several cyclists liked or noticed that the route connected them to or passed by key destinations.
+
+![Segment 5 on route 2A depicting an on-street marked bicycle lane on a one-way street with one lane going westward. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 11.png)
+
+![Segment 18 of route 2A depicting the off-street multi-use path called the Hamilton Brantford Rail Trail. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 12.png)
+
+There were four areas or features along the route that participants disliked or that were more poorly perceived. First, several participants disliked or expressed concern about turning left at an intersection without a signal after the bike lane ends. Cyclists who disliked this feature reported often waiting a while to turn left, that it was challenging for them that motorists did not always anticipate their need to transition lanes like other road users, or that they were not given enough space (see Figure 13).
+
+![Segment 8 of route 2A depicting the buffered bicycle lane ending and the transition that a cyclist would have to make to get into the left-turn lane. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 13.png)
+
+Second, the short stretch along an arterial road with two traffic lanes in each direction and no dedicated cycling infrastructure (see Figure 14) was strongly disliked by most participants. Others had mixed perceptions or experiences or reported being fine cycling on a short stretch of this road. Those who strongly disliked the arterial road reported avoiding this street as much as possible or preferred to cycle on the sidewalk instead. For example, the arterial road was perceived to be a “*speedway*” and an area that had “*a lot of car entitlement*”. Next, the left turn at a signalized intersection from an arterial road to a street with sharrows was disliked or concerning for some participants (see Figure 15). Many participants noted that they used an alternate route to get to the Rail Trail to avoid this arterial road and intersection entirely.
+
+![Segment 14 of route 2A depicting an arterial road without on-street cycling infrastructure. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 14.png)
+
+![Segment 14 of route 2A depicting a signalized intersection where a cyclist would turn left on to a street with sharrows to travel to the Hamilton-Brantford Rail Trail. (Source: Google Street View)](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 14.png)
+
+Finally, most cyclists stated that they disliked an intersection at the end of the route that would require them to transition from a residential to arterial road (see Figure 16). The area was viewed as very busy or “*not fluid*” by some participants because there was an off-street multi-use path parallel to the road on the left side of the roadway that could not be accessed swiftly from the right side. However, several participants reported that they would have taken an alternate route to access the university campus from another entrance.
+
+![Segment 29 of route 2A depicting the intersection of a residential road and two arterial roads. (Source: Google Street View)](/Users/elise/Desktop/Thesis Manuscript/Images/Figure 15.png)
+
+#### Route 2B
+
+![Map of Route 2B.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 2B.png)
+
+Some cyclists reported that they were familiar with this route or that they had previously cycled part of the route. The participants commented that there was a mix of features of the route that they liked and disliked. The segments along the route that were perceived to be "*quiet*" or "*residential*" were liked by most participants because car volume and speed were perceived to be lower (see Figure 18). The protected off-street multi-use trail over the highway was another feature that most participants liked or that elicited positive comments (see Figure 19). In general, the segments that were perceived to not be busy with traffic were liked or participants reported feeling comfortable cycling there, but the segments where car volume or speed were perceived to be higher were disliked. 
+
+![Segment 11 of route 2B depicting a residential area.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 17.png)
+
+![Segment 30 of route 2B depicting the protected multi-use trail on the right side of the roadway on an arterial road over the Red Hill Valley Parkway.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 18.png)
+
+Some cyclists had mixed perceptions about the width of some of the segments (see Figure 20 and Figure 21). A few participants commented that at times there appeared to be enough space for motorists to safely pass cyclists, while others perceived the wide streets to potentially invite speeding. Anticipated car volume and the presence of on-street parking along these segments seemed to influence perceptions about the width of the street and comfortability. Cyclists preferred to have space for a motorist to safely pass. Most participants noticed or disliked the poor condition of the road along parts of the route. Finally, participants reported that they disliked the end of the multi-use trail or having to cycle on an arterial road and cross four lanes to make a left turn (see Figure 22).
+
+![Segment 14 on route 2B depicting a two-lane arterial road with on-street parking.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 19.png)
+
+![Segment 20 on route 2B depicting a two-lane arterial road with no on-street parking and a wide grassy verge on the right side of the roadway.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 20.png)
+
+![Segment 31 of route 2B depicting a lane change from the far right side of the roadway to the left-turn lane on a four-lane arterial road.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 21.png)
+
+### Package 3
+
+#### Route 3A^[This route was slightly adjusted for the audit. The starting point was midblock on a residential street. The audit started instead at the nearest intersection along the route.]
+
+![Map of Route 3A.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 3A.png)
+
+None of the participants had cycled in this area or were familiar with this route. The opposite to Route *1A*, participants liked the first half of the route and generally disliked features of the second half. The beginning of the route was in a residential area; most cyclists reported that they liked the quiet streets and good road condition (See Figure 24). The lower speed limit of 40 kilometres/hour was noticed by several participants and some commented that they like travelling on streets with this speed limit. Once the route left the residential area about mid-way, most participants disliked turning to or cycling on a two-lane arterial road without infrastructure. The arterial road leading towards the industrial was perceived by some cyclists to be designed for cars (see Figure 25 and Figure 26). One participant described this as, “*you’re just out on a bike in the middle of the highway*”. The route ended in an industrial area which received mixed perceptions; some cyclists commented that traffic volume did not appear to be too heavy in the photos while many others reported feeling less comfortable cycling in an area where they could expect a lot of trucks.
+
+![Segment 2 of route 3A depicting a residential street.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 23.png)
+
+![Segment 13 of route 3A depicting a two-lane arterial road without cycling facilities in a residential area.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 24.png)
+
+![Segment 15 of route 3A depicting a two-lane arterial road without cycling facilities or a sidewalk leading to a more industrial area.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 25.png)
+
+#### Route 3B^[This route was slightly adjusted for the audit. Rather than starting midblock on an uphill access to the escarpment, which would be an unlikely origin, the audit started two blocks south. Recall that the origin of each inferred route is the centroid of the traffic analysis zone, so this is not the true origin of this cycling flow.]
+
+![Map of Route 3B.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Route 3B.png)
+
+This route was familiar to the participants and the majority had cycled at least part of it. Cyclists liked that the majority of the route had cycling infrastructure (see Figure 28 and 29). The first few segments at the beginning of the route were perceived to be busy in terms of traffic by several participants, but many noted that people drive slower near the hospital.
+
+![Segment 4 on route 3B with a buffered on-street bicycle lane on a one-way street.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 27.png)
+
+The two-way cycle track (see Figure 29) was generally perceived well and elicited a lot of comments from participants, likely because they reported using it. However, participants expressed a mix of appreciation and frustration about this “*major cycling infrastructure*”. Several participants reported that they had witnessed people drive or park in the lanes, as well as drift into them to avoid passing closely to the parked cars in the outer right lane. Many participants expressed a desire to have enhanced protection along these facilities. Three participants, one travelling with a young child, reporting being hit by a motorist who was turning left across the cycle track. Others reported being vigilant when using this infrastructure because it is a two-way facility on a one-way street. Despite it being a relatively new and important North-South route in the city’s cycling network, cyclists described that it needed improvements in particular areas that were conflict points with other road users.
+
+![Segment 8 on route 3B depicting a two-way cycle track on a one-way arterial road.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 28.png)
+
+There were also mixed comments about a few intersections along the route that had bike boxes. Most cyclists reported that this infrastructure could be confusing, both for them and for motorists, and that sometimes motorists park in them if the light is red (see Figure 30). However, others reported that they liked the bike boxes and find them useful for transition points. The route was also perceived to be disconnected or disjointed by some participants; these comments were in reference to the different or inconsistent types of infrastructure along the route and because the infrastructure ends or is missing at certain spots.
+
+![Segment 20 of route 3B depicting the bike box at the intersection of two cycling facilities. After the intersection, the two-way cycle track on the left side of the roadway because on-street bicycle lanes on both sides of the road.](/Users/elise/Documents/GitHub/Environmental Audits in Hamilton, Ontario/Images/Figure 29.png)
+
+## Preferred Routes
+
+After reviewing each of the three packages of photos, participants were asked to select which of the two routes in each package they preferred. All participants consistently selected the same routes: *1B* was preferred over *1A*, *2A* over *2B*, and *3B* over *3A*. In the first package, cyclists preferred route *1B* because they disliked the first three segments of *1A*. Cycling on route *1B* on residential streets was preferred over negotiating shared space on a busy four-lane arterial road even though there were dedicated cycling facilities later in the route. It is worth noting that a few participants commented that they most preferred the second half of *1A* because it had an on-street marked bicycle lane, but that *1B* was a better route overall. In the second package, participants preferred *2A* because it had cycling infrastructure throughout compared to *2B* which had a signed route only for part of it. *2A* was also familiar to most participants. Finally, *3B* was preferred for similar reasons that *2A* was preferred; there were on-street cycling facilities for most of the route and it was familiar to most participants.
 
 Discussion and Conclusion {#sec:discussion}
 =========================================
 
-The environmental audits revealed that the *quietest* distance routes inferred by *CycleStreets* had a mix of micro-level attributes that support or hinder cycling. This helped to explain why certain trip flows were over- and under-estimated in the spatial interaction model [see @Desjardins2020a]. The use of *CycleStreets* to infer different types of routes was practical because the *Transportation Tomorrow Survey* was not informative about routes travelled by respondents. All inferred routes included streets in residential areas with lower volumes of cars or cycling infrastructure, which studies have shown are attributes that are preferred by people who cycle in cities where cycling is less mainstream [@caulfieldDeterminingBicycleInfrastructure2012; @clarkUserPreferencesBicycle2019a]. The presence of multi-lane arterial roads that lacked infrastructure can help to explain why routes *1A* and *2A* were over-estimated. As the photo activity revealed, both routes had several segments that many participants reported that they would never cycle. With respect to the routes that were under-estimated (i.e., *1B*, *2B*, *3A*, and *3B*), there were many features that might influence cycling. For instance, two of the four (i.e., *2B* and *3B*) had some type of separated cycling facility. Three of the four routes (i.e., *1B*, *2B*, and *3A*) included residential streets with lower volumes of traffic. Based on the routes audited, we observed that the algorithm makes sensible recommendations that a knowledgeable cyclist could take. Three of the six routes, *1A*, *2A*, and *3B*, were familiar or partly familiar to many participants which suggests that the inferred routes do match where cyclists actually travel in Hamilton. We were also able to provide further support to the finding from the quantitative phase that the *quietest* distance routes best explain cyclist travel in Hamilton. 
+The environmental audits revealed that each of the routes had a mix of attributes that support or hinder cycling. This can be expected in a developing cycling city with a cycling network under development. The audits helped to explain why certain trip flows were over- or under-estimated by the model. All inferred routes included residential streets with lower volumes of cars or cycling infrastructure. With respect to the routes that were under-estimated (i.e., *1B*, *2B*, *3A*, and *3B*), there were many features that might influence cycling. For instance, two of the four (i.e., *2B* and *3B*) had some type of separated cycling facility. Three of the four routes (i.e., *1B*, *2B*, and *3A*) included residential streets. Based on the routes audited, we observed that the algorithm makes sensible recommendations that a knowledgeable cyclist could take. Indeed, three of the six routes (*1A*, *2A*, and *3B*) were familiar to or had been previously cycled by many participants which suggests that the inferred routes do match where cyclists actually travel in Hamilton. 
 
-Participants' route and infrastructure preferences align with previous literature, and reveal that some of the existing infrastructure and cycling routes in Hamilton can both support and hinder cycling. When asked to select which route they preferred in each photo package, participants chose routes that had cycling facilities and lower levels of traffic. This has been found in many other studies [*inter alia*, see @buehlerBikewayNetworksReview2016b; @clarkUserPreferencesBicycle2019a; @wintersMotivatorsDeterrentsBicycling2011]. Participants were sensitive to travelling through intersections [see @broachWhereCyclistsRide2012], particularly those that are unsignalized or that require a left turn, and enjoyed routes that had natural features [see @marquartPlannedPerceivedCity2020]. Car volume was also a factor that participants commented on as they reviewed photos, likely because cyclists are known to be sensitive to busy traffic [@segadilhaIdentificationFactorsThat2014a]. Participants preferred routes that visibly accommodate cycling and consider a range of factors to determine whether a street or route sufficiently meets their needs and preferences. 
+Participants preferred routes that visibly accommodate cycling, and their route and infrastructure preferences align with previous literature. They preferred cycling facilities and streets with lower levels of traffic, which has been found in many other studies [*inter alia*, see @buehlerBikewayNetworksReview2016b; @clarkUserPreferencesBicycle2019a; @wintersMotivatorsDeterrentsBicycling2011]. Participants were also sensitive to travelling through intersections [see @broachWhereCyclistsRide2012] and many enjoyed routes that had natural features [see @marquartPlannedPerceivedCity2020]. Perceived car volume was another factor that participants frequently commented on as they reviewed photos, likely because cyclists are known to be sensitive to busy traffic [@segadilhaIdentificationFactorsThat2014a] and are motivated to cycle if there are routes away from cars [@wintersMotivatorsDeterrentsBicycling2011]. Participants also considered a range of factors beyond infrastructure to determine whether a street or route sufficiently meets their needs and preferences, which is useful information for policy-makers and transport planners. Many participants reported that they like to cycle on roads with smooth or good conditions, which has previously been reported in the literature [@stinsonCommuterBicyclistRoute2003]. Some cyclists preferred to have lateral space to their right, like a sidewalk or some other “*escape zone*”, in the event that they needed to quickly move out of the way. These attributes may be overlooked by transport planners but should be considered when planning cycling networks and routes.
 
-The photo activity helped to reveal other factors that are perceived to be important for cycling but that were previously mentioned less often in the first half of the interviews [see @Desjardins2020b]. For instance, more participants commented during the photo activity on the quality of the road pavement along the routes and many reported that they like to cycle on roads with smooth or good conditions compared to the first half of the interviews. Other studies have reported similar findings [@stinsonCommuterBicyclistRoute2003]. Participants also noticed the availability of lateral space to their right on the routes. Some cyclists reported disliking segments on busy roads that lacked a sidewalk or some other “*escape zone*” in the event that they needed to quickly move out of the way to avoid a person driving too closely or a collision. In the absence of a paved shoulder or grassy verge, a few participants reported that they would hop onto the sidewalk and ride there instead. This emphasizes how the lack of dedicated road space for people who cycle can put them in precarious situations both on and off-street, and reinforced that their urban design needs are indeed different from both pedestrians and motorists [@forsythUrbanDesignThere2011]. Cycling on the sidewalk is not permitted for adults in Hamilton, presumably to prevent potential collisions with pedestrians, but this space may be perceived to be a more viable option on streets that are not accommodated for cycling. People who cycle do not currently seem to fit in either the pedestrian or car zone [@liuConceptualizingCyclingExperience2018] which highlights how the built environment needs to be more explicitly oriented for people who cycle. The emergence of additional route preferences in the second half of the interviews suggests that, in addition to a hierarchy of infrastructure preferences [@buehlerBikewayNetworksReview2016b], there may also be a hierarchy of preferred route attributes. What came to mind first for participants in the first half of the interviews were more obvious features that might improve safety or impact their experience of cycling, such as the presence of infrastructure, the aesthetics of the street, and the volume or speed of cars along the route. However, other more subtle factors that also affect cycling appear to be secondary. Some preferences may not ultimately deter cyclists from a route, such as the quality of the pavement, but others may be more detrimental like the absence of space to move off the roadway. These attributes may be overlooked by transport planners but should be considered when planning cycling networks and routes. Liu et al. [-@liuConceptualizingCyclingExperience2018] were correct in identifying that qualitative methods are informative for uncovering the influence of micro-level characteristics on cycling, which can complement other methods like travel surveys or diaries.
-
-Furthermore, the photo activity revealed that there is a threshold of unpleasantness that people who cycle are willing to tolerate along a route. Even though there were attributes along part of the inferred routes that support cycling, such as infrastructure, there were other segments with attributes that ultimately discourage people from cycling there. In the case of route 1A, the first 4 segments were such strong deterrents that cyclists chose the other unfamiliar and residential route as their preferred option between the two. Although route 1A was an inferred route and not one that participants reported using, someone who is new to cycling but unfamiliar with other routes could likely consider this to be the most direct route. The photo activity underscored that the fragmented nature of the cycling network in a transitional city can create barriers for accessing bikeable streets. More importantly, these streets are not separate from the rest of the transport system and the ability to reach this infrastructure matters. If getting to on-street cycling facilities is perceived to be challenging or too dangerous, then regular and even potential cyclists may be unwilling to use the infrastructure or avoid routes that incorporate these streets altogether. Then it is no longer failure by design of the infrastructure, but failure by design of the cycling network. Street attributes in the broader transport system are just as important and also need to be more adapted for cycling during a transitional stage. Planning for cycling in Hamilton should focus beyond infrastructure and seek to better integrate these individual links within a transport system that is designed with pro-cycling policies in mind. It also implies that the fluidity and efficiency of travel by bicycle, which is reported by cyclists in highly bikeable cities as important [@vanduppenRetracingTrajectoriesEmbodied2013], has not yet been achieved in Hamilton. If cyclists have to continuously navigate less bikeable areas as part of their travelled routes, then this may deter the uptake of cycling for more people.
+The photo activity also revealed that there is a threshold of unpleasantness that cyclists are willing to tolerate along a route. In the case of route *1A*, the segments along the arterial road without infrastructure were such strong deterrents that cyclists preferred the other unfamiliar residential route. Although *1A* was inferred and not one that participants reported using, someone who is new to cycling but unfamiliar with other routes could likely consider this to be the most direct route. The photo activity underscored that the fragmented nature of the cycling network in a developing cycling city can create barriers for accessing bikeable streets. This reinforces the importance of connected facilities in encouraging cycling [@buehlerBikewayNetworksReview2016b; @yangCyclingfriendlyCityUpdated2019] and that navigating mixed traffic in cities where there is less infrastructure is perceived to be less safe [@chatawaySafetyPerceptionsReported2014]. More importantly, these streets are not separate from the rest of the transport system and the ability to reach this infrastructure matters. If getting to on-street cycling facilities is perceived to be challenging or too dangerous, then regular and even potential cyclists may be unwilling to use the infrastructure or avoid routes that incorporate these streets altogether. Street attributes in the broader transport system are just as important and also need to be more adapted for cycling as cities become more bicycle-friendly.
 
 ## Policy Implications
 
-There are three important implications of this study for cities that wish to grow their cycling levels: i) the perceptions of people who cycle should be regularly explored by transport planners and incorporated in route design; ii) efforts to encourage cycling in a developing cycling city should focus on more than infrastructure; and iii) the timing of incorporating cyclists’ feedback is important for ensuring that infrastructure is functional and adapted as it grows.
+There are three important implications of this study for developing cycling cities: i) the perceptions of cyclists should be regularly explored and incorporated in route design; ii) the timing of incorporating cyclists’ feedback is important for ensuring that infrastructure is functional and adapted as it grows; iii) efforts to encourage cycling in a developing cycling city should focus on more than infrastructure.
 
-Ma et al.’s research [-@maObjectivePerceivedEnvironment2014] indicates that perceptions of the built environment should be considered more explicitly in planning. The photo activity was particularly illuminating because it helped participants recall their own experiences while cycling some of the inferred routes. This revealed rich insights that could not have been derived from a travel survey or cycle routing algorithm. The adaptations and detours that people who have cycle have learned over time as they navigate the city, as well as the conditions that they perceive to make cycling safe or challenging, were often described in detail as they looked through the photos. This is valuable information about cycling behaviour for transport planners in Hamilton that can be used to improve how the city is experienced and travelled by bicycle. For example, the two-way cycle track on a one-way arterial road in route *3B* indicates that this street accommodates cycling to some extent. However, participants reported that it should be more protected to ensure greater separation from cars, and some felt uncomfortable cycling in the one opposite direction on a one-way street. Two participants also reported being hit along this cycle track by people who drive which suggests that the desire for more protection is strongly warranted. 
+The photo activity was illuminating because it helped participants recall their experiences and revealed rich insights about cycling behaviours and perceptions that could not have been derived from a travel survey or cycle routing algorithm. Therefore, it is recommended that developing cycling cities routinely collect and examine qualitative data to inform and adapt their interventions. This can yield valuable information about for transport planners. Inviting cyclists to have a more regular participatory role in route design and planning as the cycling network develops is also an important practice. Failing to understand and integrate cyclists' perceptions and preferences in planning early on in a city's cycling development can negatively impact efforts to increase cycling; resources could be spent on facilities that are fundamentally unappealing to cyclists or other barriers can be ignored. Taking advantage of cyclists’ expertise in developing cycling cities can help to overcome the barrier of a lack of safe cycling routes, as identified by Félix et al. [-@felixMaturingUrbanCycling2019]. Marquart et al.’s [-@marquartPlannedPerceivedCity2020] study highlights that planners “are determining the characteristics of routes in urban areas”, which supports our recommendation that more opportunities be created for cyclists to share feedback. Participants’ comments about the bike boxes, a relatively new cycling intervention in Hamilton, is one example of how the use of photos and detailed feedback can be informative for transport planners. Likewise, new or potential cyclists also have specific preferences and their perceptions should be explored through similar approaches. In addition to our methods, other mapping techniques [see @mantonUsingMentalMapping2016 and @marquartPlannedPerceivedCity2020], ride-along activities [see @vanduppenRetracingTrajectoriesEmbodied2013], and frequent audits before and after next infrastructure is built may be further informative for understanding how cyclists navigate developing cycling cities. Developing cycling cities, like Hamilton, should also focus beyond infrastructure and seek to better integrate these individual links within a transport system that is designed with pro-cycling policies in mind. The provision of cycling facilities is highly important, but our findings also suggest that additional changes are needed to more explicitly accommodate cycling on direct routes and major roads. Pucher et al's [-@pucherInfrastructureProgramsPolicies2010a] review provides evidence that cities that are most successful in increasing their cycling trips and levels have implemented a suite of interventions to change behaviour and the built environment. Our findings support the recommendation that the City of Hamilton explore and implement bolder policies to encourage modal shifts. There is strong incentive for prioritizing cycling more: 35% of all current trips in Hamilton could be cycled [@Mitra2016] and more people could benefit from increased physical activity.
 
-Inviting people who cycle to have a more participatory role in route design and planning can be achieved by creating more engagement opportunities to explore and listen to their preferences. Planners should take advantage of cyclists’ expertise and their regular close contact with different environments on a bicycle. Marquart et al.’s [@marquartPlannedPerceivedCity2020] interviews with cyclists and experts in politics and planning demonstrate that qualitative approaches are useful for exploring perceptions that are otherwise less known or perceived differently by planners. The authors highlight that planners “are determining the characteristics of routes in urban areas” [@marquartPlannedPerceivedCity2020], which supports the recommendation that people who cycle need to share their perceptions and preferences to ensure that transport planning efforts align with their needs. These early adopters who choose to cycle when it is not yet mainstream can provide recommendations for enhancing street design to improve their experience or reveal how people who cycle negotiate shared roadways in response to other users. Participants’ comments in the photo activity about the quality and functionality of bike boxes, a relatively new cycling intervention in Hamilton, is one example of how their feedback can be informative for transport planners. Likewise, people who are new to cycling or willing to cycle have specific preferences [see @clarkUserPreferencesBicycle2019a and @wintersMotivatorsDeterrentsBicycling2011] that also need to be fulsomely explored to ensure that efforts to grow ridership have a positive influence. 
+## Conclusion
 
-The provision of cycling facilities is highly important, but our findings also suggest that additional changes are needed to more explicitly accommodate cycling on direct routes and major roads. Infrastructure alone may not be enough to encourage more cycling if other street level attributes are not adapted for people who cycle. It is for this reason that cities that are transitioning to being more bicycle-friendly, like Hamilton, should pay attention to a broader range of factors that influence cycling. Pucher et al's [-@pucherInfrastructureProgramsPolicies2010a] review provides evidence that cities that are most successful in increasing their cycling trips and levels have implemented a suite of interventions to change behaviour and the built environment. These efforts include, among many others, additional traffic calming, intersection modifications, promotional or day campaigns, restrictions on motor vehicles and free parking, and cycling education for children [@pucherInfrastructureProgramsPolicies2010a]. Our findings support the recommendation that the City of Hamilton explore and implement bolder policies identified in the literature to encourage modal shifts; this can include increasing the cost of or removing parking in dense areas, adopting regular open streets events that encourage people to explore their city on a bicycle, and car-free zones across the city in local business and tourist areas. In mid 2020, the City of Hamilton lowered the speed limit in many residential areas to 40 km/h which is an important change given that participants report that they rely on quiet streets that have slower traffic. However, Pucher et al. [@pucherInfrastructureProgramsPolicies2010a] highlights that successful cycling cities have traffic calmed residential areas to 30 km/h or less, which suggests that further lowering the speed limit from 40 km/h may be needed. 
+The audited routes in Hamilton have a mix of attributes that support and hinder cycling. The interviews with regular cyclists revealed that they prefer routes that have dedicated cycling infrastructure or streets with low volumes of traffic, and that existing infrastructure needs to be adapted to better align with cyclists' needs and preferences. As a developing cycling city with 46% of the cycling network completed, the findings from this study will be useful to policy-makers and transport planners in Hamilton to make the city more bicycle-friendly and facilitate more trips that enable people to be physically active. Our findings support the recommendation that other developing cycling cities involve local cyclists to inform infrastructure design and location and pay attention to a broad range of built environment factors that influence where people choose to cycle.
 
-In the case of Hamilton, a clear cycling mode share goal should provide a strong direction. By 2031, the City of Hamilton aims to achieve its aspirational mode share target of 15% walk/cycle trips (@CMP2018). A breakdown per mode is not articulated in the Transportation Master Plan, but assuming that it is split evenly, this means that the city has just over 10 years to increase cycling levels from 1.2% to 7.5%. This significant increase cannot be accomplished without bolder policies and stronger political will. The next Transportation Tomorrow Survey in 2021 will reveal what changes, if any, to the cycling mode share were achieved in the past 5 years. At present, there is a window of opportunity over the next decade to more boldly make the city bicycle-friendly. There is strong incentive for taking this path: 35% of all current trips in Hamilton are 5 km or less, which means that these trips could be cycled [@Mitra2016] and more people could benefit from increased physical activity. Therefore, a clear goal for the cycling mode share is needed. This research supports the recommendation that the City of Hamilton adopt a unique mode share target for cycling instead of combining this mode with walking. Otherwise, the target may be met only as a result of increasing walking shares, which says little about the city’s success in becoming a true cycling.
-
-Furthermore, tailing to understand and integrate cyclists' perceptions and preferences in planning efforts early on in a city's cycling development can negatively impact efforts to increase cycling; resources could be spent on facilities that are fundamentally unappealing to cyclists or other aspects of the travel experience that act as barriers can be ignored. Marquart et al.’s (2020) research illuminated the mismatch that between the perceptions of people who plan cities and those who travel it by bicycle. In this stage of transition, it is recommended that developing cycling cities collect and examine more qualitative data on a routine basis to inform and adapt their interventions. In addition to our methods in this study, other mapping techniques (see Manton et al. 2016 and Marquart et al. 2020) or ride-along activities (see Duppen and Spierings 2013) may be further informative for understanding how people who cycle navigate the city. Frequent environmental audits with planners and cyclists, particularly before or after new infrastructure is built, can reveal how streets are experienced and whether investments in cycling are useable. With 46% of the cycling network completed, participants still report that the design of existing infrastructure does not fully meet their needs and preferences. It is therefore also recommended that the City of Hamilton explore new frameworks for determining infrastructure design that align more with cyclists’ preferences and adopt an all ages and abilities lens for the city’s cycling network and interventions. For instance, the Cycling Master Plan notes that the City of Hamilton uses the Desirable Bicycle Facility Pre-Selection Nomograph from the Ontario Traffic Manual (City of Hamilton 2018, p. 8) to determine the type of cycling facility that is “deemed suitable for the roadway” (City of Hamilton 2018b). However, there is no stated objective to consider the needs of people of all ages and abilities. The photo activity highlights that cyclists dislike shared roadways and prefer infrastructure even where traffic levels are low. Using this nomograph in practice suggests that the needs of people who cycle are given lower priority than people who drive and leads to areas of the city that lack infrastructure because the car volume and speeds do not necessitate it. Our findings recommend that local policymakers and planners consider a different framework for determining cycling facilities, one that more readily incorporates evidence from the literature and preferences of local cyclists. At a critical stage in Hamilton’s transition to a cycling city, exploring and considering the perceptions and preferences of cyclists while planning is crucial for avoiding a cycling city that fails by design.
-
-Limitations {#sec:limitations}
+Study Limitations {#sec:limitations}
 =========================================
 
-While the *CycleStreets* algorithm made sensible recommendations for *quietest* distance routes, which did indeed include attributes that influence cycling like on-street marked bicycle lanes, there are some instances where it failed to include some of the city's off-street infrastructure (i.e., Hamilton-Brantford Rail Trail) or signed routes as part of the routes. Some participants noted these situations. They also described some alternate detours that are more locally known to people who cycle which highlights that a routing algorithm like *CycleStreets* may not reflect the extent or range of behaviours of the participants. The fact that these routes were inferred means that we don't know where cyclists actually travel but, as reported by the participants, many of the routes were familiar. Several cyclists noted that the routes they preferred were familiar to them, which suggests that familiarity played a role in their decision. This makes sense because it affords them more intimate knowledge of the route. Therefore, our findings could have been different if the participants were familiar with all of the routes or if they were familiar with none. However, their familiarity offered insightful information about how these road spaces are actually experienced and how people who cycle might adapt or respond in specific situations. This rich data is particularly useful for transport planners in Hamilton which is a strength of local research. Our findings would also likely have been different if the participants were new or occasional cyclists. People who have less experience with cycling are likely to have even stronger preferences for protected infrastructure and be more averse to mixing with traffic [@wintersMotivatorsDeterrentsBicycling2011]. Some of the routes also had photos that were darker or cloudier than others. This was noticed by two participants, suggesting that it may have subconsciously influenced participants' perceptions as well. However, there was a lot of homogeneity in participants' stated preferences and they all selected the same preferred routes. This suggests that familiarity and the weather depicted in the photos likely had less of an influence on individual perceptions and preferences, and that other attributes of the routes were more important.
+There are some instances where the *CycleStreets* algorithm failed to include some of the city's off-street infrastructure or signed routes. Some participants noted these situations and described alternate detours that are more locally known. This highlights that a routing algorithm may not reflect the extent or range of behaviours of cyclists. However, many routes were familiar to participants so we find that the algorithm makes sensible recommendations. Several cyclists noted that the routes they preferred were familiar to them, which suggests that familiarity played a role in their decision. This makes sense because it affords them more intimate knowledge of the route. Therefore, our findings could have been different if the participants were familiar with all of the routes or if they were familiar with none. However, their familiarity offered insightful information about how these road spaces are actually experienced which is useful for transport planners in Hamilton. Our findings would also likely have been different if the participants were new or occasional cyclists. Less experienced cyclists are likely to have even stronger preferences for protected infrastructure and be more averse to mixing with traffic [@wintersMotivatorsDeterrentsBicycling2011]. Finally, some photos were darker or cloudier than others. This was noticed by some participants, suggesting that it may have subconsciously influenced participants' perceptions. However, there was similarity in participants' stated preferences and all selected the same preferred routes. This suggests the weather depicted in the photos likely had less of an influence on individual perceptions and preferences, and that attributes of the routes and familiarity were more important.
+
+Acknowledgments {#sec:acknowledgments}
+======================================
+
+The authors wish to express their sincere gratitude to the participants of the study who shared their time and stories. The authors also wish to thank the research assistants for their assistance in collecting data and conducting the environmental audits. In addition, the following `R` packages were used in the course of this investigation and the authors wish to acknowledge their developers: `cyclestreets` [@Lovelace2018].
 
 References {#sec:references}
 =========================================
