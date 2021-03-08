@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.22)  8 MAR 2021 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.22)  8 MAR 2021 17:47
 entering extended mode
 **./J-Transport-Health-Manuscript.tex
 (J-Transport-Health-Manuscript.tex
@@ -1502,57 +1502,56 @@ onal cyclists. Less experienced cyclists are likely to have
  []
 
 [30] [31]
-Overfull \hbox (0.23457pt too wide) in paragraph at lines 1496--1500
+Overfull \hbox (0.23457pt too wide) in paragraph at lines 1522--1526
 [][]\T1/lmr/m/n/10 (+13) Emond, C.R., Tang, W., Handy, S.L., 2009. Explaining G
 ender Difference in Bicycling Behavior. Transportation 
  []
 
-
-Overfull \hbox (0.23691pt too wide) in paragraph at lines 1501--1505
+[32]
+Overfull \hbox (0.23691pt too wide) in paragraph at lines 1527--1531
 [][]\T1/lmr/m/n/10 (+18) Evergreen, 2017. Leveraging ontario's urban potential:
  Mid-sized cities research series [WWW Document]. URL 
  []
 
 
-Overfull \hbox (0.17682pt too wide) in paragraph at lines 1506--1512
+Overfull \hbox (0.17682pt too wide) in paragraph at lines 1532--1538
 [][]\T1/lmr/m/n/10 (+19) Félix, R., Moura, F., Clifton, K.J., 2019. Ma-tur-ing 
 ur-ban cy-cling: Com-par-ing bar-ri-ers and mo-ti-va-tors to bi-cy-cle 
  []
 
-[32]
-Overfull \hbox (0.24924pt too wide) in paragraph at lines 1543--1548
+
+Overfull \hbox (0.24924pt too wide) in paragraph at lines 1572--1577
 [][]\T1/lmr/m/n/10 (+19) Klicnik, I., Dogra, S., 2019. Perspectives on Active T
 ransportation in a Mid-Sized Age-Friendly City: ``You Stay 
  []
 
-[33] [34]
-Overfull \hbox (0.1562pt too wide) in paragraph at lines 1738--1743
+[33] [34] [35]
+Overfull \hbox (0.1562pt too wide) in paragraph at lines 1795--1800
 [][]\T1/lmr/m/n/10 (+6) Winters, M., Teschke, K., 2010. Route preferences among
  adults in the near market for bicycling: Findings of the 
  []
 
 
-Overfull \hbox (0.1556pt too wide) in paragraph at lines 1738--1743
+Overfull \hbox (0.1556pt too wide) in paragraph at lines 1795--1800
 \T1/lmr/m/n/10 (+12) cycling in cities study. American journal of health promot
 ion: AJHP 25, 40--47. doi:[]10.4278/ajhp.081006-QUAN- 
  []
 
-[35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1768.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1833.
 [36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1768.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1833.
 (J-Transport-Health-Manuscript.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1768.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1768.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1833.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1833.
 
 Package rerunfilecheck Info: File `J-Transport-Health-Manuscript.out' has not c
 hanged.
 (rerunfilecheck)             Checksum: 4F0EA5E1F31E07A61D80C30749D6A1B6;3195.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1768.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1833.
  ) 
 Here is how much of TeX's memory you used:
- 15751 strings out of 492453
- 226061 string characters out of 3129816
+ 15765 strings out of 492453
+ 226223 string characters out of 3129816
  396688 words of memory out of 3000000
  19512 multiletter control sequences out of 15000+200000
  80250 words of font info for 109 fonts, out of 3000000 for 9000
@@ -1590,10 +1589,10 @@ lic/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri7.pfb>
 MiKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
 tt8.pfb>
-Output written on J-Transport-Health-Manuscript.pdf (36 pages, 17375040 bytes).
+Output written on J-Transport-Health-Manuscript.pdf (36 pages, 17383011 bytes).
 
 PDF statistics:
- 631 PDF objects out of 1000 (max. 8388607)
- 196 named destinations out of 1000 (max. 500000)
+ 647 PDF objects out of 1000 (max. 8388607)
+ 210 named destinations out of 1000 (max. 500000)
  20295 words of extra memory for PDF output out of 20736 (max. 10000000)
 

@@ -27,7 +27,7 @@ address:
 
 journal: "Journal of Transport & Health"
 date: "February 23, 2021"
-bibliography: updatedreferences.bib
+bibliography: [updatedreferences.bib, packages.bib]
 linenumbers: true
 geometry: margin=2cm
 numbersections: true
@@ -49,7 +49,7 @@ library(dplyr)
 library(ggthemes)
 library(kableExtra)
 library(knitr)
-#library(rticles)
+library(rticles)
 library(sf)
 library(spdep)
 library(tidyverse)
@@ -58,6 +58,12 @@ library(sp)
 library(ngram)
 library(float)
 ```
+
+```{r package-bib, include=FALSE}
+# This function is used to write a bibliography for the `R` packages used in the paper
+knitr::write_bib(file = 'packages.bib')
+```
+
 
   ***Background***: Cycling is known to have many health benefits. For this reason, transport planners and public health officials in Canada increasingly aim to encourage cycling for transport. On- and off-street infrastructure is often implemented to facilitate cycling and planners rely on a range of tools for informing the design of the network of facilities. This mixed methods study compares objectively measured attributes and cyclists' perceptions of the built environment along inferred cycling routes in Hamilton, Ontario.  
   ***Methods***: Environmental audits were conducted along six cycling routes in Hamilton to document the attributes that might support or hinder cycling. The routes were inferred based on the output of a model of cycling flows. Cyclists, 9 male and 5 female, then participated in semi-structured interviews where they reviewed photos of the routes and described their perceptions and preferences. Interview data were analyzed using both inductive and deductive thematic analysis based on the categories of the audit instrument.  
@@ -846,7 +852,7 @@ Through environmental audits and a photo activity in semi-structured interviews 
 Acknowledgments {#sec:acknowledgments}
 ======================================
 
-The authors wish to express their sincere gratitude to the participants of the study who shared their time and stories. The authors also wish to thank the research assistants for their assistance in collecting data and conducting the environmental audits. In addition, the following `R` packages were used in the course of this investigation and the authors wish to acknowledge their developers: `cyclestreets` [@Lovelace2018].
+The authors wish to express their sincere gratitude to the participants of the study who shared their time and stories. The authors also wish to thank the research assistants for their assistance in collecting data and conducting the environmental audits. In addition, the following `R` packages were used in the course of this investigation and the authors wish to acknowledge their developers:  `cyclestreets` [@Lovelace2018], `dplyr` [@R-dplyr], `float` [@R-float], `forcats` [@R-forcats], `ggplot2` [@R-ggplot2], `ggthemes` [@R-ggthemes], `kableExtra` [@R-kableExtra], `knitr` [@R-knitr], `ngram` [@R-ngram], `purrr` [@R-purrr], `readr` [@R-readr], `rticles` [@R-rticles], `sf` [@R-sf], `sp` [@R-sp], `spdep` [@R-spdep].
 
 CRediT Statement {#sec:credit}
 ======================================
