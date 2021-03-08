@@ -1,0 +1,811 @@
+---
+title: "Audit Results"
+output: html_document
+---
+
+In this document, a descriptive analysis of the results of the environmental audits that were conducted along inferred routes between 6 origin-destination pairs in Hamilton, Ontario are presented.
+
+Load packages:
+```{r}
+library(readr)
+library(tidyverse)
+library(dplyr)
+library(sf)
+library(ggthemes)
+```
+
+Load data from audits:
+```{r}
+audit_results <- read_csv("Audit_Results.csv")
+Audit_Results_1A <- read_csv("Audit_Results_1A.csv")
+Audit_Results_1B <- read_csv("Audit_Results_1B.csv")
+Audit_Results_2A <- read_csv("Audit_Results_2A.csv")
+Audit_Results_2B <- read_csv("Audit_Results_2B.csv")
+Audit_Results_3A <- read_csv("Audit_Results_3A.csv")
+Audit_Results_3B <- read_csv("Audit_Results_3B.csv")
+```
+
+# Individual Audit Results
+
+## Route 1A
+
+This route is located in West Hamilton, in the lower city, and has 13 segments.
+
+Predominant buildings/features:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.PredominantBuildings))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.PredominantBuildings))
+```
+
+Cycling facilities:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.CyclingFacility))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.CyclingFacility))
+```
+
+Location of cycling facility:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.FacilityLocation))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.FacilityLocation))
+```
+
+Slope:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.Slope))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.Slope))
+```
+
+Road condition:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.RoadCondition))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.RoadCondition))
+```
+
+Number of traffic lanes:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.Lanes))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.Lanes))
+```
+
+Presence of traffic calming devices:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.TrafficCalming))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.TrafficCalming))
+```
+
+Intersection control:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.Crossing))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.Crossing))
+```
+
+Street lights:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.Lights))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.Lights))
+```
+
+Street maintenance:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.Maintenance))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.Maintenance))
+```
+
+Cleanliness of the street:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.Cleanliness))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.Cleanliness))
+```
+
+Trees:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.Trees))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.Trees))
+```
+
+Attractiveness for cycling:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.Attractiveness))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.Attractiveness))
+```
+
+Difficulty for cycling:
+```{r}
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = A.Comfortability))
+
+ggplot(data = Audit_Results_1A) + 
+  geom_bar(mapping = aes(x = B.Comfortability))
+```
+
+
+## Route 1B
+
+This route is located on the East Mountain and has a total of 12 segments.
+
+Predominant buildings/features:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.PredominantBuildings))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.PredominantBuildings))
+```
+
+Cycling facilities:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.CyclingFacility))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.CyclingFacility))
+```
+
+Location of cycling facility:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.FacilityLocation))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.FacilityLocation))
+```
+
+Slope:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.Slope))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.Slope))
+```
+
+Road condition:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.RoadCondition))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.RoadCondition))
+```
+
+Number of traffic lanes:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.Lanes))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.Lanes))
+```
+
+Presence of traffic calming devices:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.TrafficCalming))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.TrafficCalming))
+```
+
+Intersection control:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.Crossing))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.Crossing))
+```
+
+Street lights:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.Lights))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.Lights))
+```
+
+Street maintenance:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.Maintenance))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.Maintenance))
+```
+
+Cleanliness of the street:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.Cleanliness))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.Cleanliness))
+```
+
+Trees:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.Trees))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.Trees))
+```
+
+Attractiveness for cycling:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.Attractiveness))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.Attractiveness))
+```
+
+Difficulty for cycling:
+```{r}
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = A.Comfortability))
+
+ggplot(data = Audit_Results_1B) + 
+  geom_bar(mapping = aes(x = B.Comfortability))
+```
+
+## Route 2A
+
+This route is located in downtown Hamilton, in the lower city, and has 27 segments.
+
+Predominant buildings/features:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.PredominantBuildings))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.PredominantBuildings))
+```
+
+Cycling facilities:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.CyclingFacility))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.CyclingFacility))
+```
+
+Location of cycling facility:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.FacilityLocation))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.FacilityLocation))
+```
+
+Slope:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.Slope))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.Slope))
+```
+
+Road condition:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.RoadCondition))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.RoadCondition))
+```
+
+Number of traffic lanes:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.Lanes))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.Lanes))
+```
+
+Presence of traffic calming devices:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.TrafficCalming))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.TrafficCalming))
+```
+
+Intersection control:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.Crossing))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.Crossing))
+```
+
+Street lights:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.Lights))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.Lights))
+```
+
+Street maintenance:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.Maintenance))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.Maintenance))
+```
+
+Cleanliness of the street:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.Cleanliness))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.Cleanliness))
+```
+
+Trees:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.Trees))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.Trees))
+```
+
+Attractiveness for cycling:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.Attractiveness))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.Attractiveness))
+```
+
+Difficulty for cycling:
+```{r}
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = A.Comfortability))
+
+ggplot(data = Audit_Results_2A) + 
+  geom_bar(mapping = aes(x = B.Comfortability))
+```
+
+## Route 2B
+
+This route is located in East Hamilton, in the lower city, and has 31 segments.
+
+Predominant buildings/features:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.PredominantBuildings))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.PredominantBuildings))
+```
+
+Cycling facilities:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.CyclingFacility))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.CyclingFacility))
+```
+
+Location of cycling facility:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.FacilityLocation))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.FacilityLocation))
+```
+
+Slope:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.Slope))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.Slope))
+```
+
+Road condition:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.RoadCondition))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.RoadCondition))
+```
+
+Number of traffic lanes:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.Lanes))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.Lanes))
+```
+
+Presence of traffic calming devices:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.TrafficCalming))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.TrafficCalming))
+```
+
+Intersection control:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.Crossing))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.Crossing))
+```
+
+Street lights:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.Lights))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.Lights))
+```
+
+Street maintenance:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.Maintenance))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.Maintenance))
+```
+
+Cleanliness of the street:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.Cleanliness))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.Cleanliness))
+```
+
+Trees:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.Trees))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.Trees))
+```
+
+Attractiveness for cycling:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.Attractiveness))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.Attractiveness))
+```
+
+Difficulty for cycling:
+```{r}
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = A.Comfortability))
+
+ggplot(data = Audit_Results_2B) + 
+  geom_bar(mapping = aes(x = B.Comfortability))
+```
+
+## Route 3A
+
+Predominant buildings/features:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.PredominantBuildings))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.PredominantBuildings))
+```
+
+Cycling facilities:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.CyclingFacility))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.CyclingFacility))
+```
+
+Location of cycling facility:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.FacilityLocation))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.FacilityLocation))
+```
+
+Slope:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.Slope))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.Slope))
+```
+
+Road condition:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.RoadCondition))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.RoadCondition))
+```
+
+Number of traffic lanes:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.Lanes))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.Lanes))
+```
+
+Presence of traffic calming devices:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.TrafficCalming))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.TrafficCalming))
+```
+
+Intersection control:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.Crossing))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.Crossing))
+```
+
+Street lights:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.Lights))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.Lights))
+```
+
+Street maintenance:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.Maintenance))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.Maintenance))
+```
+
+Cleanliness of the street:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.Cleanliness))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.Cleanliness))
+```
+
+Trees:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.Trees))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.Trees))
+```
+
+Attractiveness for cycling:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.Attractiveness))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.Attractiveness))
+```
+
+Difficulty for cycling:
+```{r}
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = A.Comfortability))
+
+ggplot(data = Audit_Results_3A) + 
+  geom_bar(mapping = aes(x = B.Comfortability))
+```
+
+## Route 3B
+
+This route is located in downtown Hamilton, in the lower city, and has 20 segments.
+
+Predominant buildings/features:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.PredominantBuildings))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.PredominantBuildings))
+```
+
+Cycling facilities:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.CyclingFacility))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.CyclingFacility))
+```
+
+Location of cycling facility:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.FacilityLocation))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.FacilityLocation))
+```
+
+Slope:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.Slope))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.Slope))
+```
+
+Road condition:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.RoadCondition))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.RoadCondition))
+```
+
+Number of traffic lanes:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.Lanes))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.Lanes))
+```
+
+Presence of traffic calming devices:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.TrafficCalming))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.TrafficCalming))
+```
+
+Intersection control:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.Crossing))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.Crossing))
+```
+
+Street lights:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.Lights))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.Lights))
+```
+
+Street maintenance:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.Maintenance))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.Maintenance))
+```
+
+Cleanliness of the street:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.Cleanliness))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.Cleanliness))
+```
+
+Trees:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.Trees))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.Trees))
+```
+
+Attractiveness for cycling:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.Attractiveness))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.Attractiveness))
+```
+
+Difficulty for cycling:
+```{r}
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = A.Comfortability))
+
+ggplot(data = Audit_Results_3B) + 
+  geom_bar(mapping = aes(x = B.Comfortability))
+```
+
+
+
+
