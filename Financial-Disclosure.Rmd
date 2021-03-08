@@ -1,0 +1,11 @@
+---
+title: "Financial Disclosure"
+output:
+  pdf_document: default
+  html_notebook: default
+date: "October 20, 2020"
+---
+
+# Financial Disclosure
+
+The Authors did not receive any specific funding for this work.
