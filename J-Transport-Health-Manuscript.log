@@ -1,134 +1,130 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.22)  25 FEB 2021 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.22)  8 MAR 2021 17:26
 entering extended mode
 **./J-Transport-Health-Manuscript.tex
 (J-Transport-Health-Manuscript.tex
-LaTeX2e <2020-10-01> patch level 2
-L3 programming layer <2020-10-27> xparse <2020-03-03> (elsarticle.cls
+LaTeX2e <2019-10-01> patch level 1
+(elsarticle.cls
 Document Class: elsarticle 2008/05/22, 1.0.1: Elsevier Science
-\@bls=\dimen138
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+\@bls=\dimen102
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 )
-\c@part=\count175
-\c@section=\count176
-\c@subsection=\count177
-\c@subsubsection=\count178
-\c@paragraph=\count179
-\c@subparagraph=\count180
-\c@figure=\count181
-\c@table=\count182
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen139
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.st
-y
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.st
-y
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+\KV@toks@=\toks14
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
-cfg
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.de
-f
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen140
-\Gin@req@width=\dimen141
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
-Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
 
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.fd
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\upzd.fd"
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
 
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upsy.fd
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\upsy.fd"
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
-\c@tnote=\count183
-\c@fnote=\count184
-\c@cnote=\count185
-\c@ead=\count186
-\c@author=\count187
-\@eadauthor=\toks16
-\c@affn=\count188
-\absbox=\box47
-\keybox=\box48
-\Columnwidth=\dimen142
-\space@left=\dimen143
-\els@boxa=\box49
-\els@boxb=\box50
-\leftMargin=\dimen144
-\@enLab=\toks17
-\@sep=\skip49
-\@@sep=\skip50
-(J-Transport-Health-Manuscript.spl) (C:\Users\desjae\AppData\Local\Programs\MiK
-TeX\tex/latex/natbib\natbib.sty
+\c@tnote=\count88
+\c@fnote=\count89
+\c@cnote=\count90
+\c@ead=\count91
+\c@author=\count92
+\@eadauthor=\toks15
+\c@affn=\count93
+\absbox=\box27
+\keybox=\box28
+\Columnwidth=\dimen106
+\space@left=\dimen107
+\els@boxa=\box29
+\els@boxb=\box30
+\leftMargin=\dimen108
+\@enLab=\toks16
+\@sep=\skip43
+\@@sep=\skip44
+(J-Transport-Health-Manuscript.spl) ("C:\Program Files\MiKTeX 2.9\tex/latex/nat
+bib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip51
-\bibsep=\skip52
+\bibhang=\skip45
+\bibsep=\skip46
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count189
+\c@NAT@ctr=\count94
 )
 \splwrite=\write3
 \openout3 = `J-Transport-Health-Manuscript.spl'.
 
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip16
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/lineno\lineno.sty"
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count190
-\output=\toks18
-\linenoprevgraf=\count191
-\linenumbersep=\dimen145
-\linenumberwidth=\dimen146
-\c@linenumber=\count192
-\c@pagewiselinenumber=\count193
-\c@LN@truepage=\count194
-\c@internallinenumber=\count195
-\c@internallinenumbers=\count196
-\quotelinenumbersep=\dimen147
-\bframerule=\dimen148
-\bframesep=\dimen149
-\bframebox=\box51
+\linenopenalty=\count95
+\output=\toks17
+\linenoprevgraf=\count96
+\linenumbersep=\dimen109
+\linenumberwidth=\dimen110
+\c@linenumber=\count97
+\c@pagewiselinenumber=\count98
+\c@LN@truepage=\count99
+\c@internallinenumber=\count100
+\c@internallinenumbers=\count101
+\quotelinenumbersep=\dimen111
+\bframerule=\dimen112
+\bframesep=\dimen113
+\bframebox=\box31
 LaTeX Info: Redefining \\ on input line 3056.
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.st
-y
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen150
-\lightrulewidth=\dimen151
-\cmidrulewidth=\dimen152
-\belowrulesep=\dimen153
-\belowbottomsep=\dimen154
-\aboverulesep=\dimen155
-\abovetopsep=\dimen156
-\cmidrulesep=\dimen157
-\cmidrulekern=\dimen158
-\defaultaddspace=\dimen159
-\@cmidla=\count197
-\@cmidlb=\count198
-\@aboverulesep=\dimen160
-\@belowrulesep=\dimen161
-\@thisruleclass=\count199
-\@lastruleclass=\count266
-\@thisrulewidth=\dimen162
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/booktabs\booktabs.sty"
+Package: booktabs 2019/10/08 v1.6180339 publication quality tables
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
+\@cmidla=\count102
+\@cmidlb=\count103
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
+\@thisruleclass=\count104
+\@lastruleclass=\count105
+\@thisrulewidth=\dimen126
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1enc.def"
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -162,77 +158,75 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks19
+\@emptytoks=\toks18
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2020/09/23 v2.17i AMS math features
-\@mathmargin=\skip53
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2019/04/01 v2.17c AMS math features
+\@mathmargin=\skip47
 For additional information on amsmath, use the `?' option.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks20
-\ex@=\dimen163
-)) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+\@emptytoks=\toks19
+\ex@=\dimen127
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen164
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+\pmbraise@=\dimen128
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count267
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count268
-\leftroot@=\count269
-LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count270
-\DOTSCASE@=\count271
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
-\big@size=\dimen165
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count272
-\c@MaxMatrixCols=\count273
-\dotsspace@=\muskip17
-\c@parentequation=\count274
-\dspbrk@lvl=\count275
-\tag@help=\toks21
-\row@=\count276
-\column@=\count277
-\maxfields@=\count278
-\andhelp@=\toks22
-\eqnshift@=\dimen166
-\alignsep@=\dimen167
-\tagshift@=\dimen168
-\tagwidth@=\dimen169
-\totwidth@=\dimen170
-\lineht@=\dimen171
-\@envbody=\toks23
-\multlinegap=\skip54
-\multlinetaggap=\skip55
-\mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-)) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.st
-y
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/base\fixltx2e.sty
+\inf@bad=\count106
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count107
+\leftroot@=\count108
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count109
+\DOTSCASE@=\count110
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box32
+\strutbox@=\box33
+\big@size=\dimen129
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count111
+\c@MaxMatrixCols=\count112
+\dotsspace@=\muskip11
+\c@parentequation=\count113
+\dspbrk@lvl=\count114
+\tag@help=\toks20
+\row@=\count115
+\column@=\count116
+\maxfields@=\count117
+\andhelp@=\toks21
+\eqnshift@=\dimen130
+\alignsep@=\dimen131
+\tagshift@=\dimen132
+\tagwidth@=\dimen133
+\totwidth@=\dimen134
+\lineht@=\dimen135
+\@envbody=\toks22
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2855.
+LaTeX Info: Redefining \] on input line 2856.
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\fixltx2e.sty"
 Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
 Applying: [2015/01/01] Old fixltx2e package on input line 46.
 
@@ -241,185 +235,306 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 (fixltx2e)                See the latexrelease package for details.
 
 Already applied: [0000/00/00] Old fixltx2e package on input line 53.
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/upquote\upquote.sty"
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks25
-\inpenc@posthook=\toks26
-)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.st
-y
-Package: microtype 2020/12/07 v2.8 Micro-typographical refinements (RS)
-\MT@toks=\toks27
-\MT@count=\count279
-LaTeX Info: Redefining \textls on input line 788.
-\MT@outer@kern=\dimen172
-LaTeX Info: Redefining \textmicrotypecontext on input line 1358.
-\MT@listname@count=\count280
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
+File: ts1enc.dfu 2019/07/11 v1.2j UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+27E8 (decimal 10216)
+   defining Unicode char U+27E9 (decimal 10217)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
 
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pd
-ftex.def
-File: microtype-pdftex.def 2020/12/07 v2.8 Definitions specific to pdftex (RS)
-LaTeX Info: Redefining \lsstyle on input line 915.
-LaTeX Info: Redefining \lslig on input line 915.
-\MT@outer@space=\skip56
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\microtype.sty"
+Package: microtype 2019/10/10 v2.7c Micro-typographical refinements (RS)
+\MT@toks=\toks26
+\MT@count=\count118
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen136
+LaTeX Info: Redefining \textmicrotypecontext on input line 1347.
+\MT@listname@count=\count119
+("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\microtype-pdftex.def"
+File: microtype-pdftex.def 2019/10/10 v2.7c Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip50
 )
 Package microtype Info: Loading configuration file microtype.cfg.
+("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\microtype.cfg"
+File: microtype.cfg 2019/10/10 v2.7c microtype main configuration file (RS)
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count120
+\Gm@cntv=\count121
+\c@Gm@tempcnt=\count122
+\Gm@bindingoffset=\dimen137
+\Gm@wd@mp=\dimen138
+\Gm@odd@mp=\dimen139
+\Gm@even@mp=\dimen140
+\Gm@layoutwidth=\dimen141
+\Gm@layoutheight=\dimen142
+\Gm@layouthoffset=\dimen143
+\Gm@layoutvoffset=\dimen144
+\Gm@dimlist=\toks27
+("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")) ("C:\Program F
+iles\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
+Package: hyperref 2019/09/28 v7.00a Hypertext links for LaTeX
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cf
-g
-File: microtype.cfg 2020/12/07 v2.8 microtype main configuration file (RS)
-)) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.s
-ty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
 )
-\Gm@cnth=\count281
-\Gm@cntv=\count282
-\c@Gm@tempcnt=\count283
-\Gm@bindingoffset=\dimen173
-\Gm@wd@mp=\dimen174
-\Gm@odd@mp=\dimen175
-\Gm@even@mp=\dimen176
-\Gm@layoutwidth=\dimen177
-\Gm@layoutheight=\dimen178
-\Gm@layouthoffset=\dimen179
-\Gm@layoutvoffset=\dimen180
-\Gm@dimlist=\toks28
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.st
-y
-Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmd
-s.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.
-sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
+Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.
-sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefin
-ekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.
-sty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
-Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacr
-o.sty
-Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
-Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.st
-y
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-)
-\@linkdim=\dimen181
-\Hy@linkcounter=\count284
-\Hy@pagecounter=\count285
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+\@linkdim=\dimen145
+\Hy@linkcounter=\count123
+\Hy@pagecounter=\count124
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.st
-y
-Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.st
-y
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+\Hy@SavedSpaceFactor=\count125
+("C:\Program Files\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-\Hy@SavedSpaceFactor=\count286
-Package hyperref Info: Option `unicode' set `true' on input line 4338.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+Package hyperref Info: Option `unicode' set `true' on input line 4414.
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\puenc.def"
+File: puenc.def 2019/09/28 v7.00a Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4464.
-Package hyperref Info: Link nesting OFF on input line 4469.
-Package hyperref Info: Hyper index ON on input line 4472.
-Package hyperref Info: Plain pages OFF on input line 4479.
-Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Hyper figures OFF on input line 4540.
+Package hyperref Info: Link nesting OFF on input line 4545.
+Package hyperref Info: Hyper index ON on input line 4548.
+Package hyperref Info: Plain pages OFF on input line 4555.
+Package hyperref Info: Backreferencing OFF on input line 4560.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count287
-LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen182
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
-Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcal
-c.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
-))
-\Fld@menulength=\count288
-\Field@Width=\dimen183
-\Fld@charsize=\dimen184
-Package hyperref Info: Hyper figures OFF on input line 6347.
-Package hyperref Info: Link nesting OFF on input line 6352.
-Package hyperref Info: Hyper index ON on input line 6355.
-Package hyperref Info: backreferencing OFF on input line 6362.
-Package hyperref Info: Link coloring OFF on input line 6367.
-Package hyperref Info: Link coloring with OCG OFF on input line 6372.
-Package hyperref Info: PDF/A mode OFF on input line 6377.
-LaTeX Info: Redefining \ref on input line 6417.
-LaTeX Info: Redefining \pageref on input line 6421.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
-Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
-ge
-with kernel methods
-)
-\Hy@abspage=\count289
-\c@Item=\count290
-\c@Hfootnote=\count291
+Package hyperref Info: Bookmarks ON on input line 4793.
+\c@Hy@tempcnt=\count126
+LaTeX Info: Redefining \url on input line 5152.
+\XeTeXLinkMargin=\dimen146
+\Fld@menulength=\count127
+\Field@Width=\dimen147
+\Fld@charsize=\dimen148
+Package hyperref Info: Hyper figures OFF on input line 6423.
+Package hyperref Info: Link nesting OFF on input line 6428.
+Package hyperref Info: Hyper index ON on input line 6431.
+Package hyperref Info: backreferencing OFF on input line 6438.
+Package hyperref Info: Link coloring OFF on input line 6443.
+Package hyperref Info: Link coloring with OCG OFF on input line 6448.
+Package hyperref Info: PDF/A mode OFF on input line 6453.
+LaTeX Info: Redefining \ref on input line 6493.
+LaTeX Info: Redefining \pageref on input line 6497.
+\Hy@abspage=\count128
+\c@Item=\count129
+\c@Hfootnote=\count130
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
-with kernel methods
-)
-\Fld@listcount=\count292
-\c@bookmark@seq@number=\count293
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
-lecheck.sty
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\unique
-counter.sty
-Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
-)
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
+File: hpdftex.def 2019/09/28 v7.00a Hyperref driver for pdfTeX
+\Fld@listcount=\count131
+\c@bookmark@seq@number=\count132
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+82.
 )
-\Hy@SectionHShift=\skip57
+\Hy@SectionHShift=\skip51
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 52.
 
@@ -427,23 +542,21 @@ Package hyperref Warning: Option `bookmarks' has already been used,
 (hyperref)                setting the option has no effect on input line 52.
 
 Package hyperref Info: Option `colorlinks' set `false' on input line 52.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.st
-y
-Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/ragged2e\ragged2e.sty"
+Package: ragged2e 2021/02/05 v3.0 ragged2e Package
 
 LaTeX Warning: Command \@arrayparboxrestore  has changed.
                Check if current package is valid.
 
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/ms\everysel.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/ms\everysel.sty"
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.st
-y
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/footmisc\footmisc.sty"
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks29
-\footnotemargin=\dimen185
-\c@pp@next@reset=\count294
+\FN@temptoken=\toks28
+\footnotemargin=\dimen149
+\c@pp@next@reset=\count133
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -453,157 +566,144 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-\CenteringLeftskip=\skip58
-\RaggedLeftLeftskip=\skip59
-\RaggedRightLeftskip=\skip60
-\CenteringRightskip=\skip61
-\RaggedLeftRightskip=\skip62
-\RaggedRightRightskip=\skip63
-\CenteringParfillskip=\skip64
-\RaggedLeftParfillskip=\skip65
-\RaggedRightParfillskip=\skip66
-\JustifyingParfillskip=\skip67
-\CenteringParindent=\skip68
-\RaggedLeftParindent=\skip69
-\RaggedRightParindent=\skip70
-\JustifyingParindent=\skip71
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
-Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip72
-\LTright=\skip73
-\LTpre=\skip74
-\LTpost=\skip75
-\LTchunksize=\count295
-\LTcapwidth=\dimen186
-\LT@head=\box54
-\LT@firsthead=\box55
-\LT@foot=\box56
-\LT@lastfoot=\box57
-\LT@cols=\count296
-\LT@rows=\count297
-\c@LT@tables=\count298
-\c@LT@chunks=\count299
-\LT@p@ftn=\toks30
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+\CenteringLeftskip=\skip52
+\RaggedLeftLeftskip=\skip53
+\RaggedRightLeftskip=\skip54
+\CenteringRightskip=\skip55
+\RaggedLeftRightskip=\skip56
+\RaggedRightRightskip=\skip57
+\CenteringParfillskip=\skip58
+\RaggedLeftParfillskip=\skip59
+\RaggedRightParfillskip=\skip60
+\JustifyingParfillskip=\skip61
+\CenteringParindent=\skip62
+\RaggedLeftParindent=\skip63
+\RaggedRightParindent=\skip64
+\JustifyingParindent=\skip65
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\longtable.sty"
+Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
+\LTleft=\skip66
+\LTright=\skip67
+\LTpre=\skip68
+\LTpost=\skip69
+\LTchunksize=\count134
+\LTcapwidth=\dimen150
+\LT@head=\box34
+\LT@firsthead=\box35
+\LT@foot=\box36
+\LT@lastfoot=\box37
+\LT@cols=\count135
+\LT@rows=\count136
+\c@LT@tables=\count137
+\c@LT@chunks=\count138
+\LT@p@ftn=\toks29
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen187
-\ar@mcellbox=\box58
-\extrarowheight=\dimen188
-\NC@list=\toks31
-\extratabsurround=\skip76
-\backup@length=\skip77
-\ar@cellbox=\box59
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.st
-y
-Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
-\multirow@colwidth=\skip78
-\multirow@cntb=\count300
-\multirow@dima=\skip79
-\bigstrutjot=\dimen189
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen190
-\WF@size=\dimen191
-\c@WF@wrappedlines=\count301
-\WF@box=\box60
-\WF@everypar=\toks32
+\col@sep=\dimen151
+\ar@mcellbox=\box38
+\extrarowheight=\dimen152
+\NC@list=\toks30
+\extratabsurround=\skip70
+\backup@length=\skip71
+\ar@cellbox=\box39
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty"
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip72
+\multirow@cntb=\count139
+\multirow@dima=\skip73
+\bigstrutjot=\dimen153
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen154
+\WF@size=\dimen155
+\c@WF@wrappedlines=\count140
+\WF@box=\box40
+\WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count302
-\float@exts=\toks33
-\float@box=\box61
-\@float@everytoks=\toks34
-\@floatcapt=\box62
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.st
-y
-Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
-Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+\c@float@type=\count141
+\float@exts=\toks32
+\float@box=\box41
+\@float@everytoks=\toks33
+\@floatcapt=\box42
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/colortbl\colortbl.sty"
+Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-\everycr=\toks35
-\minrowclearance=\skip80
-)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.st
-y
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+\everycr=\toks34
+\minrowclearance=\skip74
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\pdflscape.sty"
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/tabu\tabu.sty
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tabu\tabu.sty"
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/varwidth\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box63
-\sift@deathcycles=\count303
-\@vwid@loff=\dimen192
-\@vwid@roff=\dimen193
+\@vwid@box=\box43
+\sift@deathcycles=\count142
+\@vwid@loff=\dimen156
+\@vwid@roff=\dimen157
 )
-\c@taburow=\count304
-\tabu@nbcols=\count305
-\tabu@cnt=\count306
-\tabu@Xcol=\count307
-\tabu@alloc=\count308
-\tabu@nested=\count309
-\tabu@target=\dimen194
-\tabu@spreadtarget=\dimen195
-\tabu@naturalX=\dimen196
-\tabucolX=\dimen197
-\tabu@Xsum=\dimen198
-\extrarowdepth=\dimen199
-\abovetabulinesep=\dimen256
-\belowtabulinesep=\dimen257
-\tabustrutrule=\dimen258
-\tabu@thebody=\toks36
-\tabu@footnotes=\toks37
-\tabu@box=\box64
-\tabu@arstrutbox=\box65
-\tabu@hleads=\box66
-\tabu@vleads=\box67
-\tabu@cellskip=\skip81
-)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/threeparttable\threepa
-rttable.sty
+\c@taburow=\count143
+\tabu@nbcols=\count144
+\tabu@cnt=\count145
+\tabu@Xcol=\count146
+\tabu@alloc=\count147
+\tabu@nested=\count148
+\tabu@target=\dimen158
+\tabu@spreadtarget=\dimen159
+\tabu@naturalX=\dimen160
+\tabucolX=\dimen161
+\tabu@Xsum=\dimen162
+\extrarowdepth=\dimen163
+\abovetabulinesep=\dimen164
+\belowtabulinesep=\dimen165
+\tabustrutrule=\dimen166
+\tabu@thebody=\toks35
+\tabu@footnotes=\toks36
+\tabu@box=\box44
+\tabu@arstrutbox=\box45
+\tabu@hleads=\box46
+\tabu@vleads=\box47
+\tabu@cellskip=\skip75
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/threeparttable\threeparttable.sty"
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box68
-)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/threeparttablex\threep
-arttablex.sty
+\@tempboxb=\box48
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/threeparttablex\threeparttablex.sty"
 Package: threeparttablex 2013/07/23 v0.3 by daleif
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/environ\environ.sty"
 Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.
-sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/trimspaces\trimspaces.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip82
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
-\UL@box=\box69
-\UL@hyphenbox=\box70
-\UL@skip=\skip83
-\UL@hook=\toks38
-\UL@height=\dimen259
-\UL@pe=\count310
-\UL@pixel=\dimen260
-\ULC@box=\box71
-Package: ulem 2019/11/18
-\ULdepth=\dimen261
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.st
-y
+\TPTL@width=\skip76
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/ulem\ulem.sty"
+\UL@box=\box49
+\UL@hyphenbox=\box50
+\UL@skip=\skip77
+\UL@hook=\toks37
+\UL@height=\dimen167
+\UL@pe=\count149
+\UL@pixel=\dimen168
+\ULC@box=\box51
+Package: ulem 2012/05/18
+\ULdepth=\dimen169
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/makecell\makecell.sty"
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen262
-\c@nlinenum=\count311
-\TeXr@lab=\toks39
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+\rotheadsize=\dimen170
+\c@nlinenum=\count150
+\TeXr@lab=\toks38
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -617,72 +717,73 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 81
-.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
-ftex.def
-File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count312
-\l__pdf_internal_box=\box72
 ) (J-Transport-Health-Manuscript.aux)
 \openout1 = `J-Transport-Health-Manuscript.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
-kii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 8
+5.
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 85
+.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count313
-\scratchdimen=\dimen263
-\scratchbox=\box73
-\nofMPsegments=\count314
-\nofMParguments=\count315
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count316
-\MPscratchDim=\dimen264
-\MPnumerator=\count317
-\makeMPintoPDFobject=\count318
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count151
+\scratchdimen=\dimen171
+\scratchbox=\box52
+\nofMPsegments=\count152
+\nofMParguments=\count153
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen172
+\MPnumerator=\count155
+\makeMPintoPDFobject=\count156
+\everyMPtoPDFconversion=\toks40
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \microtypecontext on input line 81.
+LaTeX Info: Redefining \microtypecontext on input line 85.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 81.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 85.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -720,71 +821,68 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 81.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+\AtBeginShipoutBox=\box53
+Package hyperref Info: Link coloring OFF on input line 85.
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\getti
-tlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+\c@section@level=\count157
 )
-\c@section@level=\count319
-)
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 85.
+LaTeX Info: Redefining \pageref on input line 85.
+LaTeX Info: Redefining \nameref on input line 85.
 (J-Transport-Health-Manuscript.out) (J-Transport-Health-Manuscript.out)
 \@outlinefile=\write4
 \openout4 = `J-Transport-Health-Manuscript.out'.
 
-Package ragged2e Info: ABD: executing \RaggedRight on input line 81.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 85.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 81.
+LaTeX Info: Redefining \selectfont on input line 85.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-04.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+08.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-04.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+08.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-104.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+108.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-104.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+108.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 104.
+(Font)              <8> on input line 108.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 104.
+(Font)              <6> on input line 108.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 104.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 104
+(Font)              <5> on input line 108.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108
 .
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 104
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 .
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-04.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+08.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -792,8 +890,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-04.
-(C:\Users\desjae\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
+08.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -801,176 +899,701 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 104.
+(Font)              <10> on input line 108.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 104.
+(Font)              <7> on input line 108.
 
-Overfull \hbox (0.18364pt too wide) in paragraph at lines 139--152
-[]\T1/lmr/m/n/10 (+3) Many Cana-dian cities have adopted pro-cycling poli-cies 
-and pro-grams in re-cent years to sup-port the up-take of cy- 
+Overfull \hbox (0.10237pt too wide) in paragraph at lines 110--117
+\T1/lmr/m/n/10 (+10) health of-fi-cials in Canada in-creas-ingly aim to en-cour
+-age cy-cling for trans-port. On- and off-street in-fras-truc-ture is 
  []
-
-
-Overfull \hbox (0.17525pt too wide) in paragraph at lines 139--152
-\T1/lmr/m/n/10 (+16) suc-cess-fully tran-si-tion to a bicycle-friendly city whe
-re healthy and ac-tive modes of travel con-sti-tute a larger part 
- []
-
-
-Overfull \vbox (35.52815pt too high) has occurred while \output is active []
 
 [1
 
 
-{C:/Users/desjae/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Overfull \hbox (0.11725pt too wide) in paragraph at lines 181--214
-\T1/lmr/m/n/10 (+2) ef-forts sup-port or hin-der cy-cling. A few stud-ies in de
--vel-op-ing cy-cling cities have found a sim-i-lar-ity in route pref-er- 
+{C:/Users/paezha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (0.11485pt too wide) in paragraph at lines 180--193
+\T1/lmr/m/n/10 (+7) found that cy-clists travel routes that have on-street and 
+off-path cy-cling fa-cil-i-ties and streets with low vol-umes of 
  []
 
 
-Overfull \hbox (0.20483pt too wide) in paragraph at lines 181--214
-\T1/lmr/m/n/10 (+11) of the built en-vi-ron-ment. For ex-am-ple, in-ter-views o
-r map-ping ex-er-cises (see Man-ton et al., 2016; Mar-quart et al., 
+Overfull \hbox (0.16464pt too wide) in paragraph at lines 194--208
+\T1/lmr/m/n/10 (+5) cycling cities have found a similarity in route preferences
+ and barriers to cycling between cyclists and non-cyclists 
  []
 
 
-Overfull \hbox (0.1701pt too wide) in paragraph at lines 181--214
-\T1/lmr/m/n/10 (+17) and how cy-cling is ex-pe-ri-enced. Pho-tovoice or photo e
-lic-i-ta-tion is an-other method that has been used to ex-plore 
+Overfull \hbox (0.12878pt too wide) in paragraph at lines 194--208
+\T1/lmr/m/n/10 (+12) (see Félix et al., 2019; Clark et al., 2019; Winters and T
+eschke, 2010) which also suggests that the perspectives of 
  []
 
 [2]
-Overfull \hbox (0.12234pt too wide) in paragraph at lines 215--232
-\T1/lmr/m/n/10 (+1) We pre-vi-ously es-ti-mated a spa-tial in-ter-ac-tion model
- to in-ves-ti-gate the cor-re-lates of cy-cling in Hamil-ton and found 
+Overfull \hbox (0.17125pt too wide) in paragraph at lines 209--235
+\T1/lmr/m/n/10 (+15) exercises (see Manton et al., 2016; Marquart et al., 2020)
+ and ride-alongs (van Duppen and Spierings, 2013) may 
  []
 
 
-Overfull \hbox (0.13048pt too wide) in paragraph at lines 239--268
-[]\T1/lmr/m/n/10 (+8) Hamilton is a mid-sized city lo-cated in Canada with a po
-p-u-la-tion of roughly 740,000 ac-cord-ing to the 2016 Cana- 
+Overfull \hbox (0.22922pt too wide) in paragraph at lines 209--235
+\T1/lmr/m/n/10 (+18) thus complement objective assessments of the physical envi
+ronment studied through methods like environmental 
  []
 
 
-Overfull \hbox (0.1598pt too wide) in paragraph at lines 239--268
-\T1/lmr/m/n/10 (+20) in-fras-truc-ture falls short of what is needed to meet th
-is goal. There-fore, it is sug-gested that Hamil-ton is a de-vel- 
+Overfull \hbox (0.18198pt too wide) in paragraph at lines 260--289
+\T1/lmr/m/n/10 (+19) Es-carp-ment, re-ferred to lo-cally as ``the moun-tain'', 
+which can be as high as 100m in many places. The ru-ral and 
+ []
+
+
+Overfull \hbox (0.11528pt too wide) in paragraph at lines 260--289
+\T1/lmr/m/n/10 (+9) typ-i-cal an-nual in-vest-ment in cy-cling in-fras-truc-tur
+e falls short of what is needed to meet this goal. There-fore, it is 
  []
 
 [3]
-Overfull \hbox (0.12288pt too wide) in paragraph at lines 269--289
+Overfull \hbox (0.12288pt too wide) in paragraph at lines 290--310
 []\T1/lmr/m/n/10 (+19) This pa-per con-tributes to the grow-ing body of re-sear
 ch on cy-cling and ac-tive travel in mid-sized Cana-dian cities 
  []
 
 
-Overfull \hbox (0.18724pt too wide) in paragraph at lines 269--289
+Overfull \hbox (0.18724pt too wide) in paragraph at lines 290--310
 \T1/lmr/m/n/10 (+8) fur-ther anal-y-sis of the 2016 \T1/lmr/m/it/10 (+8) TTS \T
 1/lmr/m/n/10 (+8) re-vealed that 35% of all cur-rent trips in Hamil-ton are 5 k
 m or less (Mi-tra et al., 
  []
 
-<TAZ-Hamilton.png, id=60, 673.51625pt x 367.3725pt>
-File: TAZ-Hamilton.png Graphic file (type png)
-<use TAZ-Hamilton.png>
-Package pdftex.def Info: TAZ-Hamilton.png  used on input line 292.
-(pdftex.def)             Requested size: 325.31154pt x 177.4411pt.
-
-Overfull \hbox (0.1274pt too wide) in paragraph at lines 302--344
-\T1/lmr/m/n/10 (+1) min-i-mize dis-tance and in-ter-ac-tions with other road us
-ers best ex-plain the pat-tern of travel by bi-cy-cle in Hamil-ton 
+<Cycling-Hamilton.png, id=120, 514.92375pt x 330.23375pt>
+File: Cycling-Hamilton.png Graphic file (type png)
+<use Cycling-Hamilton.png>
+Package pdftex.def Info: Cycling-Hamilton.png  used on input line 313.
+(pdftex.def)             Requested size: 325.31154pt x 208.63287pt.
+[4]
+Overfull \hbox (0.2017pt too wide) in paragraph at lines 323--367
+\T1/lmr/m/n/10 (+14) Hamil-ton. While the \T1/lmr/m/it/10 (+14) TTS \T1/lmr/m/n
+/10 (+14) is in-for-ma-tive about the traf-fic zones of ori-gin and des-ti-na-t
+ion of cy-cling trips, it does 
  []
 
 
-Overfull \hbox (0.11931pt too wide) in paragraph at lines 302--344
-\T1/lmr/m/n/10 (+7) pres-ence or ab-sence of cy-cle in-fras-truc-ture. Our find
--ings sug-gests that cy-clists in Hamil-ton are seek-ing out routes 
+Overfull \hbox (0.10808pt too wide) in paragraph at lines 323--367
+\T1/lmr/m/n/10 (+5) each traf-fic anal-y-sis zone, the ge-o-graph-i-cal unit of
+ anal-y-sis used by the \T1/lmr/m/it/10 (+5) TTS\T1/lmr/m/n/10 (+5) , serves as
+ the start and end point for 
  []
 
 
-Overfull \hbox (0.13425pt too wide) in paragraph at lines 302--344
-\T1/lmr/m/n/10 (+7) estimated if routes be-tween zones of ori-gin and des-ti-na
--tion are less sup-port-ive of cy-cling (mean-ing that there was 
+Overfull \hbox (0.12737pt too wide) in paragraph at lines 323--367
+\T1/lmr/m/it/10 (+15) bal-anced \T1/lmr/m/n/10 (+15) by the \T1/lmr/m/it/10 (+1
+5) Cy-cleStreets \T1/lmr/m/n/10 (+15) al-go-rithm, were used as mea-sures of im
+pedance in the model. Briefly, the []\T1/lmtt/m/n/10 R \T1/lmr/m/n/10 (+15) pac
+k-age[] 
  []
 
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+
+Overfull \hbox (0.10739pt too wide) in paragraph at lines 323--367
+\T1/lmr/m/n/10 (+10) re-spec-tively'' (Lovelace and Lucas-Smith, 2018, p. 1). A
+d-di-tional de-tails about the al-go-rithm are avail-able []on-line[]. 
+ []
+
+
+Overfull \hbox (0.11162pt too wide) in paragraph at lines 323--367
+\T1/lmr/m/n/10 (+7) been over-estimated if routes be-tween zones of ori-gin and
+ des-ti-na-tion are less sup-port-ive of cy-cling (mean-ing that 
+ []
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.344 
-       <./TAZ-Hamilton.png>]
-Overfull \hbox (0.15945pt too wide) in paragraph at lines 351--373
-\T1/lmr/m/n/10 (+17) tional, safety, aes-thetic, and des-ti-na-tion (Pikora et 
-al., 2003). The in-stru-ment was de-vel-oped for use along street 
- []
 
-[5]
-Overfull \hbox (0.1043pt too wide) in paragraph at lines 374--404
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.367 
+       <./Cycling-Hamilton.png>]
+Overfull \hbox (0.1043pt too wide) in paragraph at lines 398--428
 \T1/lmr/m/n/10 (+19) in Hamil-ton. Each au-di-tor par-tic-i-pated in a train-in
 g ex-er-cise led by the first au-thor to be-come fa-mil-iar with the 
  []
 
 
-Overfull \hbox (0.19434pt too wide) in paragraph at lines 374--404
+Overfull \hbox (0.19434pt too wide) in paragraph at lines 398--428
 \T1/lmr/m/it/10 (+16) SPACES In-stru-ment \T1/lmr/m/n/10 (+16) and the \T1/lmr/
 m/it/10 (+16) SPACES Ob-ser-va-tion Man-ual[][][] \T1/lmr/m/n/10 (+16) (Pikora 
 et al., 2002), and to stan-dard-ize the way in 
  []
 
 
-Overfull \hbox (0.2127pt too wide) in paragraph at lines 374--404
-\T1/lmr/m/n/10 (+6) tors were in-structed to dis-cuss any dis-agree-ments and r
-each con-sen-sus be-fore fill-ing out the in-stru-ment. Once the 
- []
-
-
-LaTeX Warning: Reference `tab:routes' on page 6 undefined on input line 457.
-
-
-LaTeX Warning: Reference `tab:routes' on page 6 undefined on input line 472.
-
-
-Overfull \hbox (0.15506pt too wide) in paragraph at lines 451--488
-\T1/lmr/m/n/10 (+16) routes were over- and under-estimated. The pho-tos for eac
-h route were num-bered to make it eas-ier to tran-scribe 
+Overfull \hbox (0.11012pt too wide) in paragraph at lines 398--428
+\T1/lmr/m/n/10 (+2) au-di-tors were in-structed to dis-cuss any dis-agree-ments
+ and reach con-sen-sus be-fore fill-ing out the in-stru-ment. Once 
  []
 
 [6]
-Overfull \hbox (0.23172pt too wide) in paragraph at lines 489--502
-\T1/lmr/m/n/10 (+20) us-ing an in-duc-tive ap-proach based on per-cep-tions and
- ex-pe-ri-ences that emerged in the in-ter-views. Themes were 
+Overfull \hbox (0.18341pt too wide) in paragraph at lines 474--500
+\T1/lmr/m/n/10 (+9) the changes that they perceive. This enables us to capture 
+both perceptions of specific attributes of the routes as 
  []
 
 [7pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
 as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.502 
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.500 
       ]
+Overfull \hbox (0.17091pt too wide) in paragraph at lines 501--522
+\T1/lmr/m/it/10 (+9) 2A\T1/lmr/m/n/10 (+9) ), and one route where cycling was u
+nder-estimated by the original model (i.e., \T1/lmr/m/it/10 (+9) 1B \T1/lmr/m/n
+/10 (+9) and \T1/lmr/m/it/10 (+9) 2B\T1/lmr/m/n/10 (+9) ). The final package 
+ []
 
-LaTeX Warning: Reference `tab:routes' on page 8 undefined on input line 517.
+
+Overfull \hbox (0.18446pt too wide) in paragraph at lines 501--522
+\T1/lmr/m/n/10 (+20) they preferred. Additional questions were asked if a parti
+cipant reported having cycled part of a route or if they 
+ []
 
 
-LaTeX Warning: Reference `tab:attributes' on page 8 undefined on input line 518
-.
+Overfull \hbox (0.16542pt too wide) in paragraph at lines 550--561
+\T1/lmr/m/n/10 (+1) are only doc-u-mented in one di-rec-tion along the routes. 
+Each route is ac-com-pa-nied by a map of the street net-work 
+ []
+
+[8]
+<Route 1A.png, id=172, 380.42125pt x 236.885pt>
+File: Route 1A.png Graphic file (type png)
+<use Route 1A.png>
+Package pdftex.def Info: Route 1A.png  used on input line 676.
+(pdftex.def)             Requested size: 325.31154pt x 202.57492pt.
+[9pdfTeX warning (ext4): destination with the same identifier (name{table.2}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.692 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.692 
+       <./Route 1A.png>] [10pdfTeX warning (ext4): destination with the same id
+entifier (name{table.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.692 
+      ]
+<Figure 3.png, id=190, 907.39pt x 603.25375pt>
+File: Figure 3.png Graphic file (type png)
+<use Figure 3.png>
+Package pdftex.def Info: Figure 3.png  used on input line 695.
+(pdftex.def)             Requested size: 325.31154pt x 216.2691pt.
+<Figure 4.png, id=191, 896.34875pt x 531.9875pt>
+File: Figure 4.png Graphic file (type png)
+<use Figure 4.png>
+Package pdftex.def Info: Figure 4.png  used on input line 704.
+(pdftex.def)             Requested size: 325.31154pt x 193.0739pt.
+<Figure 5.png, id=192, 433.62pt x 278.03876pt>
+File: Figure 5.png Graphic file (type png)
+<use Figure 5.png>
+Package pdftex.def Info: Figure 5.png  used on input line 724.
+(pdftex.def)             Requested size: 325.31154pt x 208.60066pt.
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.741 
+       <./Figure 3.png>] [12pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.741 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.741 
+       <./Figure 4.png> <./Figure 5.png>]
+<Figure 6.png, id=208, 891.33pt x 539.01375pt>
+File: Figure 6.png Graphic file (type png)
+<use Figure 6.png>
+Package pdftex.def Info: Figure 6.png  used on input line 744.
+(pdftex.def)             Requested size: 325.31154pt x 196.72604pt.
+<Figure 7.png, id=209, 884.30376pt x 548.0475pt>
+File: Figure 7.png Graphic file (type png)
+<use Figure 7.png>
+Package pdftex.def Info: Figure 7.png  used on input line 753.
+(pdftex.def)             Requested size: 325.31154pt x 201.612pt.
+<Route 1B.png, id=210, 493.845pt x 305.14pt>
+File: Route 1B.png Graphic file (type png)
+<use Route 1B.png>
+Package pdftex.def Info: Route 1B.png  used on input line 765.
+(pdftex.def)             Requested size: 325.31154pt x 201.00189pt.
+
+Overfull \hbox (0.13394pt too wide) in paragraph at lines 772--786
+\T1/lmr/m/n/10 (+7) pos-i-tive com-ments. Cy-clists pri-mar-ily liked the route
+ be-cause it was per-ceived to have low traf-fic, fewer cars, and 
+ []
+
+<Figure 9.png, id=211, 739.76375pt x 532.99126pt>
+File: Figure 9.png Graphic file (type png)
+<use Figure 9.png>
+Package pdftex.def Info: Figure 9.png  used on input line 789.
+(pdftex.def)             Requested size: 325.31154pt x 234.38675pt.
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.797 \subsubsection{Package 2}\label{package-2}}
+                                                 pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.7}) has been already used, duplicate
+ ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.797 \subsubsection{Package 2}\label{package-2}}
+                                                  <./Figure 6.png> <./Figure 7.
+png>] [14pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.797 \subsubsection{Package 2}\label{package-2}}
+                                                 pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.9}) has been already used, duplicate
+ ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.797 \subsubsection{Package 2}\label{package-2}}
+                                                  <./Route 1B.png> <./Figure 9.
+png>]
+<Route 2A.png, id=232, 517.935pt x 319.1925pt>
+File: Route 2A.png Graphic file (type png)
+<use Route 2A.png>
+Package pdftex.def Info: Route 2A.png  used on input line 810.
+(pdftex.def)             Requested size: 325.31154pt x 200.49326pt.
+<Figure 11.png, id=234, 564.1075pt x 426.59375pt>
+File: Figure 11.png Graphic file (type png)
+<use Figure 11.png>
+Package pdftex.def Info: Figure 11.png  used on input line 831.
+(pdftex.def)             Requested size: 325.31154pt x 246.01202pt.
+<Figure 12.png, id=235, 778.91pt x 544.0325pt>
+File: Figure 12.png Graphic file (type png)
+<use Figure 12.png>
+Package pdftex.def Info: Figure 12.png  used on input line 840.
+(pdftex.def)             Requested size: 325.31154pt x 227.2137pt.
+
+Overfull \hbox (0.13103pt too wide) in paragraph at lines 847--855
+\T1/lmr/m/n/10 (+12) after the bike lane ends. Cyclists who disliked this featu
+re reported often waiting a while to turn left, that it was 
+ []
+
+<Figure 13.png, id=236, 526.96875pt x 388.45125pt>
+File: Figure 13.png Graphic file (type png)
+<use Figure 13.png>
+Package pdftex.def Info: Figure 13.png  used on input line 858.
+(pdftex.def)             Requested size: 325.31154pt x 239.81186pt.
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.10}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.878 
+       <./Route 2A.png>] [16pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.878 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.878 
+       <./Figure 11.png> <./Figure 12.png>]
+<Figure 14.png, id=254, 730.73pt x 452.69125pt>
+File: Figure 14.png Graphic file (type png)
+<use Figure 14.png>
+Package pdftex.def Info: Figure 14.png  used on input line 881.
+(pdftex.def)             Requested size: 325.31154pt x 201.53331pt.
+<Figure 14a.png, id=255, 527.9725pt x 339.2675pt>
+File: Figure 14a.png Graphic file (type png)
+<use Figure 14a.png>
+Package pdftex.def Info: Figure 14a.png  used on input line 890.
+(pdftex.def)             Requested size: 325.31154pt x 209.03911pt.
+<Figure 15.png, id=256, 790.955pt x 504.88625pt>
+File: Figure 15.png Graphic file (type png)
+<use Figure 15.png>
+Package pdftex.def Info: Figure 15.png  used on input line 908.
+(pdftex.def)             Requested size: 325.31154pt x 207.65182pt.
+<Route 2B.png, id=257, 536.0025pt x 326.21875pt>
+File: Route 2B.png Graphic file (type png)
+<use Route 2B.png>
+Package pdftex.def Info: Route 2B.png  used on input line 920.
+(pdftex.def)             Requested size: 325.31154pt x 197.98764pt.
+<Figure 17.png, id=258, 756.8275pt x 444.66125pt>
+File: Figure 17.png Graphic file (type png)
+<use Figure 17.png>
+Package pdftex.def Info: Figure 17.png  used on input line 943.
+(pdftex.def)             Requested size: 325.31154pt x 191.13275pt.
+<Figure 18.png, id=259, 529.98pt x 324.21124pt>
+File: Figure 18.png Graphic file (type png)
+<use Figure 18.png>
+Package pdftex.def Info: Figure 18.png  used on input line 952.
+(pdftex.def)             Requested size: 325.31154pt x 199.01027pt.
+
+Overfull \hbox (0.1868pt too wide) in paragraph at lines 959--971
+\T1/lmr/m/n/10 (+1) comfortability. Cyclists preferred to have space for a moto
+rist to safely pass. Most participants noticed or disliked 
+ []
+
+[17pdfTeX warning (ext4): destination with the same identifier (name{figure.13}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.971 
+       <./Figure 13.png>] [18pdfTeX warning (ext4): destination with the same i
+dentifier (name{figure.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.971 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.971 
+       <./Figure 14.png> <./Figure 14a.png>] [19pdfTeX warning (ext4): destinat
+ion with the same identifier (name{figure.16}) has been already used, duplicate
+ ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.971 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+17}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.971 
+       <./Figure 15.png> <./Route 2B.png>] [20pdfTeX warning (ext4): destinatio
+n with the same identifier (name{figure.18}) has been already used, duplicate i
+gnored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.971 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+19}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.971 
+       <./Figure 17.png> <./Figure 18.png>]
+<Figure 19.png, id=293, 772.8875pt x 496.85625pt>
+File: Figure 19.png Graphic file (type png)
+<use Figure 19.png>
+Package pdftex.def Info: Figure 19.png  used on input line 974.
+(pdftex.def)             Requested size: 325.31154pt x 209.1255pt.
+<Figure 20.png, id=294, 803.0pt x 513.92pt>
+File: Figure 20.png Graphic file (type png)
+<use Figure 20.png>
+Package pdftex.def Info: Figure 20.png  used on input line 982.
+(pdftex.def)             Requested size: 325.31154pt x 208.19919pt.
+<Figure 21.png, id=295, 475.7775pt x 317.185pt>
+File: Figure 21.png Graphic file (type png)
+<use Figure 21.png>
+Package pdftex.def Info: Figure 21.png  used on input line 991.
+(pdftex.def)             Requested size: 325.31154pt x 216.88321pt.
+<Route 3A.png, id=296, 469.755pt x 293.095pt>
+File: Route 3A.png Graphic file (type png)
+<use Route 3A.png>
+Package pdftex.def Info: Route 3A.png  used on input line 1009.
+(pdftex.def)             Requested size: 325.31154pt x 202.97368pt.
+<Figure 23.png, id=298, 761.84625pt x 515.9275pt>
+File: Figure 23.png Graphic file (type png)
+<use Figure 23.png>
+Package pdftex.def Info: Figure 23.png  used on input line 1037.
+(pdftex.def)             Requested size: 325.31154pt x 220.3015pt.
+<Figure 24.png, id=299, 755.82375pt x 487.8225pt>
+File: Figure 24.png Graphic file (type png)
+<use Figure 24.png>
+Package pdftex.def Info: Figure 24.png  used on input line 1046.
+(pdftex.def)             Requested size: 325.31154pt x 209.96056pt.
+<Figure 25.png, id=300, 826.08624pt x 521.95pt>
+File: Figure 25.png Graphic file (type png)
+<use Figure 25.png>
+Package pdftex.def Info: Figure 25.png  used on input line 1055.
+(pdftex.def)             Requested size: 325.31154pt x 205.54279pt.
+<Route 3B.png, id=301, 480.79625pt x 296.10625pt>
+File: Route 3B.png Graphic file (type png)
+<use Route 3B.png>
+Package pdftex.def Info: Route 3B.png  used on input line 1072.
+(pdftex.def)             Requested size: 325.31154pt x 200.35104pt.
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.20}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1085 
+        <./Figure 19.png>] [22pdfTeX warning (ext4): destination with the same 
+identifier (name{figure.21}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1085 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.22}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1085 
+        <./Figure 20.png> <./Figure 21.png>] [23pdfTeX warning (ext4): destinat
+ion with the same identifier (name{figure.23}) has been already used, duplicate
+ ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1085 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.24}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1085 
+        <./Route 3A.png> <./Figure 23.png>] [24pdfTeX warning (ext4): destinati
+on with the same identifier (name{figure.25}) has been already used, duplicate 
+ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1085 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.26}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1085 
+        <./Figure 24.png> <./Figure 25.png>]
+<Figure 27.png, id=339, 674.52pt x 425.59pt>
+File: Figure 27.png Graphic file (type png)
+<use Figure 27.png>
+Package pdftex.def Info: Figure 27.png  used on input line 1088.
+(pdftex.def)             Requested size: 325.31154pt x 205.26146pt.
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.27}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1110 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.28}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1110 
+        <./Route 3B.png> <./Figure 27.png>]
+<Figure 28.png, id=350, 748.7975pt x 493.845pt>
+File: Figure 28.png Graphic file (type png)
+<use Figure 28.png>
+Package pdftex.def Info: Figure 28.png  used on input line 1113.
+(pdftex.def)             Requested size: 325.31154pt x 214.54956pt.
+<Figure 29.png, id=351, 840.13875pt x 481.8pt>
+File: Figure 29.png Graphic file (type png)
+<use Figure 29.png>
+Package pdftex.def Info: Figure 29.png  used on input line 1132.
+(pdftex.def)             Requested size: 325.31154pt x 186.55588pt.
+
+Overfull \hbox (0.10042pt too wide) in paragraph at lines 1142--1160
+\T1/lmr/m/n/10 (+15) in each package they preferred. All participants consisten
+tly selected the same routes: \T1/lmr/m/it/10 (+15) 1B \T1/lmr/m/n/10 (+15) was
+ preferred over \T1/lmr/m/it/10 (+15) 1A\T1/lmr/m/n/10 (+15) , 
+ []
 
 
-! LaTeX Error: Unknown float option `H'.
+Overfull \hbox (0.17714pt too wide) in paragraph at lines 1142--1160
+\T1/lmr/m/it/10 (+9) 2A \T1/lmr/m/n/10 (+9) over \T1/lmr/m/it/10 (+9) 2B\T1/lmr
+/m/n/10 (+9) , and \T1/lmr/m/it/10 (+9) 3B \T1/lmr/m/n/10 (+9) over \T1/lmr/m/i
+t/10 (+9) 3A\T1/lmr/m/n/10 (+9) . In the first package, cyclists preferred rout
+e \T1/lmr/m/it/10 (+9) 1B \T1/lmr/m/n/10 (+9) because they disliked the first t
+hree 
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.640 \begin{figure}[!H]
-                         
+
+Overfull \hbox (0.2128pt too wide) in paragraph at lines 1142--1160
+\T1/lmr/m/n/10 (+5) because it had cycling infrastructure throughout compared t
+o \T1/lmr/m/it/10 (+5) 2B \T1/lmr/m/n/10 (+5) which had a signed route only for
+ part of it. \T1/lmr/m/it/10 (+5) 2A 
+ []
+
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.29}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1160 
+        <./Figure 28.png>]
+Overfull \hbox (0.11665pt too wide) in paragraph at lines 1164--1182
+\T1/lmr/m/n/10 (+6) (i.e., \T1/lmr/m/it/10 (+6) 1B\T1/lmr/m/n/10 (+6) , \T1/lmr
+/m/it/10 (+6) 2B\T1/lmr/m/n/10 (+6) , and \T1/lmr/m/it/10 (+6) 3A\T1/lmr/m/n/10
+ (+6) ) included residential streets. Based on the routes audited, we observed 
+that the \T1/lmr/m/it/10 (+6) CycleStreets 
+ []
+
+
+Overfull \hbox (0.15492pt too wide) in paragraph at lines 1164--1182
+\T1/lmr/m/n/10 (+9) routes (\T1/lmr/m/it/10 (+9) 1A\T1/lmr/m/n/10 (+9) , \T1/lm
+r/m/it/10 (+9) 2A\T1/lmr/m/n/10 (+9) , and \T1/lmr/m/it/10 (+9) 3B\T1/lmr/m/n/1
+0 (+9) ) were familiar to or had been previously cycled by many participants. T
+his suggests that 
+ []
+
+
+Overfull \hbox (0.15736pt too wide) in paragraph at lines 1183--1210
+\T1/lmr/m/n/10 (+10) pre-vi-ously been re-ported in the lit-er-a-ture (Stin-son
+ and Bhat, 2003). Some cy-clists pre-ferred to have lat-eral space 
+ []
+
+[27pdfTeX warning (ext4): destination with the same identifier (name{figure.30}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1210 
+        <./Figure 29.png>]
+Overfull \hbox (0.14514pt too wide) in paragraph at lines 1243--1264
+\T1/lmr/m/n/10 (+14) like photo elic-i-ta-tion to cen-tre the ex-pe-ri-ence of 
+cy-cling in the de-sign of in-fras-truc-ture and routes. This data can 
+ []
+
+[28]
+Overfull \hbox (0.12563pt too wide) in paragraph at lines 1265--1291
+\T1/lmr/m/n/10 (+3) be ig-nored. Tak-ing ad-van-tage of cy-clists' ex-per-tise 
+in de-vel-op-ing cy-cling cities can help to over-come the bar-rier of 
+ []
+
+
+Overfull \hbox (0.19711pt too wide) in paragraph at lines 1292--1304
+\T1/lmr/m/n/10 (+6) ex-plore and im-ple-ment bolder poli-cies to en-cour-age mo
+dal shifts. There is strong in-cen-tive for pri-or-i-tiz-ing cy-cling 
+ []
+
+[29]
+Overfull \hbox (0.18642pt too wide) in paragraph at lines 1320--1338
+\T1/lmr/m/n/10 (+12) or if they were familiar with none. However, their familia
+rity offered insightful information about how these road 
+ []
+
+
+Overfull \hbox (0.22281pt too wide) in paragraph at lines 1320--1338
+\T1/lmr/m/n/10 (+10) have been different if the participants were new or occasi
+onal cyclists. Less experienced cyclists are likely to have 
+ []
+
+[30] [31]
+Overfull \hbox (0.23457pt too wide) in paragraph at lines 1496--1500
+[][]\T1/lmr/m/n/10 (+13) Emond, C.R., Tang, W., Handy, S.L., 2009. Explaining G
+ender Difference in Bicycling Behavior. Transportation 
+ []
+
+
+Overfull \hbox (0.23691pt too wide) in paragraph at lines 1501--1505
+[][]\T1/lmr/m/n/10 (+18) Evergreen, 2017. Leveraging ontario's urban potential:
+ Mid-sized cities research series [WWW Document]. URL 
+ []
+
+
+Overfull \hbox (0.17682pt too wide) in paragraph at lines 1506--1512
+[][]\T1/lmr/m/n/10 (+19) Félix, R., Moura, F., Clifton, K.J., 2019. Ma-tur-ing 
+ur-ban cy-cling: Com-par-ing bar-ri-ers and mo-ti-va-tors to bi-cy-cle 
+ []
+
+[32]
+Overfull \hbox (0.24924pt too wide) in paragraph at lines 1543--1548
+[][]\T1/lmr/m/n/10 (+19) Klicnik, I., Dogra, S., 2019. Perspectives on Active T
+ransportation in a Mid-Sized Age-Friendly City: ``You Stay 
+ []
+
+[33] [34]
+Overfull \hbox (0.1562pt too wide) in paragraph at lines 1738--1743
+[][]\T1/lmr/m/n/10 (+6) Winters, M., Teschke, K., 2010. Route preferences among
+ adults in the near market for bicycling: Findings of the 
+ []
+
+
+Overfull \hbox (0.1556pt too wide) in paragraph at lines 1738--1743
+\T1/lmr/m/n/10 (+12) cycling in cities study. American journal of health promot
+ion: AJHP 25, 40--47. doi:[]10.4278/ajhp.081006-QUAN- 
+ []
+
+[35]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1768.
+[36]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1768.
+(J-Transport-Health-Manuscript.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1768.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1768.
+
+Package rerunfilecheck Info: File `J-Transport-Health-Manuscript.out' has not c
+hanged.
+(rerunfilecheck)             Checksum: 4F0EA5E1F31E07A61D80C30749D6A1B6;3195.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1768.
+ ) 
 Here is how much of TeX's memory you used:
- 14984 strings out of 479798
- 223067 string characters out of 2869230
- 592385 words of memory out of 3000000
- 31507 multiletter control sequences out of 15000+200000
- 608219 words of font info for 134 fonts, out of 3000000 for 9000
+ 15751 strings out of 492453
+ 226061 string characters out of 3129816
+ 396688 words of memory out of 3000000
+ 19512 multiletter control sequences out of 15000+200000
+ 80250 words of font info for 109 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,10n,85p,438b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,42p,470b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
+st, replaced by a fixed one
 
-!  ==> Fatal error occurred, no output PDF file produced!
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiK
+TeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
+ps/lm/lm-mathit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri7.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+tt8.pfb>
+Output written on J-Transport-Health-Manuscript.pdf (36 pages, 17375040 bytes).
+
+PDF statistics:
+ 631 PDF objects out of 1000 (max. 8388607)
+ 196 named destinations out of 1000 (max. 500000)
+ 20295 words of extra memory for PDF output out of 20736 (max. 10000000)
+
