@@ -3,17 +3,17 @@ title: "Highlights"
 output:
   pdf_document: default
   html_notebook: default
-date: "October 20, 2020"
+date: "March 9, 2021"
 ---
 
 # Highlights
 
 * Environmental audits were conducted along six inferred cycling routes in Hamilton.
 
-* Cyclists' perceptions of the routes were explored in semi-structured interviews.
+* Cyclists' perceptions of the routes were explored through photo elicitation.
 
-* Qualitative data can help to understand which objective measures influence cycling.
+* Qualitative data can help to understand how objective measures influence cycling.
 
 * Cyclists' perceptions should be regularly explored and incorporated in route design.
 
-* Developing cycling cities should pay attention to factors beyond infrastructure.
+* Photo elicitation is a useful participatory approach for developing cycling cities.
