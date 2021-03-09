@@ -60,7 +60,8 @@
 % Pandoc header
 \usepackage{setspace}\doublespacing
 \usepackage[document]{ragged2e}
-\setlength\parindent{24pt}\setlength{\parskip}{0.0pt plus 1.0pt}
+\setlength\parindent{24pt}
+\setlength{\parskip}{0.0pt plus 1.0pt}
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
@@ -157,39 +158,39 @@ however, is how to successfully transition from commonly car-centric
 North American cities, to bicycle-friendly cities with larger shares of
 active travel.
 
-Eudaimonic values such as freedom, enjoyment, and happiness, are often
-associated with active travel, even by users of other modes
-({\textbf{???}}). However, to be able to convince travelers to adopt
-active modes it is also necessary to create social and built
-environments that are bicycle-friendly. Short distances are ideal for
-cycle trips, which makes compact mixed-used areas attractive for cycling
-(Handy, 2020; Pucher and Buehler, 2008). Streets with slow traffic and
-traffic calming devices can also encourage people to use the bicycle for
-transport (Mertens et al., 2017). Other features such as adequate
-lighting and greenery have been found to support or motivate cycling
-(Winters et al., 2011), in addition to increased address and street
-density (Gao et al., 2018). Furthermore, cycling experts from both The
-Netherlands and New Zealand agree that cycling infrastructure is a
-universal prerequisite in countries with an established culture of
-cycling for transport and in countries with low levels of cycling (Adam
-et al., 2020).
+Active travelers seem to derive intrinsic value from their travel
+experience (Whalen et al., 2013). Moreover, travelers also tend to
+associate values such as freedom, enjoyment, and happiness with active
+travel, even if their regular mode of travel is not active (Mella Lira
+and Paez, 2021). However, to convince people to cycle it is also
+necessary to create social and built environments that are
+bicycle-friendly. Short distances are ideal for cycle trips, which makes
+compact mixed-used areas attractive for cycling (Handy, 2020; Pucher and
+Buehler, 2008). Streets with slow traffic and traffic calming devices
+can also encourage people to use the bicycle for transport (Mertens et
+al., 2017). Other features such as adequate lighting and greenery have
+been found to support or motivate cycling (Winters et al., 2011), in
+addition to increased address and street density (Gao et al., 2018).
+Furthermore, cycling experts from both The Netherlands and New Zealand
+agree that cycling infrastructure is a universal prerequisite in
+countries with an established culture of cycling for transport and in
+countries with low levels of cycling (Adam et al., 2020).
 
 Likely for this reason, cities where cycling is less mainstream have
-started building infrastructure to encourage more cycling.
-
-The case of Seville, Spain is a great example of the success that can be
-achieved by implementing a network of connected facilities at a rapid
-pace (Marqués et al., 2015). Revealed and stated preference studies have
-been further informative about the types of environments that cyclists
-prefer and have reinforced that cycling infrastructure is fundamentally
-important. Using global positioning system (GPS) data, several studies
-have found that cyclists travel routes that have on-street and off-path
-cycling facilities and streets with low volumes of traffic (Broach et
-al., 2012; Dill, 2009; Lu et al., 2018; Misra and Watkins, 2018; Scott
-et al., 2021). Stated preference studies also indicate that cyclists
-dislike mixing with traffic and prefer dedicated infrastructure
-(\emph{inter alia}, see Clark et al., 2019; Caulfield et al., 2012;
-Stinson and Bhat, 2003; Veillette et al., 2019; Winters et al., 2011).
+started building infrastructure to encourage more cycling. The case of
+Seville, Spain is a great example of the success that can be achieved by
+implementing a network of connected facilities at a rapid pace (Marqués
+et al., 2015). Revealed and stated preference studies have been further
+informative about the types of environments that cyclists prefer and
+have reinforced that cycling infrastructure is fundamentally important.
+Using global positioning system (GPS) data, several studies have found
+that cyclists travel routes that have on-street and off-path cycling
+facilities and streets with low volumes of traffic (Broach et al., 2012;
+Dill, 2009; Lu et al., 2018; Misra and Watkins, 2018; Scott et al.,
+2021). Stated preference studies also indicate that cyclists dislike
+mixing with traffic and prefer dedicated infrastructure (\emph{inter
+alia}, see Clark et al., 2019; Caulfield et al., 2012; Stinson and Bhat,
+2003; Veillette et al., 2019; Winters et al., 2011).
 
 Cities with low but growing levels of cycling have been called
 ``developing cycling cities'' (Liu et al., 2020), ``low cycling
@@ -327,7 +328,7 @@ built environment correlates of cycling flows in Hamilton. While the
 \emph{TTS} is informative about the traffic zones of origin and
 destination of cycling trips, it does not reveal the route choice of
 respondents. Thanks to the growth in open source resources for
-transportation analysis ({\textbf{???}}), a novel feature of this model
+transportation analysis (Lovelace, 2021), a novel feature of this model
 was the use of a cycle routing algorithm to infer different types of
 cycle routes between zones of origins and destinations (Lovelace and
 Lucas-Smith, 2018). The centroid of each traffic analysis zone, the
@@ -355,14 +356,15 @@ more or less cycling than expected (i.e., reported number vs.~predicted
 number of cycle trips). The model did not capture any route-level
 characteristics beyond the data available for Hamilton through
 \emph{OpenStreetMap} that was used by the algorithm. Therefore (see
-{\textbf{???}}), it was hypothesized that more cycling occurred between
-zones of origin and destination that were under-estimated because the
-inferred routes facilitate cycling (meaning that there was \emph{more}
-cycling between the zones than predicted by the model), for example
-through the provision of infrastructure. Conversely, cycling trips may
-have been over-estimated if routes between zones of origin and
-destination are less supportive of cycling (meaning that there was
-\emph{less} cycling between zones than predicted by the model).
+Moniruzzaman and Páez, 2012), it was hypothesized that more cycling
+occurred between zones of origin and destination that were
+under-estimated because the inferred routes facilitate cycling (meaning
+that there was \emph{more} cycling between the zones than predicted by
+the model), for example through the provision of infrastructure.
+Conversely, cycling trips may have been over-estimated if routes between
+zones of origin and destination are less supportive of cycling (meaning
+that there was \emph{less} cycling between zones than predicted by the
+model).
 
 \hypertarget{methods}{%
 \subsection{Methods}\label{methods}}
@@ -1374,15 +1376,15 @@ thank the research assistants for their assistance in collecting data
 and conducting the environmental audits. In addition, the following
 \texttt{R} packages were used in the course of this investigation and
 the authors wish to acknowledge their developers: \texttt{cyclestreets}
-(Lovelace and Lucas-Smith, 2018), \texttt{dplyr} (H. Wickham, François,
-et al., 2020), \texttt{float} (Schmidt and Chen, 2020), \texttt{forcats}
-(Wickham, 2020), \texttt{ggplot2} (H. Wickham, W. Chang, et al., 2020),
-\texttt{ggthemes} (Arnold, 2019), \texttt{kableExtra} (Zhu, 2020),
-\texttt{knitr} (Xie, 2020), \texttt{ngram} (Schmidt and Heckendorf,
-2017), \texttt{purrr} (Henry and Wickham, 2020), \texttt{readr} (Wickham
-and Hester, 2020), \texttt{rticles} (Allaire et al., 2020), \texttt{sf}
-(Pebesma, 2020), \texttt{sp} (Pebesma and Bivand, 2020), \texttt{spdep}
-(Bivand, 2020).
+(Lovelace and Lucas-Smith, 2018), \texttt{dplyr} (Wickham et al., 2021),
+\texttt{float} (Schmidt and Chen, 2020), \texttt{forcats} (Wickham,
+2020), \texttt{ggplot2} (Wickham et al., 2020), \texttt{ggthemes}
+(Arnold, 2019), \texttt{kableExtra} (Zhu, 2020), \texttt{knitr} (Xie,
+2021), \texttt{ngram} (Schmidt and Heckendorf, 2017), \texttt{purrr}
+(Henry and Wickham, 2020), \texttt{readr} (Wickham and Hester, 2020),
+\texttt{rticles} (Allaire et al., 2021), \texttt{sf} (Pebesma, 2021),
+\texttt{sp} (Pebesma and Bivand, 2021), and \texttt{spdep} (Bivand,
+2020).
 
 \hypertarget{sec:credit}{%
 \section{CRediT Statement}\label{sec:credit}}
@@ -1428,7 +1430,7 @@ Gasparini, A., Desautels, M.-A., Leutnant, D., MDPI, Taylor and Francis,
 Ögreden, O., Hance, D., Nüst, D., Uvesten, P., Campitelli, E.,
 Muschelli, J., Hayes, A., Kamvar, Z.N., Ross, N., Cannoodt, R., Luguern,
 D., Kaplan, D.M., Kreutzer, S., Wang, S., Hesselberth, J., Dervieux, C.,
-2020. Rticles: Article formats for r markdown.
+2021. Rticles: Article formats for r markdown.
 
 \leavevmode\hypertarget{ref-R-ggthemes}{}%
 Arnold, J.B., 2019. Ggthemes: Extra themes, scales and geoms for
@@ -1602,6 +1604,11 @@ What Makes a Good Cargo Bike Route? Perspectives from Users and
 Planners. American Journal of Economics and Sociology 79, 941--965.
 doi:\href{https://doi.org/10.1111/ajes.12332}{10.1111/ajes.12332}
 
+\leavevmode\hypertarget{ref-lovelaceOpenSource2021}{}%
+Lovelace, R., 2021. Open source tools for geographic analysis in
+transport planning. Journal of Geographical Systems.
+doi:\href{https://doi.org/10.1007/s10109-020-00342-2}{10.1007/s10109-020-00342-2}
+
 \leavevmode\hypertarget{ref-Lovelace2018}{}%
 Lovelace, R., Lucas-Smith, M., 2018. Cyclestreets: Cycle routing and
 data for cycling advocacy.
@@ -1643,6 +1650,12 @@ Boost Cycling for the Promotion of Sustainable Mobility in Mid-Sized
 Starter Cycling Cities. Sustainability 12, 2064.
 doi:\href{https://doi.org/10.3390/su12052064}{10.3390/su12052064}
 
+\leavevmode\hypertarget{ref-mellaDoDrivers2021}{}%
+Mella Lira, B., Paez, A., 2021. Do drivers dream of walking? An
+investigation of travel mode dissonance from the perspective of
+affective values. Journal of Transport \& Health 20, 101015.
+doi:\href{https://doi.org/https://doi.org/10.1016/j.jth.2021.101015}{https://doi.org/10.1016/j.jth.2021.101015}
+
 \leavevmode\hypertarget{ref-mertensBuiltEnvironmentalCorrelates2017}{}%
 Mertens, L., Compernolle, S., Deforche, B., Mackenbach, J.D., Lakerveld,
 J., Brug, J., Roda, C., Feuillet, T., Oppert, J.-M., Glonti, K., Rutter,
@@ -1664,6 +1677,11 @@ behaviour and potential in the greater toronto and hamilton area {[}WWW
 Document{]}. URL
 \url{http://transformlab.ryerson.ca/wp-content/uploads/2016/10/Cycling-potential-in-GTHA-final-report-2016.pdf}
 
+\leavevmode\hypertarget{ref-moniruzzamanModelbasedApproachSelect2012}{}%
+Moniruzzaman, M., Páez, A., 2012. A model-based approach to select case
+sites for walkability audits. Health \& Place 18, 1323--1334.
+doi:\href{https://doi.org/10.1016/j.healthplace.2012.09.013}{10.1016/j.healthplace.2012.09.013}
+
 \leavevmode\hypertarget{ref-moudonWalkingBicyclingEvaluation2003}{}%
 Moudon, A.V., Lee, C., 2003. Walking and bicycling: An evaluation of
 environmental audit instruments. American journal of health promotion:
@@ -1671,10 +1689,10 @@ AJHP 18, 21--37.
 doi:\href{https://doi.org/10.4278/0890-1171-18.1.21}{10.4278/0890-1171-18.1.21}
 
 \leavevmode\hypertarget{ref-R-sf}{}%
-Pebesma, E., 2020. Sf: Simple features for r.
+Pebesma, E., 2021. Sf: Simple features for r.
 
 \leavevmode\hypertarget{ref-R-sp}{}%
-Pebesma, E., Bivand, R., 2020. Sp: Classes and methods for spatial data.
+Pebesma, E., Bivand, R., 2021. Sp: Classes and methods for spatial data.
 
 \leavevmode\hypertarget{ref-pikoraDevelopingFrameworkAssessment2003}{}%
 Pikora, T., Giles-Corti, B., Bull, F., Jamrozik, K., Donovan, R., 2003.
@@ -1763,6 +1781,12 @@ well-being among teenagers: A photovoice project in New Zealand. Journal
 of Transport \& Health 2, 414--422.
 doi:\href{https://doi.org/10.1016/j.jth.2015.06.004}{10.1016/j.jth.2015.06.004}
 
+\leavevmode\hypertarget{ref-whalenModeChoice2013}{}%
+Whalen, K.E., Páez, A., Carrasco, J.A., 2013. Mode choice of university
+students commuting to school and the role of active travel. Journal of
+Transport Geography 31, 132--142.
+doi:\href{https://doi.org/http://dx.doi.org/10.1016/j.jtrangeo.2013.06.008}{http://dx.doi.org/10.1016/j.jtrangeo.2013.06.008}
+
 \leavevmode\hypertarget{ref-R-forcats}{}%
 Wickham, H., 2020. Forcats: Tools for working with categorical variables
 (factors).
@@ -1773,7 +1797,7 @@ C., Woo, K., Yutani, H., Dunnington, D., 2020. Ggplot2: Create elegant
 data visualisations using the grammar of graphics.
 
 \leavevmode\hypertarget{ref-R-dplyr}{}%
-Wickham, H., François, R., Henry, L., Müller, K., 2020. Dplyr: A grammar
+Wickham, H., François, R., Henry, L., Müller, K., 2021. Dplyr: A grammar
 of data manipulation.
 
 \leavevmode\hypertarget{ref-R-readr}{}%
@@ -1807,7 +1831,7 @@ tools from a gender perspective. Travel Behaviour and Society 13,
 doi:\href{https://doi.org/10.1016/j.tbs.2018.07.002}{10.1016/j.tbs.2018.07.002}
 
 \leavevmode\hypertarget{ref-R-knitr}{}%
-Xie, Y., 2020. Knitr: A general-purpose package for dynamic report
+Xie, Y., 2021. Knitr: A general-purpose package for dynamic report
 generation in r.
 
 \leavevmode\hypertarget{ref-yangCyclingfriendlyCityUpdated2019}{}%

@@ -26,7 +26,7 @@ address:
     address: Department of Z
 
 journal: "Journal of Transport & Health"
-date: "February 23, 2021"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 bibliography: [updatedreferences.bib, packages.bib]
 linenumbers: true
 geometry: margin=2cm
@@ -35,7 +35,8 @@ csl: elsevier-harvard.csl
 header-includes:
     - \usepackage{setspace}\doublespacing
     - \usepackage[document]{ragged2e}
-    - \setlength\parindent{24pt}\setlength{\parskip}{0.0pt plus 1.0pt}
+    - \setlength\parindent{24pt}
+    - \setlength{\parskip}{0.0pt plus 1.0pt}
     - \tolerance=1
     - \emergencystretch=\maxdimen
     - \hyphenpenalty=10000
@@ -77,7 +78,7 @@ Introduction {#sec:introduction}
 
 Many Canadian cities have adopted pro-cycling policies and programs in recent years to support the uptake of cycling for transport, including a range of interventions from investments in infrastructure to educational programs or promotional events  [@assuncao-denisIncreasingCyclingTransportation2019a]. Large population health gains [@celis-moralesAssociationActiveCommuting2017b] and improved environmental conditions in urban areas [@zahabiExploringLinkNeighborhood2016b] could be achieved if cycling became more mainstream. For instance, Raustrop and Koglin [-@raustorpPotentialActiveCommuting2019] estimated that if nearly half of the residents in Scania county, Sweden cycled to work, almost 20 percent would meet physical activity guidelines from utilitarian travel alone. The challenge, however, is how to successfully transition from commonly car-centric North American cities, to bicycle-friendly cities with larger shares of active travel.
 
-Eudaimonic values such as freedom, enjoyment, and happiness, are often associated with active travel, even by users of other modes [@mellaDoDrivers2021]. However, to be able to convince travelers to adopt active modes it is also necessary to create social and built environments that are bicycle-friendly. Short distances are ideal for cycle trips, which makes compact mixed-used areas attractive for cycling [@handyMakingUSCities2020; @pucherMakingCyclingIrresistible2008]. Streets with slow traffic and traffic calming devices can also encourage people to use the bicycle for transport [@mertensBuiltEnvironmentalCorrelates2017]. Other features such as adequate lighting and greenery have been found to support or motivate cycling [@wintersMotivatorsDeterrentsBicycling2011], in addition to increased address and street density [@gaoRoleNaturalBuilt2018]. Furthermore, cycling experts from both The Netherlands and New Zealand agree that cycling infrastructure is a universal prerequisite in countries with an established culture of cycling for transport and in countries with low levels of cycling [@adamPlanningCyclingDispersed2020]. 
+Active travelers seem to derive intrinsic value from their travel experience [@whalenModeChoice2013]. Moreover, travelers also tend to associate values such as freedom, enjoyment, and happiness with active travel, even if their regular mode of travel is not active [@mellaDoDrivers2021]. However, to convince people to cycle it is also necessary to create social and built environments that are bicycle-friendly. Short distances are ideal for cycle trips, which makes compact mixed-used areas attractive for cycling [@handyMakingUSCities2020; @pucherMakingCyclingIrresistible2008]. Streets with slow traffic and traffic calming devices can also encourage people to use the bicycle for transport [@mertensBuiltEnvironmentalCorrelates2017]. Other features such as adequate lighting and greenery have been found to support or motivate cycling [@wintersMotivatorsDeterrentsBicycling2011], in addition to increased address and street density [@gaoRoleNaturalBuilt2018]. Furthermore, cycling experts from both The Netherlands and New Zealand agree that cycling infrastructure is a universal prerequisite in countries with an established culture of cycling for transport and in countries with low levels of cycling [@adamPlanningCyclingDispersed2020]. 
 
 Likely for this reason, cities where cycling is less mainstream have started building infrastructure to encourage more cycling. The case of Seville, Spain is a great example of the success that can be achieved by implementing a network of connected facilities at a rapid pace [@marquesHowInfrastructureCan2015a]. Revealed and stated preference studies have been further informative about the types of environments that cyclists prefer and have reinforced that cycling infrastructure is fundamentally important. Using global positioning system (GPS) data, several studies have found that cyclists travel routes that have on-street and off-path cycling facilities and streets with low volumes of traffic [@broachWhereCyclistsRide2012; @dillBicyclingTransportationHealth2009; @luUnderstandingBikeShare2018; @misraModelingCyclistRoute2018; @scottRouteChoiceBike2021]. Stated preference studies also indicate that cyclists dislike mixing with traffic and prefer dedicated infrastructure [*inter alia*, see @clarkUserPreferencesBicycle2019a; @caulfieldDeterminingBicycleInfrastructure2012; @stinsonCommuterBicyclistRoute2003; @veilletteDoesOneBicycle2019; @wintersMotivatorsDeterrentsBicycling2011]. 
 
@@ -848,7 +849,7 @@ Through environmental audits and a photo activity in semi-structured interviews 
 Acknowledgments {#sec:acknowledgments}
 ======================================
 
-The authors wish to express their sincere gratitude to the participants of the study who shared their time and stories. The authors also wish to thank the research assistants for their assistance in collecting data and conducting the environmental audits. In addition, the following `R` packages were used in the course of this investigation and the authors wish to acknowledge their developers:  `cyclestreets` [@Lovelace2018], `dplyr` [@R-dplyr], `float` [@R-float], `forcats` [@R-forcats], `ggplot2` [@R-ggplot2], `ggthemes` [@R-ggthemes], `kableExtra` [@R-kableExtra], `knitr` [@R-knitr], `ngram` [@R-ngram], `purrr` [@R-purrr], `readr` [@R-readr], `rticles` [@R-rticles], `sf` [@R-sf], `sp` [@R-sp], `spdep` [@R-spdep].
+The authors wish to express their sincere gratitude to the participants of the study who shared their time and stories. The authors also wish to thank the research assistants for their assistance in collecting data and conducting the environmental audits. In addition, the following `R` packages were used in the course of this investigation and the authors wish to acknowledge their developers:  `cyclestreets` [@Lovelace2018], `dplyr` [@R-dplyr], `float` [@R-float], `forcats` [@R-forcats], `ggplot2` [@R-ggplot2], `ggthemes` [@R-ggthemes], `kableExtra` [@R-kableExtra], `knitr` [@R-knitr], `ngram` [@R-ngram], `purrr` [@R-purrr], `readr` [@R-readr], `rticles` [@R-rticles], `sf` [@R-sf], `sp` [@R-sp], and `spdep` [@R-spdep].
 
 CRediT Statement {#sec:credit}
 ======================================
