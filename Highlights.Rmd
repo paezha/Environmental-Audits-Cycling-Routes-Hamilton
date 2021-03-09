@@ -2,18 +2,15 @@
 title: "Highlights"
 output:
   pdf_document: default
-  html_notebook: default
-date: "March 9, 2021"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 ---
-
-# Highlights
 
 * Environmental audits were conducted along six inferred cycling routes in Hamilton.
 
-* Cyclists' perceptions of the routes were explored through photo elicitation.
+* Cyclists' perceptions of the routes were explored through a form of photo elicitation.
 
-* Qualitative data can help to understand how objective measures influence cycling.
+* Photo elicitation is extended to generate more holistic photo-journeys of cycling routes.
 
 * Cyclists' perceptions should be regularly explored and incorporated in route design.
 
-* Photo elicitation is a useful participatory approach for developing cycling cities.
+* Photo-journeys is a useful participatory approach for developing cycling cities.

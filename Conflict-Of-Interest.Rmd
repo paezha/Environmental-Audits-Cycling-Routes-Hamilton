@@ -2,10 +2,7 @@
 title: "Conflict of Interest"
 output:
   pdf_document: default
-  html_notebook: default
-date: "October 20, 2020"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 ---
-
-# Conflict of Interest
 
 On behalf of all authors, the corresponding author states that there is no conflict of interest.
