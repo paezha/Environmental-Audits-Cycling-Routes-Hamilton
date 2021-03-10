@@ -1,0 +1,15 @@
+---
+title: "Author Statement"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+**Elise Desjardins**: conceptualization, methodology, investigation, formal analysis, data curation, writing - original draft, writing - review & editing. 
+
+**Christopher D. Higgins**: conceptualization, writing - original draft, writing - review & editing. 
+
+**Darren Scott**: conceptualization, writing - original draft, writing - review & editing. 
+
+**Emma Apatu**: conceptualization, methodology, writing - original draft, writing - review & editing. 
+
+**Antonio Paez**: conceptualization, methodology, writing - original draft, writing - review & editing, supervision.
