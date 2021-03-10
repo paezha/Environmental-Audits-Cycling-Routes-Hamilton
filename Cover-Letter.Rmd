@@ -6,7 +6,7 @@ output: pdf_document
 
 To the Editor:
 
-Please find attached our revised paper. The paper was previously titled "A comparison of objective attributes and cyclists' perceptions along cycling routes in a Canadian developing cycling city", which has been revised to "Using environmental audits and photo journeys to compare objective attributes and cyclists' perceptions along cycling routes" to reflect both the methodological and practical contributions of this work. We would like to thank the editor and two anonymous reviewers for their constructive comments and suggestions.
+Please find attached our revised paper. The paper was previously titled "A comparison of objective attributes and cyclists' perceptions along cycling routes in a Canadian developing cycling city", which has been revised to "Using environmental audits and photo-journeys to compare objective attributes and cyclists' perceptions along cycling routes" to reflect both the methodological and practical contributions of this work. We would like to thank the editor and two anonymous reviewers for their constructive comments and suggestions.
 
 We believe that this paper makes the following contributions to the literature:
 
