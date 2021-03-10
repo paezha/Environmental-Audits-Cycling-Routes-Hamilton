@@ -9,7 +9,7 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 
 * Cyclists' perceptions of the routes were explored through a form of photo elicitation.
 
-* Photo elicitation is extended to generate more holistic photo-journeys of cycling routes.
+* Photo elicitation is extended to generate more holistic photo-journeys of the routes.
 
 * Cyclists' perceptions should be regularly explored and incorporated in route design.
 
